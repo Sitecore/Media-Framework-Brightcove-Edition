@@ -1,0 +1,15 @@
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\App_Config\Include\Sitecore.ContentSearch.MediaFramework.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\App_Config\Include\Sitecore.RestSharp.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\Views\MediaFramework\Brightcove\CustomFields.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\Views\web.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\AgencyOasis.MediaFramework.Brightcove.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\AgencyOasis.MediaFramework.Brightcove.pdb
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Sitecore.RestSharp.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\System.Web.WebPages.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Web.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\DEV-AOBrightcove\bin\Web.pdb

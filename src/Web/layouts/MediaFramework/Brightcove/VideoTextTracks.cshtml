@@ -1,0 +1,720 @@
+﻿@using System.Web.Mvc
+@using System.Web.Mvc.Html
+@using Sitecore.Globalization
+@inherits System.Web.Mvc.WebViewPage
+
+@{
+    string videoId = System.Web.HttpContext.Current.Request.QueryString.Get("videoId");
+    string accountItemId = System.Web.HttpContext.Current.Request.QueryString.Get("accountItemId");
+    var serviceUrl = "/sitecore/api/brightcove/accounts/{accountItemId}/videos/{videoId}/texttracks".Replace("{accountItemId}", accountItemId).Replace("{videoId}", videoId);
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1">
+    <title>Manage Video Text Tracks</title>
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap.min.css">
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-ie6.min.css">
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-responsive.min.css">
+    <style>
+        body {
+            background: white;
+        }
+
+        .loading {
+            display: none;
+            float: right;
+            margin-right: 11px;
+            margin-top: 10px;
+        }
+
+        .submitbtnloading img {
+            margin-top: 8px;
+        }
+
+        .radio-buttons-start:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        #fileurlbox input[type=file] {
+            height: auto;
+            margin-top: 4px;
+            line-height: normal;
+        }
+
+        label.success-message {
+            font-size: 24px;
+            margin-bottom: 28px;
+            color: green;
+        }
+
+        label.error-message {
+            font-size: 24px;
+            margin-bottom: 28px;
+            color: red;
+        }
+
+        label.error {
+            color: #e9322d;
+            width: 100px;
+        }
+
+        input.error {
+            border: 1px solid #e9322d;
+            -webkit-box-shadow: 0 0 6px #f8b9b7;
+            -ms-box-shadow: 0 0 6px #f8b9b7;
+            box-shadow: 0 0 6px #f8b9b7;
+        }
+
+        .url-textbox .error {
+            width: auto;
+        }
+
+        select.error {
+            border: 1px solid #e9322d;
+            -webkit-box-shadow: 0 0 6px #f8b9b7;
+            -ms-box-shadow: 0 0 6px #f8b9b7;
+            box-shadow: 0 0 6px #f8b9b7;
+        }
+
+            select.error option {
+                color: #555;
+            }
+
+        .video-entry-start {
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+
+        .bc-button-update {
+            display: none;
+        }
+
+        .tracks-found .td-src #selectfile {
+            display: none;
+        }
+
+        .radio-button-item > input {
+            float: left;
+            margin-right: 11px;
+            margin-top: 6px;
+        }
+
+        .tracks-found table th, .tracks-found table td {
+            text-align: left;
+            width: 10%;
+        }
+
+        .tracks-found table th, .tracks-found table tr.default-row label {
+            font-weight: bold;
+        }
+
+        .tracks-found table tr .td-src label {
+            width: 172px;
+            overflow: hidden;
+            -moz-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .tracks-found table input[type=checkbox] {
+            margin-top: -6px;
+        }
+
+        .no-fields {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #faa732;
+        }
+
+        .upload-message {
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .no-tracks-found {
+            border-top: 1px solid #000;
+            display: none;
+            margin-top: 33px;
+            padding-top: 26px;
+        }
+
+        label.submit-message {
+            font-size: 27px;
+            margin-bottom: 28px;
+        }
+
+        .video-name {
+            margin-bottom: 0;
+        }
+
+        .video-id {
+            font-size: 19px;
+            margin-top: 0;
+        }
+
+        .bc-panel-edit-buttons {
+            float: right;
+        }
+
+        .bc-panel-buttons {
+            clear: both;
+            content: "";
+            display: block;
+            padding-top: 12px;
+        }
+
+        body input[type=submit] {
+            margin-top: 10px;
+        }
+
+        body div.text-tracks-start {
+            margin-left: 35px;
+            margin-top: 35px;
+            width: 759px;
+            margin-right: 0;
+        }
+
+        .submit-buttons-start {
+            margin-top: 19px;
+        }
+
+            .submit-buttons-start input#submitButton {
+                float: right;
+            }
+
+        .url-textbox > input[type=text] {
+            width: 98%;
+        }
+
+        .fileSelection {
+            float: left;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+            .fileSelection .remoteurl-textbox {
+                display: inline-block;
+                width: 100%;
+                margin-top: 11px;
+            }
+
+                .fileSelection .remoteurl-textbox input {
+                    width: 500px;
+                }
+
+        .fileAttributes {
+            float: left;
+            width: 100%;
+        }
+
+            .fileAttributes::after {
+                clear: both;
+                content: "";
+                display: block;
+            }
+
+            .fileAttributes .bc-form-cell {
+                float: left;
+                margin-right: 25px;
+            }
+
+            .fileAttributes input[type="text"] {
+                width: 100px;
+            }
+
+            .fileAttributes select {
+                width: 100px;
+            }
+
+        .radio-button-item {
+            float: left;
+            width: 109px;
+            margin-right: 30px;
+        }
+
+            .radio-button-item label {
+                margin-top: 3px;
+            }
+
+        .file-source-fields {
+            display: inline-block;
+            float: none;
+            width: 100%;
+        }
+
+
+        .bc-form-cell.default-checkbox::before {
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+        .bc-form-cell.default-checkbox {
+            float: left;
+            margin-top: 24px;
+            margin-left: 27px;
+        }
+
+
+            .bc-form-cell.default-checkbox label {
+                display: inline-block;
+                padding-top: 6.5px;
+            }
+
+
+            .bc-form-cell.default-checkbox div {
+                display: inline-block;
+                padding-right: 7px;
+                padding-top: 3px;
+                vertical-align: top;
+            }
+    </style>
+    <script src="/sitecore modules/Web/MediaFramework/js/Uploader/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="text-tracks-start">
+        <form id="textTracksFormPost" name="textTracksFormPost" method="post" enctype="multipart/form-data" novalidate="novalidate">
+            <div class="tracks-found"></div>
+        </form>
+
+        <form id="textTracksForm" name="textTracksForm">
+            <div class="no-tracks-found">
+                <div class="fileSelection">
+                    <fieldset>
+                        <div class="radio-buttons-start">
+                            <div class="radio-button-item">
+                                <input id="fileUpload" type="radio" value="File Upload" name="tracks" data-box="fileurlbox" checked>
+                                <label for="fileUpload">@Translate.Text("File Upload")</label>
+                            </div>
+                            <div class="radio-button-item">
+                                <input id="urlUpload" type="radio" value="URL Upload" name="tracks" data-box="urlbox">
+                                <label for="urlUpload">@Translate.Text("URL Upload")</label>
+                            </div>
+                            <div class="radio-button-item">
+                                <input id="remoteUrl" type="radio" value="Remote URL" name="tracks" data-box="remoteurlbox">
+                                <label for="remoteUrl">@Translate.Text("Remote URL")</label>
+                            </div>
+                        </div>
+                        <div id="fileurlbox" class="url-textbox">
+                            <input type="file" name="selectfile" id="selectfile" required />
+                        </div>
+
+                        <div id="urlbox" class="url-textbox" style="display: none;">
+                            <input id="urltextbox" name="urltextbox" type="text" required />
+                        </div>
+
+                        <div id="remoteurlbox" class="url-textbox" style="display: none;">
+                            <input id="remoteurltextbox" name="remoteurltextbox" type="text" required />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="fileAttributes">
+                    <div class="bc-form-cell">
+                        <fieldset>
+                            <label>@Translate.Text("Language")*</label>
+                            <div>
+                                <div class="bc-select">
+                                    <select id="language" name="language" required>
+                                        <option value=""></option>
+                                        @foreach (Sitecore.Data.Items.Item item in Sitecore.Context.ContentDatabase.GetItem("/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes").Children)
+                                        {
+                                            <option value="@item.Name">@item.DisplayName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="bc-form-cell">
+                        <fieldset>
+                            <label>@Translate.Text("Label")</label>
+                            <div>
+                                <div class="bc-select">
+                                    <input id="labeltextbox" name="labeltextbox" type="text" size="10" maxlength="255" value="" class="tt-hint" autocomplete="off" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="bc-form-cell">
+                        <fieldset>
+                            <label>@Translate.Text("Kind")</label>
+                            <div>
+                                <div class="bc-select">
+                                    <select id="kind" name="kind">
+                                        @foreach (Sitecore.Data.Items.Item item in Sitecore.Context.ContentDatabase.GetItem("/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds").Children)
+                                        {
+                                            <option value="@item.Name">@item.DisplayName</option>
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="bc-form-cell">
+                        <fieldset>
+                            <label>@Translate.Text("MIME Type")</label>
+                            <div>
+                                <div class="bc-select">
+                                    <input id="mimetypetextbox" name="mimetypetextbox" type="text" size="10" maxlength="10" value="text/vtt" class="tt-hint" autocomplete="off" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="bc-form-cell default-checkbox">
+                        <fieldset>
+                            <div>
+                                <input type="checkbox" name="defaultcheckbox" id="defaultcheckbox">
+                            </div>
+                            <label for="defaultcheckbox">@Translate.Text("default")</label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="bc-panel-buttons">
+                    <button class="btn btn-primary start bc-button-save" type="submit">@Translate.Text("Add")</button>
+                    <button class="btn btn-primary start bc-button-update" type="submit">@Translate.Text("Update")</button>
+                    <button class="btn btn-warning cancel bc-button-cancel" type="submit">@Translate.Text("Cancel")</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+
+        var $form1 = $('form#textTracksForm');
+        var $form2 = $('form#textTracksFormPost');
+
+        function clearFormFields() {
+            document.textTracksForm.labeltextbox.value = "";
+            document.textTracksForm.language.selectedIndex = 0;
+            document.textTracksForm.kind.selectedIndex = 0;
+            document.textTracksForm.mimetypetextbox.value = "text/vtt";
+            document.textTracksForm.defaultcheckbox.checked = false;
+            document.textTracksForm.selectfile.value = '';
+            $('.no-tracks-found').find('.radio-button-item input#fileUpload').prop('checked', true);
+            $('.no-tracks-found').find('.url-textbox').hide();
+            $('.no-tracks-found').find('.url-textbox input').val('');
+            $('.no-tracks-found').find('#fileurlbox').show();
+        }
+
+        function enableSubmitButton() {
+            if ($form2.find('table tr:not(:first)').length > 0) {
+                $form2.find('#submitButton').removeAttr("disabled");
+            }
+        }
+
+        function hideSubmitMessage() {
+            if ($form2.find('.error-message').length > 0) {
+                $form2.find('.error-message').remove();
+            }
+            if ($form2.find('.success-message').length > 0) {
+                $form2.find('.success-message').remove();
+            }
+        }
+
+        function showErrorMessage() {
+            hideSubmitMessage();
+            $form2.prepend("<label class='error-message'>" + "Error occured while submitting text tracks." + "</label>");
+        }
+
+        function showSuccessMessage() {
+            hideSubmitMessage();
+            $form2.prepend("<label class='success-message'>" + "Text tracks information has been successfully saved." + "</label>");
+        }
+
+        function showTextTracks($element1, func1, $element2, func2) {
+            func1($element1);
+            func2($element2);
+            $form1.valid();
+        }
+
+        function setDefaultOnCurrentRow($tableElement, $index) {
+            var $rows = $tableElement.find('tr:not(:first)');
+            if (document.textTracksForm.defaultcheckbox.checked) {
+                $tableElement.find('.is-default').val('false');
+                $rows.removeClass("default-row");
+                $rows.eq($index).addClass("default-row");
+                $rows.eq($index).find('.is-default').val(document.textTracksForm.defaultcheckbox.checked);
+            } else {
+                $rows.removeClass("default-row");
+                $rows.eq($index).find('.is-default').val(document.textTracksForm.defaultcheckbox.checked);
+            }
+
+
+        }
+
+        function showTable() {
+            if ($form2.find('table tr:not(:first)').length > 0) {
+                $form2.find('table').show();
+            }
+        }
+
+        function show(e) { e.show(); }
+
+        function hide(e) { e.hide(); }
+
+        function validateForm() {
+            $form1.validate({
+                rules: {
+                    remoteurltextbox: {
+                        required: true,
+                        url: true
+                    },
+                    urltextbox: {
+                        required: true,
+                        url: true
+                    }
+                }
+            });
+        }
+
+        function applydisableEnableOnButtons(disableButtons) {
+            if (disableButtons) {
+                $form2.find('.enbl-dsbl').attr("disabled", "");
+            } else {
+                $form2.find('.enbl-dsbl').removeAttr("disabled");
+            }
+        }
+
+        $(document).ready(function () {
+            var serviceUrl = "@serviceUrl";
+            var rowIndex = -1;
+
+            $form2.submit(function () {
+                var formData = new FormData($(this)[0]);
+                if ($form2.find('table tr:not(:first)').length > 0) {
+                    $.ajax({
+                        url: "@serviceUrl",
+                        type: 'POST',
+                        data: formData,
+                        cache: false,
+                        processData: false,
+                        contentType: false,
+                        beforeSend: function () {
+                            console.log(formData);
+                            applydisableEnableOnButtons(true);
+                            $('.submitbtnloading').fadeIn().css("display", "inline-block");
+                        },
+                        success: function (data) {
+                            $('form#textTracksFormPost .tracks-found').html(data);
+                            showSuccessMessage();
+                        },
+                        error: function (data) {
+                            console.log("error" + data.message);
+                            showErrorMessage();
+                        },
+                        complete: function () {
+                            $('.submitbtnloading').fadeOut();
+                            $('.edit-button').fadeIn().css("display", "inline-block");
+                            applydisableEnableOnButtons(false);
+                        }
+                    });
+                }
+
+                return false;
+            });
+
+            $form2.on('click', '#addTrackButton', function () {
+                showTextTracks($('.video-entry-start'), hide, $('.no-tracks-found'), show);
+                $form1.find('.bc-panel-buttons .bc-button-save').show();
+                $form1.find('.bc-panel-buttons .bc-button-update').hide();
+                return false;
+            });
+
+            $form1.submit(function () {
+                return false;
+            });
+
+            $form2.on('change', '#deletetrack', function () {
+                $(this).next('.is-delete').val($(this).prop("checked"));
+                enableSubmitButton();
+            });
+
+            $form1.on('change', '.radio-button-item input', function () {
+                var $this = $(this);
+                var databoxId = $this.data("box");
+                $form1.find('.url-textbox').hide();
+                if ($this.prop('checked')) {
+                    $form1.find('#' + databoxId).show();
+                    $form1.valid();
+                }
+            });
+
+            $.get(serviceUrl, function (data) {
+                if ($(data).find('#tracksfound').val() == "true") {
+                    $('body .text-tracks-start form#textTracksFormPost .tracks-found').html(data);
+                    validateForm();
+                    $form1.valid();
+                }
+                else {
+                    $('body .text-tracks-start form#textTracksFormPost .tracks-found').html(data);
+                    validateForm();
+                    $form1.valid();
+                }
+            });
+
+            $('.bc-button-save').click(function () {
+                if ($form1.valid()) {
+                    var rowsCount = $('#textTracksFormPost table tr:not(:first)').length;
+                    var htmlAppend = "<tr>";
+
+                    htmlAppend += ("<td class='td-label'>" + "<label title=" + document.textTracksForm.labeltextbox.value + ">" + document.textTracksForm.labeltextbox.value + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].Label'  value='" + document.textTracksForm.labeltextbox.value + "' " + "/>" + "</td>");
+                    htmlAppend += ("<td class='td-lang'>" + "<label title=" + document.textTracksForm.language.value + ">" + document.textTracksForm.language.value + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].SrcLang' value='" + document.textTracksForm.language.value + "'  />" + "</td>");
+                    htmlAppend += ("<td class='td-kind'>" + "<label title=" + document.textTracksForm.kind.value + ">" + document.textTracksForm.kind.value + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].Kind' value='" + document.textTracksForm.kind.value + "'  />" + "</td>");
+                    var urlTextBox = $form1.find('.url-textbox:visible');
+                    if (urlTextBox.length == 1) {
+                        if (urlTextBox.attr('id') == "urlbox") {
+                            htmlAppend += ("<td class='td-src'>" + "<label title=" + urlTextBox.find('input').val() + ">" + urlTextBox.find('input').val() + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].Src' value='" + urlTextBox.find('input').val() + "'  />" + "<input class='is-upload' name='videoTextTracks.Tracks[" + rowsCount + "].IsUpload' type='hidden' value='true' />" + "</td>");
+                        }
+                        else if (urlTextBox.attr('id') == "fileurlbox") {
+                            htmlAppend += ("<td id='tdsrc" + rowsCount + "'  class='td-src'>" + "<label title=" + urlTextBox.find('input#selectfile')[0].files[0].name + ">" + urlTextBox.find('input#selectfile')[0].files[0].name + "</label>" + "<input class='is-upload' name='videoTextTracks.Tracks[" + rowsCount + "].IsUpload' type='hidden' value='true' />" + "</td>");
+                        }
+                        else {
+                            htmlAppend += ("<td class='td-src'>" + "<label title=" + urlTextBox.find('input').val() + ">" + urlTextBox.find('input').val() + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].Src' value='" + urlTextBox.find('input').val() + "'  />" + "<input class='is-upload' name='videoTextTracks.Tracks[" + rowsCount + "].IsUpload' type='hidden' value='false' />" + "</td>");
+                        }
+                    }
+                    htmlAppend += ("<td class='td-mimetype'>" + "<label title=" + document.textTracksForm.mimetypetextbox.value + ">" + document.textTracksForm.mimetypetextbox.value + "</label>" + "<input style='display:none;' type='text' name='videoTextTracks.Tracks[" + rowsCount + "].MimeType' value='" + document.textTracksForm.mimetypetextbox.value + "'  />" + "</td>");
+                    htmlAppend += ("<td class='td-delete'><input id='deletetrack' class='enbl-dsbl' name='deletecheckbox[" + rowsCount + "]' type='checkbox' /><input class='is-delete' name='videoTextTracks.Tracks[" + rowsCount + "].IsDelete' type='hidden' value='false' /><input class='is-default' name='videoTextTracks.Tracks[" + rowsCount + "].Default' type='hidden' value=" + document.textTracksForm.defaultcheckbox.checked + " /></td>");
+                    htmlAppend += ("<td class='td-edit'><button id='edittrack' class='edittrack btn btn-success fileinput-button enbl-dsbl ' type='button'>Edit</button></td></tr>");
+                    $form2.find('.tracks-found table tbody').append(htmlAppend);
+
+                    if ($('#tdsrc' + rowsCount).length > 0) {
+                        var real = urlTextBox.find('#selectfile');
+                        var cloned = real.clone(true);
+                        cloned.insertAfter(real);
+                        real.attr("name", "videoTextTracks.Tracks[" + rowsCount + "].File");
+                        real.appendTo('#tdsrc' + rowsCount);
+                    }
+                    if (document.textTracksForm.defaultcheckbox.checked) {
+                        setDefaultOnCurrentRow($('.tracks-found table'), rowsCount);
+                    }
+
+                    clearFormFields();
+                    showTextTracks($('.video-entry-start'), show, $('.no-tracks-found'), hide);
+                    enableSubmitButton();
+                    showTable();
+                }
+
+                return false;
+            });
+
+            $('.bc-button-cancel').click(function () {
+                clearFormFields();
+                showTextTracks($('.video-entry-start'), show, $('.no-tracks-found'), hide);
+                rowIndex = -1;
+                $form1.valid();
+                enableSubmitButton();
+                return false;
+            });
+
+            $('.tracks-found').on('click', '.edittrack', function () {
+                var $this = $(this).closest('tr');
+                rowIndex = $('.tracks-found').find('table tr:not(:first)').index($(this).closest('tr'));
+                var editTracksElement = $('.no-tracks-found');
+                if (editTracksElement.length > 0 && rowIndex != -1) {
+                    editTracksElement.find('.radio-button-item input').prop('checked', false);
+                    editTracksElement.find('.url-textbox').hide();
+
+                    if ($this.find('.is-upload').val() == "true") {
+                        if ($this.find('.td-src input#selectfile').length == 1) {
+                            editTracksElement.find('.radio-button-item input#fileUpload').prop('checked', true);
+                            editTracksElement.find('#fileurlbox').show();
+                            var real = $this.find('.td-src input#selectfile');
+                            var cloned = real.clone(true);
+                            cloned.insertAfter(real);
+                            editTracksElement.find('#fileurlbox').empty();
+                            real.appendTo('#fileurlbox');
+
+                        } else {
+                            editTracksElement.find('.radio-button-item input#urlUpload').prop('checked', true);
+                            editTracksElement.find('#urlbox').show();
+                            editTracksElement.find('#urlbox input[type=text]').val($.trim($this.find('.td-src label').text()));
+                        }
+                    } else {
+                        editTracksElement.find('.radio-button-item input#remoteUrl').prop('checked', true);
+                        editTracksElement.find('#remoteurlbox').show();
+                        editTracksElement.find('#remoteurlbox input[type=text]').val($.trim($this.find('.td-src label').text()));
+                    }
+
+                    document.textTracksForm.labeltextbox.value = $.trim($this.find('.td-label label').text());
+                    document.textTracksForm.language.value = $.trim($this.find('.td-lang label').text());
+                    document.textTracksForm.kind.value = $.trim($this.find('.td-kind label').text());
+                    document.textTracksForm.mimetypetextbox.value = $.trim($this.find('.td-mimetype label').text());
+                    document.textTracksForm.defaultcheckbox.checked = $this.find('.is-default').val() == "false" ? false : true;
+                    $form1.find('.bc-panel-buttons .bc-button-save').hide();
+                    $form1.find('.bc-panel-buttons .bc-button-update').show();
+                    $form1.valid();
+                    showTextTracks($('.video-entry-start'), hide, $('.no-tracks-found'), show);
+                    showTable();
+                }
+            });
+
+            $('.bc-button-update').click(function () {
+                if ($form1.valid()) {
+                    var tableRowEdit = $('.tracks-found').find('table tr:not(:first)').eq(rowIndex);
+                    if (tableRowEdit.find('.td-label').length == 1) {
+                        tableRowEdit.find('.td-label label').text(document.textTracksForm.labeltextbox.value);
+                        tableRowEdit.find('.td-label label').attr("title", document.textTracksForm.labeltextbox.value);
+                        tableRowEdit.find('.td-label input[type=text]').val(document.textTracksForm.labeltextbox.value);
+                    }
+                    if (tableRowEdit.find('.td-lang').length == 1) {
+                        tableRowEdit.find('.td-lang label').text(document.textTracksForm.language.value);
+                        tableRowEdit.find('.td-lang label').attr("title", document.textTracksForm.language.value);
+                        tableRowEdit.find('.td-lang input[type=text]').val(document.textTracksForm.language.value);
+                    }
+                    if (tableRowEdit.find('.td-kind').length == 1) {
+                        tableRowEdit.find('.td-kind label').text(document.textTracksForm.kind.value);
+                        tableRowEdit.find('.td-kind label').attr("title", document.textTracksForm.kind.value);
+                        tableRowEdit.find('.td-kind input[type=text]').val(document.textTracksForm.kind.value);
+                    }
+                    if (tableRowEdit.find('.td-src').length == 1) {
+                        var urlTextBox = $form1.find('.url-textbox:visible');
+                        if (urlTextBox != undefined && urlTextBox.attr('id') == "fileurlbox") {
+                            tableRowEdit.find('.td-src label').text(urlTextBox.find('input#selectfile')[0].files[0].name);
+                            tableRowEdit.find('.td-src label').attr("title", urlTextBox.find('input#selectfile')[0].files[0].name);
+                            tableRowEdit.find('.td-src input[type=file]').remove();
+                            var real = urlTextBox.find('input#selectfile');
+                            var cloned = real.clone(true);
+                            cloned.insertAfter(real);
+                            real.attr("name", "videoTextTracks.Tracks[" + rowIndex + "].File");
+                            tableRowEdit.find('.td-src').append(real);
+                        }
+                        else if (urlTextBox != undefined && urlTextBox.attr('id') == "urlbox") {
+                            tableRowEdit.find('.td-src label').text(document.textTracksForm.urltextbox.value);
+                            tableRowEdit.find('.td-src label').attr("title", document.textTracksForm.urltextbox.value);
+                            tableRowEdit.find('.td-src input[type=text]').val(document.textTracksForm.urltextbox.value);
+                        }
+                        else {
+                            tableRowEdit.find('.td-src label').text(document.textTracksForm.remoteurltextbox.value);
+                            tableRowEdit.find('.td-src label').attr("title", document.textTracksForm.remoteurltextbox.value);
+                            tableRowEdit.find('.td-src input[type=text]').val(document.textTracksForm.remoteurltextbox.value);
+                        }
+                    }
+                    if (tableRowEdit.find('.td-mimetype').length == 1) {
+                        tableRowEdit.find('.td-mimetype label').text(document.textTracksForm.mimetypetextbox.value);
+                        tableRowEdit.find('.td-mimetype label').attr("title", document.textTracksForm.mimetypetextbox.value);
+                        tableRowEdit.find('.td-mimetype input[type=text]').val(document.textTracksForm.mimetypetextbox.value);
+                    }
+                    if (tableRowEdit.find('.is-default').length == 1) {
+                        setDefaultOnCurrentRow($('.tracks-found table'), rowIndex);
+                    }
+
+                    $form1.find('.bc-panel-buttons .bc-button-save').show();
+                    $form1.find('.bc-panel-buttons .bc-button-update').hide();
+                    rowIndex = -1;
+                    clearFormFields();
+                    showTextTracks($('.video-entry-start'), show, $('.no-tracks-found'), hide);
+                    enableSubmitButton();
+                    showTable();
+                }
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

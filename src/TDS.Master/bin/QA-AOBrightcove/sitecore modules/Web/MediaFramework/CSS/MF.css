@@ -1,0 +1,24 @@
+﻿.mf-player-container {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    z-index: 0;
+}
+
+.mf-default-view
+{
+    
+    margin: 0 auto;
+    border: none;
+    display: block;
+    background: black;
+    color: azure;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 110px;
+    font-weight: bolder;
+    font-size: small;
+}

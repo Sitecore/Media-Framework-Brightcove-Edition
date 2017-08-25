@@ -1,0 +1,113 @@
+﻿@using AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels
+@using Sitecore
+@model VideoCustomFields
+
+@{
+    var index = -1;
+}
+<html>
+<head>
+    <title>Manage Video Custom Fields</title>
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap.min.css">
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-ie6.min.css">
+    <link rel="stylesheet" href="/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-responsive.min.css">
+    <style>
+        body {
+            background: white;
+        }
+
+        label.error {
+            color: red;
+        }
+
+        body input[type=submit] {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        body div.field-section {
+            margin-left: 10px;
+        }
+
+        body input[type=text] {
+            height: 33px;
+        }
+    </style>
+    <script src="/sitecore modules/Web/MediaFramework/js/Uploader/jquery.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>@Model.Video.Name</h1>
+    <h2>@Model.Video.Id</h2>
+    @if (@Model.Fields != null && @Model.Fields.Count > 0)
+    {
+        using (Html.BeginForm())
+        {
+            foreach (var item in @Model.Fields)
+            {
+                index++;
+                if (item != null)
+                {
+                    if (item.Type.Equals("string", StringComparison.OrdinalIgnoreCase))
+                    {
+                        <div class="field-section">
+                            @Html.HiddenFor(m => m.Fields[index].Id)
+                            <span class="field-label">@Html.LabelFor(m => m.Fields[index].Id, item.DisplayName)</span>
+                            <span class="field-value type-string">
+                                @(item.Required ? Html.TextBoxFor(m => m.Fields[index].Value, new { required = "required" }) : Html.TextBoxFor(m => m.Fields[index].Value))
+                            </span>
+                        </div>
+                    }
+                    else if (item.Type.Equals("enum", StringComparison.OrdinalIgnoreCase) && item.EnumValues != null && item.EnumValues.Count > 0)
+                    {
+                        <div class="field-section">
+                            @Html.HiddenFor(m => m.Fields[index].Id)
+                            <span class="field-label">@Html.LabelFor(m => m.Fields[index].Id, item.DisplayName)</span>
+                            <span class="field-value type-enums">
+                                @(item.Required ? Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value), new { required = "required" }) : Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value)))
+                            </span>
+                        </div>
+                    }
+                }
+            }
+
+            <input type="submit" value="Submit" id="submitButton" class="btn btn-primary start" />
+        }
+    }
+    else if (@Model.Video.CustomFields != null && @Model.Video.CustomFields.Count > 0)
+    {
+        foreach (var customField in @Model.Video.CustomFields)
+        {
+            <div>
+                <span class="field-key">@customField.Key</span>
+                <span class="field-value">@customField.Value</span>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="no-fields">There are no custom fields.</div>
+    }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $form = $('form');
+            var serviceUrl = $form.attr("action");
+
+            $form.submit(function () {
+                return false;
+            });
+
+            $('#submitButton').click(function () {
+                var formData = $form.serialize();
+                if ($form.valid()) {
+                    $.post(serviceUrl, formData, function (data) {
+                        $('body').html(data);
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@using AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels
+@using Sitecore
+@model VideoCustomFields
+
+@{
+    var index = -1;
+}
+
+<h1 class="video-name">@Model.Video.Name</h1>
+<h2 class="video-id">@Model.Video.Id</h2>
+@if (@Model.Fields != null && @Model.Fields.Count > 0)
+{
+    foreach (var item in @Model.Fields)
+    {
+        index++;
+        if (item != null)
+        {
+            if (item.Type.Equals("string", StringComparison.OrdinalIgnoreCase))
+            {
+                <div class="field-section">
+                    @Html.HiddenFor(m => m.Fields[index].Id)
+                    <span class="field-label">@Html.LabelFor(m => m.Fields[index].Id, item.DisplayName)</span>
+                    <span class="field-value type-string">
+                        @(item.Required ? Html.TextBoxFor(m => m.Fields[index].Value, new { required = "required" }) : Html.TextBoxFor(m => m.Fields[index].Value))
+                    </span>
+                </div>
+            }
+            else if (item.Type.Equals("enum", StringComparison.OrdinalIgnoreCase) && item.EnumValues != null && item.EnumValues.Count > 0)
+            {
+                <div class="field-section">
+                    @Html.HiddenFor(m => m.Fields[index].Id)
+                    <span class="field-label">@Html.LabelFor(m => m.Fields[index].Id, item.DisplayName)</span>
+                    <span class="field-value type-enums">
+                        @(item.Required ? Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value), new { required = "required" }) : Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value)))
+                    </span>
+                </div>
+            }
+        }
+    }
+
+    <input type="submit" value="Submit" id="submitButton" class="btn btn-primary start" />
+}
+else if (@Model.Video.CustomFields != null && @Model.Video.CustomFields.Count > 0)
+{
+    <label class="submit-message">Thank you for submitting custom fields entries</label>
+    <div class="customFields">
+        @foreach (var customField in @Model.Video.CustomFields)
+        {
+            <div>
+                <span class="field-key">@customField.Key</span>
+                <span class="field-value">@customField.Value</span>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="no-fields">There are no custom fields.</div>
+}

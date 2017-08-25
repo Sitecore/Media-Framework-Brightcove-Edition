@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {04704D09-7690-4103-A000-CB6063F0339F}
+database: core
+path: /sitecore/content/Applications/Media/MediaFramework/Brightcove
+parent: {3DBD71EE-1C27-4ADE-82A9-43079EC9C00C}
+name: Brightcove
+master: {73C2385C-9A34-4125-9419-F64376B34A62}
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
+
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 78
+
+{1F0770EA-8B77-4110-91AA-CC00DEE102DD}|{73C2385C-9A34-4125-9419-F64376B34A62}|
+----version----
+language: en
+version: 1
+revision: 51b13a6e-ff29-4df6-a921-9d34f4611c19
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160516T143837Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+51b13a6e-ff29-4df6-a921-9d34f4611c19
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160517T131529Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

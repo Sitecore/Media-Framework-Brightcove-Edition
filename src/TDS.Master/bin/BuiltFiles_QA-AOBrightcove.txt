@@ -1,0 +1,112 @@
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\Sitecore.ContentSearch.MediaFramework.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\Sitecore.RestSharp.Brightcove.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\layouts\MediaFramework\Brightcove\VideoCustomFields.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\layouts\MediaFramework\Brightcove\VideoTextTracks.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\ExperienceAnalytics\Sitecore.ExperienceAnalytics.WebAPI.MediaFramework.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\Sitecore.MediaFramework.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\App_Config\Include\Sitecore.Mvc.MediaFramework.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\layouts\MediaFramework\Sublayouts\EmbedMediaPlayer.ascx
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\layouts\MediaFramework\Sublayouts\Player.aspx
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\layouts\MediaFramework\Upload.aspx
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\Analytics\PlayerEventsRecorder.asmx
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\ajax-loader.gif
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\MF.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\Uploader\bootstrap-ie6.min.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\Uploader\bootstrap-responsive.min.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\Uploader\bootstrap.min.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\Uploader\jquery.fileupload-ui.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\CSS\Uploader\mfUploader.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Analytics\brightcove.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Analytics\PlayerEventsListener.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\blank.gif
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancybox-x.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancybox-y.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancybox.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_close.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_loading.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_nav_left.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_nav_right.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_e.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_n.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_ne.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_nw.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_s.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_se.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_sw.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_shadow_w.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_title_left.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_title_main.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_title_over.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\fancy_title_right.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\jquery.fancybox-1.3.4.css
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\jquery.fancybox-1.3.4.pack.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\fancybox\jquery.mousewheel-3.0.4.pack.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\jquery-ui-1.10.3.custom.draggable.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\mediaframework.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\bootstrap.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\canvas-to-blob.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.blueimp-gallery.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-angular.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-audio.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-image.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-jquery-ui.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-process.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-ui.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-validate.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload-video.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.fileupload.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.iframe-transport.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\jquery.ui.widget.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\load-image.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\main.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\MFUpload.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\tmpl.min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\js\Uploader\underscore-min.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\client\Applications\ExperienceAnalytics\Common\Layouts\Renderings\MediaFramework\ExperienceAnalyticsListControl.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Controls\Rich Text Editor\EmbedLink\EmbedLink.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Controls\Rich Text Editor\EmbedLink\EmbedLink.xml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Controls\Rich Text Editor\EmbedMedia\EmbedMedia.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Controls\Rich Text Editor\EmbedMedia\EmbedMedia.xml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Controls\Rich Text Editor\MF RichText Commands.js
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\Images\MediaFramework\Common\gal.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\Images\MediaFramework\Common\loading.gif
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\Images\MediaFramework\Common\Player.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\Images\MediaFramework\Common\stop.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\Images\MediaFramework\Common\stop_sign.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\MediaFramework\Brightcove\128x128\logo.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\MediaFramework\Brightcove\16x16\logo.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\MediaFramework\Brightcove\24x24\logo.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\MediaFramework\Brightcove\32x32\logo.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Themes\Standard\MediaFramework\Brightcove\48x48\logo.png
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\Views\web.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Applications\Analytics\Reports\MediaFramework\MostCompletedVideos.mrt
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Applications\Analytics\Reports\MediaFramework\MostPopularVideosStartedButNotCompleted.mrt
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\Applications\Analytics\Reports\MediaFramework\MostStartedVideos.mrt
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore\shell\client\Applications\ExperienceAnalytics\Common\Layouts\Renderings\MediaFramework\ExperienceAnalyticsListControl.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\MVC\Views\EmbedMedia.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\MVC\Views\Web.config
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\Upload\MediaUpload.ashx
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\MVC\Views\Brightcove\VideoCustomFields.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\sitecore modules\Web\MediaFramework\MVC\Views\Brightcove\VideoTextTracks.cshtml
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\AgencyOasis.MediaFramework.Brightcove.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\AgencyOasis.MediaFramework.Brightcove.pdb
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Analytics.Core.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Analytics.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Analytics.Model.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.ContentSearch.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.ContentSearch.Linq.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Integration.Common.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Kernel.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.MediaFramework.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.MediaFramework.Migration.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.MediaFramework.Mvc.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Mvc.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.RestSharp.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Sitecore.Services.Infrastructure.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\System.Web.WebPages.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Web.dll
+D:\Projects\AgencyOasis\Brightcove\2.2.1\TDS.Master\bin\QA-AOBrightcove\bin\Web.pdb
