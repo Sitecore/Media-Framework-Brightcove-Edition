@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove.Entities;
 using Sitecore.MediaFramework.Synchronize;
-using Video = AgencyOasis.MediaFramework.Brightcove.Entities.Video;
+using Video = Brightcove.MediaFramework.Brightcove.Entities.Video;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize.EntityCreators
+namespace Brightcove.MediaFramework.Brightcove.Synchronize.EntityCreators
 {
     public class VideoEntityCreator : IMediaServiceEntityCreator
     {

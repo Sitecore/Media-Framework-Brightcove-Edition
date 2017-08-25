@@ -1,8 +1,8 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.MediaFramework.Cleanup;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Cleanup
+namespace Brightcove.MediaFramework.Brightcove.Cleanup
 {
   public class PlaylistCleanupExecuter : CleanupExecuterBase<PlayList, PlaylistSearchResult>
   {

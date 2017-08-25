@@ -1,5 +1,5 @@
 ﻿
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public class StorageServiceConfigBase
     {

@@ -1,13 +1,13 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework;
 using Sitecore.MediaFramework.Export;
 using Sitecore.MediaFramework.Synchronize;
-using FieldIDs = AgencyOasis.MediaFramework.Brightcove.FieldIDs;
+using FieldIDs = Brightcove.MediaFramework.Brightcove.FieldIDs;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Export
+namespace Brightcove.MediaFramework.Brightcove.Export
 {
     /// <summary>
     /// Video Exporter

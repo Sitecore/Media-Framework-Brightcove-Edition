@@ -1,7 +1,7 @@
 ﻿////using Sitecore.Data;
 ////using Sitecore.Data.Items;
 
-////namespace AgencyOasis.MediaFramework.Brightcove.Upload.MediaItem
+////namespace Brightcove.MediaFramework.Brightcove.Upload.MediaItem
 ////{
 ////    public class VideoUploadServiceConfig : VideoUploadServiceConfigBase
 ////    {

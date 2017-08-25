@@ -1,6 +1,6 @@
 ﻿using Sitecore.MediaFramework;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Analytics
+namespace Brightcove.MediaFramework.Brightcove.Analytics
 {
   public class PlaylistEventTrigger : EventTrigger
   {

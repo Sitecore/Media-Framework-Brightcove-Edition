@@ -1,9 +1,9 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Upload;
+﻿using Brightcove.MediaFramework.Brightcove.Upload;
 using Sitecore.MediaFramework.Diagnostics;
 using System.Web.Mvc;
-using AgencyOasis.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Configuration;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Controllers
+namespace Brightcove.MediaFramework.Brightcove.Controllers
 {
     public class FilesController : Controller
     {

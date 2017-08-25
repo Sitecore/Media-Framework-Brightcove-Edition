@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using Sitecore.Data;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Extensions
+namespace Brightcove.MediaFramework.Brightcove.Extensions
 {
     public static class IDExtensions
     {

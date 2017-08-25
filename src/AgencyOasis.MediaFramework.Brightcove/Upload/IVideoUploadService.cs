@@ -1,8 +1,8 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
 using Sitecore.Syndication;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public interface IVideoUploadService
     {

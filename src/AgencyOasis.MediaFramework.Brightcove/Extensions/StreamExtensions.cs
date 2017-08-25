@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Extensions
+namespace Brightcove.MediaFramework.Brightcove.Extensions
 {
     public static class StreamExtensions
     {

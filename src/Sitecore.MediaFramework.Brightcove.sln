@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgencyOasis.MediaFramework.Brightcove", "AgencyOasis.MediaFramework.Brightcove\AgencyOasis.MediaFramework.Brightcove.csproj", "{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brightcove.MediaFramework.Brightcove", "AgencyOasis.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj", "{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6C4132F-37F9-4719-8A65-A33A095C4191}"
 EndProject

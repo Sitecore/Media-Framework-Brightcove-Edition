@@ -1,4 +1,4 @@
-﻿namespace AgencyOasis.MediaFramework.Brightcove.Serialization
+﻿namespace Brightcove.MediaFramework.Brightcove.Serialization
 {
     public class JsonNetSerializer : Sitecore.RestSharp.Serialization.JsonNetSerializer
     {

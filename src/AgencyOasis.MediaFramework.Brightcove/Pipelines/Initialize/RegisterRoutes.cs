@@ -1,11 +1,11 @@
 ﻿using System.Web.Http;
 using System.Web.Routing;
-using AgencyOasis.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Configuration;
 using Sitecore.Diagnostics;
 using Sitecore.Pipelines;
 using MVCRouteCollectionExtensions = System.Web.Mvc.RouteCollectionExtensions;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.Initialize
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.Initialize
 {
     public class RegisterRoutes
     {

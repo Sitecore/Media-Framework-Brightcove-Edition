@@ -1,5 +1,5 @@
 ﻿
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.VideoUpload
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload
 {
     public abstract class VideoUploadProcessor
     {

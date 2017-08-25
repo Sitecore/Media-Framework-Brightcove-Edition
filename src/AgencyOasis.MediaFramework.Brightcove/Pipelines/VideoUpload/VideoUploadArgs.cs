@@ -1,8 +1,8 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Upload;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Upload;
 using Sitecore.Pipelines;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.VideoUpload
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload
 {
     public class VideoUploadArgs : PipelineArgs
     {

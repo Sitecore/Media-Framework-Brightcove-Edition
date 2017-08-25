@@ -1,6 +1,6 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
 using Newtonsoft.Json;
 using RestSharp;
 using Sitecore.Data.Items;
@@ -8,7 +8,7 @@ using Sitecore.MediaFramework.Diagnostics;
 using Sitecore.Mvc.Extensions;
 using System;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public abstract class VideoUploadExecutorBase
     {

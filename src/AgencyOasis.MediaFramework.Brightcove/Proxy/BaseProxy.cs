@@ -1,11 +1,11 @@
 ﻿using System;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
+using Brightcove.MediaFramework.Brightcove.Extensions;
 using RestSharp;
 using Sitecore.Configuration;
 using Sitecore.RestSharp;
 using Sitecore.Web.UI.HtmlControls;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Proxy
+namespace Brightcove.MediaFramework.Brightcove.Proxy
 {
     public abstract class BaseProxy
     {

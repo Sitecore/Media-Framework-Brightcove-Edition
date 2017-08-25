@@ -1,21 +1,21 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using AgencyOasis.MediaFramework.Brightcove.Configuration;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
-using AgencyOasis.MediaFramework.Brightcove.Upload;
-using AgencyOasis.MediaFramework.Brightcove.Upload.MediaItem;
+using Brightcove.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities.ViewModels;
+using Brightcove.MediaFramework.Brightcove.Extensions;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
+using Brightcove.MediaFramework.Brightcove.Upload;
+using Brightcove.MediaFramework.Brightcove.Upload.MediaItem;
 using Sitecore.Data;
 using System.Linq;
 using System.Web.Mvc;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Diagnostics;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Controllers
+namespace Brightcove.MediaFramework.Brightcove.Controllers
 {
     public class VideoTextTracksController : Controller
     {

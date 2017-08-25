@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.MediaFramework.Brightcove.Entities;
 using Sitecore.MediaFramework.Synchronize;
-using PlayList = AgencyOasis.MediaFramework.Brightcove.Entities.PlayList;
-using PlaylistType = AgencyOasis.MediaFramework.Brightcove.Entities.PlaylistType;
+using PlayList = Brightcove.MediaFramework.Brightcove.Entities.PlayList;
+using PlaylistType = Brightcove.MediaFramework.Brightcove.Entities.PlaylistType;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize.EntityCreators
+namespace Brightcove.MediaFramework.Brightcove.Synchronize.EntityCreators
 {
   public class PlayListEntityCreator : IMediaServiceEntityCreator
   {

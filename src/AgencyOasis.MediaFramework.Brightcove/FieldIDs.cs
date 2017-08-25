@@ -1,6 +1,6 @@
 ﻿using Sitecore.Data;
 
-namespace AgencyOasis.MediaFramework.Brightcove
+namespace Brightcove.MediaFramework.Brightcove
 {
     public static class FieldIDs
     {

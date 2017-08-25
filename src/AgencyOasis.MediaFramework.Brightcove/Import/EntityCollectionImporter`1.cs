@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Web;
-using AgencyOasis.MediaFramework.Brightcove.Configuration;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+using Brightcove.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Security;
 using RestSharp;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Diagnostics;
 using Sitecore.MediaFramework.Import;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Import
+namespace Brightcove.MediaFramework.Brightcove.Import
 {
     public abstract class EntityCollectionImporter<TEntity> : IImportExecuter
     {

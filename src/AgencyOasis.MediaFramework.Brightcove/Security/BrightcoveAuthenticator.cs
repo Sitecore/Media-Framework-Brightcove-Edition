@@ -1,10 +1,10 @@
 ﻿using System.Globalization;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.Security;
+using Brightcove.MediaFramework.Brightcove.Extensions;
+using Brightcove.MediaFramework.Brightcove.Proxy.Security;
 using RestSharp;
 using Sitecore.Data.Items;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Security
+namespace Brightcove.MediaFramework.Brightcove.Security
 {
     public class BrightcoveAuthenticator : IAuthenticator
     {

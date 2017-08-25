@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels
+namespace Brightcove.MediaFramework.Brightcove.Entities.ViewModels
 {
     public class TextTrackInfo : VideoTextTrack
     {

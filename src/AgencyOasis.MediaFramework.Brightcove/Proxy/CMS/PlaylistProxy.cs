@@ -1,7 +1,7 @@
 ﻿using RestSharp;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Proxy.CMS
+namespace Brightcove.MediaFramework.Brightcove.Proxy.CMS
 {
     public class PlaylistProxy : BaseProxy
     {

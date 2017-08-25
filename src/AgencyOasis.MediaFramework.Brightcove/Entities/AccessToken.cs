@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities
+namespace Brightcove.MediaFramework.Brightcove.Entities
 {
     public class AccessToken
   {

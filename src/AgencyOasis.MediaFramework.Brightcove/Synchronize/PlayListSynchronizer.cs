@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Linq.Expressions;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.MediaFramework.Brightcove.Synchronize;
 using Sitecore.MediaFramework.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
+namespace Brightcove.MediaFramework.Brightcove.Synchronize
 {
     /// <summary>
     /// Play List Synchronizer

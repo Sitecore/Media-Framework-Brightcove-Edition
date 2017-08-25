@@ -1,4 +1,4 @@
-﻿namespace AgencyOasis.MediaFramework.Brightcove
+﻿namespace Brightcove.MediaFramework.Brightcove
 {
     public static class Constants
     {

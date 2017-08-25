@@ -1,5 +1,5 @@
 ﻿
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.HandleCallback
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.HandleCallback
 {
     public abstract class HandleCallbackProcessor
     {

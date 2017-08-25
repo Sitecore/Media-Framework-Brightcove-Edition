@@ -1,9 +1,9 @@
 ﻿
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
-using AgencyOasis.MediaFramework.Brightcove.Pipelines.VideoUpload;
-using AgencyOasis.MediaFramework.Brightcove.Upload;
+using Brightcove.MediaFramework.Brightcove.Extensions;
+using Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload;
+using Brightcove.MediaFramework.Brightcove.Upload;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.HandleCallback
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.HandleCallback
 {
     public class CheckVideoUpload : HandleCallbackProcessor
     {

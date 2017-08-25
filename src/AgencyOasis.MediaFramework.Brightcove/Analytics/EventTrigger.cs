@@ -4,7 +4,7 @@ using Sitecore.Analytics.Tracking;
 using Sitecore.Configuration;
 using Sitecore.SecurityModel.License;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Analytics
+namespace Brightcove.MediaFramework.Brightcove.Analytics
 {
     public abstract class EventTrigger : Sitecore.MediaFramework.Analytics.EventTrigger
     {

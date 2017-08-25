@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Sitecore.SecurityModel.License;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Configuration
+namespace Brightcove.MediaFramework.Brightcove.Configuration
 {
     public static class Settings
     {

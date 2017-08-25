@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Web;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.MediaFramework.Entities;
-using VideoSearchResult = AgencyOasis.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
+using VideoSearchResult = Brightcove.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
+namespace Brightcove.MediaFramework.Brightcove.Synchronize
 {
     public class VideoSynchronizer : AssetSynchronizer
     {
         public override Item SyncItem(object entity, Item accountItem)
         {
-            AgencyOasis.MediaFramework.Brightcove.Entities.ItemState? itemState = ((Video)entity).ItemState;
-            if ((itemState.GetValueOrDefault() != AgencyOasis.MediaFramework.Brightcove.Entities.ItemState.INACTIVE ? 0 : (itemState.HasValue ? 1 : 0)) != 0)
+            Entities.ItemState? itemState = ((Video)entity).ItemState;
+            if ((itemState.GetValueOrDefault() != Entities.ItemState.INACTIVE ? 0 : (itemState.HasValue ? 1 : 0)) != 0)
                 return (Item)null;
             return base.SyncItem(entity, accountItem);
         }

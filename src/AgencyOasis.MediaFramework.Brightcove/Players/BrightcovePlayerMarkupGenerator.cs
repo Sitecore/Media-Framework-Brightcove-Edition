@@ -20,7 +20,7 @@ using Sitecore.Xml;
 // </summary>                                  
 // ------------------------------------------------------------ --------------------------------------------------------
 
-namespace AgencyOasis.MediaFramework.Brightcove.Players
+namespace Brightcove.MediaFramework.Brightcove.Players
 {
     /// <summary>
     /// The ooyala player markup provider.
@@ -69,7 +69,7 @@ namespace AgencyOasis.MediaFramework.Brightcove.Players
                 stringBuilder.Append(" " + keyValuePair.Key + "='" + keyValuePair.Value + "'");
             stringBuilder.Append("></video>");
 
-            if (!args.MediaItem.TemplateID.Equals(TemplateIDs.Video) && args.PlayerItem[AgencyOasis.MediaFramework.Brightcove.FieldIDs.Player.ShowPlaylist] == "1")
+            if (!args.MediaItem.TemplateID.Equals(TemplateIDs.Video) && args.PlayerItem[FieldIDs.Player.ShowPlaylist] == "1")
             {
                 stringBuilder.Append("<ol class='vjs-playlist'></ol>");
             }
@@ -121,8 +121,8 @@ namespace AgencyOasis.MediaFramework.Brightcove.Players
             // Add class attribute for player
             if (args.PlayerItem != null)
             {
-                if (!args.PlayerItem[AgencyOasis.MediaFramework.Brightcove.FieldIDs.Player.Class].IsNullOrEmpty())
-                    dictionary["class"] = "video-js " + args.PlayerItem[AgencyOasis.MediaFramework.Brightcove.FieldIDs.Player.Class];
+                if (!args.PlayerItem[FieldIDs.Player.Class].IsNullOrEmpty())
+                    dictionary["class"] = "video-js " + args.PlayerItem[FieldIDs.Player.Class];
                 else
                     dictionary["class"] = "video-js";
             }

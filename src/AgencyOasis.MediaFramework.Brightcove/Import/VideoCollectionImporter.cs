@@ -1,18 +1,18 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
+﻿using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
 using RestSharp;
-using Video = AgencyOasis.MediaFramework.Brightcove.Entities.Video;
+using Video = Brightcove.MediaFramework.Brightcove.Entities.Video;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Import
+namespace Brightcove.MediaFramework.Brightcove.Import
 {
     /// <summary>
     /// Video Collection Importer
     /// </summary>
-    public class VideoCollectionImporter : AgencyOasis.MediaFramework.Brightcove.Import.EntityCollectionImporter<Video>
+    public class VideoCollectionImporter : Import.EntityCollectionImporter<Video>
     {
         /// <summary>
         /// Retrieve List
         /// </summary>
-        public override AgencyOasis.MediaFramework.Brightcove.Entities.Collections.PagedCollection<Video> RetrieveList(int limit, int offset, IAuthenticator authenticator)
+        public override Entities.Collections.PagedCollection<Video> RetrieveList(int limit, int offset, IAuthenticator authenticator)
         {
             return new VideoProxy(authenticator).RetrieveList(limit, offset);
         }

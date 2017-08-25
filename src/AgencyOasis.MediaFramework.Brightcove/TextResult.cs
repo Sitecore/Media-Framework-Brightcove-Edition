@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
-namespace AgencyOasis.MediaFramework.Brightcove
+namespace Brightcove.MediaFramework.Brightcove
 {
     public class TextResult : ActionResult
     {

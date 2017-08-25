@@ -4,7 +4,7 @@ using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities
+namespace Brightcove.MediaFramework.Brightcove.Entities
 {
     /// <summary>
     /// Represents a video object from the Brightcove API
@@ -36,7 +36,7 @@ namespace AgencyOasis.MediaFramework.Brightcove.Entities
 
         [JsonProperty("state", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
-        public AgencyOasis.MediaFramework.Brightcove.Entities.ItemState? ItemState { get; set; }
+        public Entities.ItemState? ItemState { get; set; }
 
         [JsonProperty("custom_fields", NullValueHandling = NullValueHandling.Ignore)]
         public IDictionary<string, string> CustomFields { get; set; }

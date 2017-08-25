@@ -1,13 +1,13 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities.ViewModels;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
 using Sitecore.Data;
 using System;
 using System.Linq;
 using System.Web.Mvc;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Controllers
+namespace Brightcove.MediaFramework.Brightcove.Controllers
 {
     public class VideoCustomFieldsController : Controller
     {

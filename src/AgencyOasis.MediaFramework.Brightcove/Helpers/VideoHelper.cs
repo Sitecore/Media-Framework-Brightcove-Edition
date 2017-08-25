@@ -1,4 +1,4 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Extensions;
+﻿using Brightcove.MediaFramework.Brightcove.Extensions;
 using Sitecore.MediaFramework.Entities;
 using System;
 using System.Collections.Generic;
@@ -6,9 +6,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using AgencyOasis.MediaFramework.Brightcove.Indexing.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
 using Sitecore.Configuration;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data;
@@ -17,9 +17,9 @@ using Sitecore.Integration.Common.Utils;
 using Sitecore.MediaFramework.Account;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.SecurityModel;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Helpers
+namespace Brightcove.MediaFramework.Brightcove.Helpers
 {
     public static class VideoHelper
     {
@@ -44,7 +44,7 @@ namespace AgencyOasis.MediaFramework.Brightcove.Helpers
                 try
                 {
                     sitecoreItem.Editing.BeginEdit();
-                    sitecoreItem[AgencyOasis.MediaFramework.Brightcove.FieldIDs.Video.IngestStatus] = value;
+                    sitecoreItem[FieldIDs.Video.IngestStatus] = value;
                     sitecoreItem.Editing.EndEdit();
                 }
                 catch (Exception ex)

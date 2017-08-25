@@ -1,11 +1,11 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.MediaFramework.Entities;
 using Sitecore.MediaFramework.Export;
 using Sitecore.MediaFramework.Synchronize;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
+namespace Brightcove.MediaFramework.Brightcove.Synchronize
 {
   public abstract class AssetSynchronizer : SynchronizerBase
   {

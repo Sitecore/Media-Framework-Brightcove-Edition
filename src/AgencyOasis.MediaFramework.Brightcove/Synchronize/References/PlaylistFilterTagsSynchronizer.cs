@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data;
 using Sitecore.Data.Items;
@@ -12,7 +12,7 @@ using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.MediaFramework.Synchronize;
 using Sitecore.MediaFramework.Synchronize.References;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize.References
+namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
 {
     public class PlaylistFilterTagsSynchronizer : IdReferenceSynchronizer<PlayList>
     {

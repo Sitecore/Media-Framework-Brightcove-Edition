@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sitecore.MediaFramework.Account;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Commands
+namespace Brightcove.MediaFramework.Brightcove.Commands
 {
     [Serializable]
     public class CustomFields : Command

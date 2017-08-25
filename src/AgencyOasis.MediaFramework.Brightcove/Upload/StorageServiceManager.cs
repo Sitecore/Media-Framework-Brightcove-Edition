@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Pipelines.VideoUpload;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Diagnostics;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public interface IStorageService
     {

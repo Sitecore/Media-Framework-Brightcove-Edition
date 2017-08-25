@@ -6,7 +6,7 @@
 // </summary>                                                                                
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace AgencyOasis.MediaFramework.Brightcove.Analytics
+namespace Brightcove.MediaFramework.Brightcove.Analytics
 {
   public class VideoEventTrigger : EventTrigger
   {

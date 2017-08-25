@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Indexing.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Cleanup;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Cleanup
+namespace Brightcove.MediaFramework.Brightcove.Cleanup
 {
   public class VideoCleanupExecuter : CleanupExecuterBase<Video, VideoSearchResult>
   {
@@ -27,8 +27,8 @@ namespace AgencyOasis.MediaFramework.Brightcove.Cleanup
         return (List<Video>) null;
       return Enumerable.ToList<Video>(Enumerable.Where<Video>((IEnumerable<Video>) serviceData, (Func<Video, bool>) (i =>
       {
-        AgencyOasis.MediaFramework.Brightcove.Entities.ItemState? itemState = i.ItemState;
-        if (itemState.GetValueOrDefault() == AgencyOasis.MediaFramework.Brightcove.Entities.ItemState.ACTIVE)
+        Entities.ItemState? itemState = i.ItemState;
+        if (itemState.GetValueOrDefault() == Entities.ItemState.ACTIVE)
           return itemState.HasValue;
         return false;
       })));

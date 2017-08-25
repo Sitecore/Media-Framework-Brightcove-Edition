@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Extensions;
 using RestSharp;
 using Sitecore.RestSharp;
 using Sitecore.RestSharp.Data;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Proxy.Security
+namespace Brightcove.MediaFramework.Brightcove.Proxy.Security
 {
     public class TokenProxy : BaseProxy
     {

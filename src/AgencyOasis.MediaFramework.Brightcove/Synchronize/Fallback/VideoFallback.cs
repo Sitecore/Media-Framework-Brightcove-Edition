@@ -1,12 +1,12 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove;
 using Sitecore.MediaFramework.Brightcove.Synchronize.Fallback;
 using Sitecore.MediaFramework.Entities;
-using VideoSearchResult = AgencyOasis.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
+using VideoSearchResult = Brightcove.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Synchronize.Fallback
+namespace Brightcove.MediaFramework.Brightcove.Synchronize.Fallback
 {
   public class VideoFallback : AssetFallback<VideoSearchResult>
   {

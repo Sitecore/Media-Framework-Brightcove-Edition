@@ -10,7 +10,7 @@ using Sitecore.RestSharp.Data;
 using Sitecore.RestSharp.Service;
 using RestSharp.Deserializers;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Debug
+namespace Brightcove.MediaFramework.Brightcove.Debug
 {
     public class DebugRestContext
     {

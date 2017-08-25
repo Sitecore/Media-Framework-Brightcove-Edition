@@ -1,8 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using AgencyOasis.MediaFramework.Brightcove.Entities.Collections;
+using Brightcove.MediaFramework.Brightcove.Entities.Collections;
 using Newtonsoft.Json;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities.Response
+namespace Brightcove.MediaFramework.Brightcove.Entities.Response
 {
     public class CustomFieldsResponse
     {

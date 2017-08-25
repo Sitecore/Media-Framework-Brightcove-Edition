@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -118,9 +119,9 @@
     <Content Include="sitecore modules\Web\MediaFramework\MVC\Views\Brightcove\VideoTextTracks.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AgencyOasis.MediaFramework.Brightcove\AgencyOasis.MediaFramework.Brightcove.csproj">
+    <ProjectReference Include="..\AgencyOasis.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj">
       <Project>{c4ce22b6-2f6f-456d-a502-7914dbc3cea8}</Project>
-      <Name>AgencyOasis.MediaFramework.Brightcove</Name>
+      <Name>Brightcove.MediaFramework.Brightcove</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

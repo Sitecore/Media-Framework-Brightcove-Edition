@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities.ViewModels
+namespace Brightcove.MediaFramework.Brightcove.Entities.ViewModels
 {
     public class VideoCustomFields
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Pipelines.VideoUpload;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload;
 using Sitecore.Data.Items;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public static class VideoUploadManager
     {

@@ -20,7 +20,6 @@ C:\Users\Uy.Tran\Documents\brightcove\sitecore-media-framework-brightcove-editio
 C:\Users\Uy.Tran\Documents\brightcove\sitecore-media-framework-brightcove-edition-3.0\sitecore-media-framework-brightcove-edition-3.0\source\Web\obj\Debug\Web.pdb
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Web.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Web.pdb
-C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\AgencyOasis.MediaFramework.Brightcove.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Integration.Common.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Kernel.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.MediaFramework.dll
@@ -34,7 +33,8 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Mvc.dl
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Analytics.Model.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Services.Infrastructure.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Analytics.Core.dll
-C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\AgencyOasis.MediaFramework.Brightcove.pdb
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Brightcove.MediaFramework.Brightcove.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Brightcove.MediaFramework.Brightcove.pdb

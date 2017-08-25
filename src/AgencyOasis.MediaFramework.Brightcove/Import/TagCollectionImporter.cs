@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
 using RestSharp;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Brightcove.Entities;
-using Video = AgencyOasis.MediaFramework.Brightcove.Entities.Video;
+using Video = Brightcove.MediaFramework.Brightcove.Entities.Video;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Import
+namespace Brightcove.MediaFramework.Brightcove.Import
 {
-    public class TagCollectionImporter : AgencyOasis.MediaFramework.Brightcove.Import.EntityCollectionImporter<Video>
+    public class TagCollectionImporter : Import.EntityCollectionImporter<Video>
     {
-        public override AgencyOasis.MediaFramework.Brightcove.Entities.Collections.PagedCollection<Video> RetrieveList(int limit, int offset, IAuthenticator authenticator)
+        public override Entities.Collections.PagedCollection<Video> RetrieveList(int limit, int offset, IAuthenticator authenticator)
         {
             return new VideoProxy(authenticator).RetrieveList(limit, offset);
         }

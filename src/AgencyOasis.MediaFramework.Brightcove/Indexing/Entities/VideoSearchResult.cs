@@ -4,7 +4,7 @@ using Sitecore.ContentSearch.Converters;
 using Sitecore.Data;
 using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Indexing.Entities
+namespace Brightcove.MediaFramework.Brightcove.Indexing.Entities
 {
   public class VideoSearchResult : AssetSearchResult
   {

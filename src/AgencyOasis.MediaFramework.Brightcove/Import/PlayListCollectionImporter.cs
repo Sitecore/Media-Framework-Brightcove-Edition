@@ -1,15 +1,15 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
+﻿using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
 using RestSharp;
-using PlayList = AgencyOasis.MediaFramework.Brightcove.Entities.PlayList;
+using PlayList = Brightcove.MediaFramework.Brightcove.Entities.PlayList;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Import
+namespace Brightcove.MediaFramework.Brightcove.Import
 {
     /// <summary>
     /// PlayList Collection Importer
     /// </summary>
-    public class PlayListCollectionImporter : AgencyOasis.MediaFramework.Brightcove.Import.EntityCollectionImporter<PlayList>
+    public class PlayListCollectionImporter : Import.EntityCollectionImporter<PlayList>
     {
-        public override AgencyOasis.MediaFramework.Brightcove.Entities.Collections.PagedCollection<PlayList> RetrieveList(int limit, int offset, IAuthenticator authenticator)
+        public override Entities.Collections.PagedCollection<PlayList> RetrieveList(int limit, int offset, IAuthenticator authenticator)
         {
             return new PlaylistProxy(authenticator).RetrieveList(limit, offset);
         }

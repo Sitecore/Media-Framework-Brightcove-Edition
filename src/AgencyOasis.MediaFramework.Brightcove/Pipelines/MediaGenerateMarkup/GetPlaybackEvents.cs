@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AgencyOasis.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Configuration;
 using Sitecore;
 using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
+namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
 {
     public class GetPlaybackEvents : Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup.GetPlaybackEvents
     {

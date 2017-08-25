@@ -1,5 +1,5 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Extensions;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Diagnostics;
@@ -7,7 +7,7 @@ using Sitecore.MediaFramework.Upload;
 using System;
 using System.Collections.Specialized;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public class VideoUploader : UploadExecuterBase
     {

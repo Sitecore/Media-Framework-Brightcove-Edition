@@ -2,13 +2,13 @@
   <Metadata>
     <metadata>
       <PackageName>Sitecore Media Framework Brightcove Edition</PackageName>
-      <Author>Agency Oasis</Author>
-      <Version>3.0</Version>
+      <Author>Brightcove</Author>
+      <Version>2.2</Version>
       <Revision />
       <License />
       <Comment />
       <Attributes />
-      <Readme>        Sitecore Media Framework Brightcove Edition 3.0 rev. 1
+      <Readme>        Sitecore Media Framework Brightcove Edition 2.2 rev. 1
 -------------------------------------------------------------
 Date: 25-Jun-2015
 -------------------------------------------------------------
@@ -29,7 +29,7 @@ product names are the property of their respective holders.
 The contents of this document are the property of Sitecore.
 Copyright © 2001-2015 Sitecore. All rights reserved.
 </Readme>
-      <Publisher>Agency Oasis</Publisher>
+      <Publisher>Brightcove</Publisher>
       <PostStep>Sitecore.MediaFramework.PostStep,Sitecore.MediaFramework</PostStep>
       <PackageID />
     </metadata>
@@ -98,7 +98,7 @@ Copyright © 2001-2015 Sitecore. All rights reserved.
         <x-item>/bin/RestSharp.dll</x-item>
         <x-item>/bin/Sitecore.MediaFramework.Brightcove.dll</x-item>
         <x-item>/bin/Sitecore.RestSharp.dll</x-item>
-        <x-item>/bin/AgencyOasis.MediaFramework.Brightcove.dll</x-item>
+        <x-item>/bin/Brightcove.MediaFramework.Brightcove.dll</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Entities.Collections;
-using AgencyOasis.MediaFramework.Brightcove.Entities.Response;
+using Brightcove.MediaFramework.Brightcove.Entities.Collections;
+using Brightcove.MediaFramework.Brightcove.Entities.Response;
 using RestSharp;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Shell.Applications.ContentEditor;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Proxy.CMS
+namespace Brightcove.MediaFramework.Brightcove.Proxy.CMS
 {
     public class VideoProxy : BaseProxy
     {

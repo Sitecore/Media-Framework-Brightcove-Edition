@@ -1,13 +1,13 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Configuration;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Upload.MediaItem;
+﻿using Brightcove.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Upload.MediaItem;
 using Sitecore.Data.Items;
 using Sitecore.MediaFramework.Diagnostics;
 using Sitecore.Mvc.Extensions;
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload
+namespace Brightcove.MediaFramework.Brightcove.Upload
 {
     public abstract class VideoUploadExecutorBase<TConfig, TSConfig> : VideoUploadExecutorBase
         where TConfig : VideoUploadServiceConfigBase

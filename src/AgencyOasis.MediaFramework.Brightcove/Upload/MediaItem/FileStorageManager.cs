@@ -1,12 +1,12 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Extensions;
 using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.SecurityModel;
 using System;
 using System.IO;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload.MediaItem
+namespace Brightcove.MediaFramework.Brightcove.Upload.MediaItem
 {
     public static class FileStorageManager
     {

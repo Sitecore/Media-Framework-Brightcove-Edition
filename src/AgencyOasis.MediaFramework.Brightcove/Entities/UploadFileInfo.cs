@@ -4,7 +4,7 @@ using Sitecore.Data.Items;
 using Sitecore.IO;
 using Sitecore.Resources.Media;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities
+namespace Brightcove.MediaFramework.Brightcove.Entities
 {
     public class UploadFileInfo
     {

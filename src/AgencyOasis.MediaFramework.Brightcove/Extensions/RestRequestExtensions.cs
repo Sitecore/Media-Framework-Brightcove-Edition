@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Extensions
+namespace Brightcove.MediaFramework.Brightcove.Extensions
 {
     public static class RestRequestExtensions
     {

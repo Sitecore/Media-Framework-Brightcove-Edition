@@ -1,5 +1,5 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Pipelines.HandleCallback;
+﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Pipelines.HandleCallback;
 using Newtonsoft.Json;
 using Sitecore.MediaFramework.Diagnostics;
 using Sitecore.Services.Infrastructure.Web.Http;
@@ -7,7 +7,7 @@ using System;
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Controllers
+namespace Brightcove.MediaFramework.Brightcove.Controllers
 {
     public class IngestionCallbackController : Controller
     {

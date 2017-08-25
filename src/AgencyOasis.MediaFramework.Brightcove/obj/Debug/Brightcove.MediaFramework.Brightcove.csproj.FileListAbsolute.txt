@@ -1,0 +1,11 @@
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\obj\Debug\Brightcove.MediaFramework.Brightcove.csprojResolveAssemblyReference.cache
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Brightcove.MediaFramework.Brightcove.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Brightcove.MediaFramework.Brightcove.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Sitecore.MediaFramework.Mvc.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Sitecore.RestSharp.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\obj\Debug\Brightcove.MediaFramework.Brightcove.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\obj\Debug\Brightcove.MediaFramework.Brightcove.pdb

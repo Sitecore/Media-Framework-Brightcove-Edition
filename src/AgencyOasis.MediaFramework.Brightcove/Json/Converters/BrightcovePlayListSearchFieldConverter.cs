@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Newtonsoft.Json;
 using Sitecore.MediaFramework.Brightcove.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Json.Converters
+namespace Brightcove.MediaFramework.Brightcove.Json.Converters
 {
     public class BrightcovePlaylistSearchFieldConverter : JsonConverter
     {

@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using AgencyOasis.MediaFramework.Brightcove.Json.Converters;
+using Brightcove.MediaFramework.Brightcove.Json.Converters;
 using Newtonsoft.Json;
 using System;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Entities
+namespace Brightcove.MediaFramework.Brightcove.Entities
 {
     /// <summary>
     /// Represents a playlist object from the Brightcove API
     /// For more information, see http://support.brightcove.com/en/video-cloud/docs/media-api-objects-reference#Playlist
     /// </summary>
-    public class PlayList : AgencyOasis.MediaFramework.Brightcove.Entities.Asset
+    public class PlayList : Asset
     {
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "video_ids")]
         public List<string> VideoIds { get; set; }

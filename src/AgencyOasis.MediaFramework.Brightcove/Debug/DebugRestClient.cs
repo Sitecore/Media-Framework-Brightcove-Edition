@@ -1,7 +1,7 @@
 ﻿// Type: RestSharp.DebugRestClient
 // Assembly: RestSharp, Version=104.2.0.0, Culture=neutral
 // MVID: 770CA01C-2D7C-4179-999E-41A3E85DE492
-// Assembly location: D:\Projects\AgencyOasis\Bright Cove\2.2\Lib\Sitecore\RestSharp.dll
+// Assembly location: D:\Projects\Brightcove\Bright Cove\2.2\Lib\Sitecore\RestSharp.dll
 
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ using RestSharp;
 using RestSharp.Deserializers;
 using RestSharp.Extensions;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Debug
+namespace Brightcove.MediaFramework.Brightcove.Debug
 {
     public class DebugRestClient : IRestClient
     {

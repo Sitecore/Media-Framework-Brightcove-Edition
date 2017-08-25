@@ -1,10 +1,10 @@
-﻿using AgencyOasis.MediaFramework.Brightcove.Configuration;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Extensions;
+﻿using Brightcove.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Extensions;
 using Sitecore.ContentSearch.Linq.Extensions;
 using Sitecore.Data.Items;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Upload.MediaItem
+namespace Brightcove.MediaFramework.Brightcove.Upload.MediaItem
 {
     public class VideoUploadExecutor : VideoUploadExecutorBase<VideoUploadServiceConfigBase, StorageServiceConfig>
     {

@@ -1,17 +1,17 @@
 ﻿using System.Collections.Specialized;
 using System.Xml;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
-using AgencyOasis.MediaFramework.Brightcove.Proxy.CMS;
-using AgencyOasis.MediaFramework.Brightcove.Security;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
+using Brightcove.MediaFramework.Brightcove.Security;
 using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.MediaFramework;
 using Sitecore.MediaFramework.Export;
 using Sitecore.MediaFramework.Synchronize;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Export
+namespace Brightcove.MediaFramework.Brightcove.Export
 {
-    public class VideoExporterWithDelete : AgencyOasis.MediaFramework.Brightcove.Export.VideoExporter, IConstructable
+    public class VideoExporterWithDelete : VideoExporter, IConstructable
     {
         protected NameValueCollection DeleteParameters = new NameValueCollection();
 

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using AgencyOasis.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Entities;
 
-namespace AgencyOasis.MediaFramework.Brightcove.Extensions
+namespace Brightcove.MediaFramework.Brightcove.Extensions
 {
     public static class NotificationExtensions
     {
