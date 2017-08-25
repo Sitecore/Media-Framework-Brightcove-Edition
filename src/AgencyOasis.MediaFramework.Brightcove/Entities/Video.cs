@@ -6,6 +6,10 @@ using Newtonsoft.Json.Converters;
 
 namespace AgencyOasis.MediaFramework.Brightcove.Entities
 {
+    /// <summary>
+    /// Represents a video object from the Brightcove API
+    /// For more information, see http://support.brightcove.com/en/video-cloud/docs/media-api-objects-reference#Video
+    /// </summary>
     public class Video : Asset
     {
         [JsonProperty("created_at", NullValueHandling = NullValueHandling.Ignore)]

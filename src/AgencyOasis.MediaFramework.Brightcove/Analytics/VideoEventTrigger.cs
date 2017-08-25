@@ -1,5 +1,11 @@
 ﻿using Sitecore.MediaFramework;
 
+// --------------------------------------------------------------------------------------------------------------------
+// <summary>
+//   The player event trigger.
+// </summary>                                                                                
+// --------------------------------------------------------------------------------------------------------------------
+
 namespace AgencyOasis.MediaFramework.Brightcove.Analytics
 {
   public class VideoEventTrigger : EventTrigger

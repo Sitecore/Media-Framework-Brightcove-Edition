@@ -17,6 +17,8 @@ namespace AgencyOasis.MediaFramework.Brightcove.Export
             var playList = (PlayList)itemSynchronizer.CreateEntity(operation.Item);
             playList.Id = null;
             playList.ReferenceId = null;
+            //Video ids used only for EXPLICIT playlist.
+            //In other case will be used playlistsearch
             if (playList.PlaylistType == PlaylistType.EXPLICIT.ToString())
             {
                 playList.PlayListSearch = null;
@@ -48,6 +50,8 @@ namespace AgencyOasis.MediaFramework.Brightcove.Export
                 return null;
             var playList = (PlayList)itemSynchronizer.CreateEntity(operation.Item);
             playList.ReferenceId = null;
+            //Video ids used only for EXPLICIT playlist.
+            //In other case will be used playlistsearch
             if (playList.PlaylistType == PlaylistType.EXPLICIT.ToString())
             {
                 playList.PlayListSearch = null;

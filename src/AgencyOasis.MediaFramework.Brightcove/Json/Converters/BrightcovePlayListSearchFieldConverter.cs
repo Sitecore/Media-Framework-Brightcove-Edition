@@ -47,6 +47,12 @@ namespace AgencyOasis.MediaFramework.Brightcove.Json.Converters
             return result;
         }
 
+        /// <summary>
+        /// Write Json
+        /// </summary>
+        /// <param name="writer"></param>
+        /// <param name="value"></param>
+        /// <param name="serializer"></param>
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
             var playListSearch = value as PlayListSearch;
@@ -59,6 +65,14 @@ namespace AgencyOasis.MediaFramework.Brightcove.Json.Converters
                 writer.WriteNull();
         }
 
+        /// <summary>
+        /// Read Json
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <param name="objectType"></param>
+        /// <param name="existingValue"></param>
+        /// <param name="serializer"></param>
+        /// <returns></returns>
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             object obj = reader.Value;
@@ -68,6 +82,11 @@ namespace AgencyOasis.MediaFramework.Brightcove.Json.Converters
             return (object)result;
         }
 
+        /// <summary>
+        /// Can Convert
+        /// </summary>
+        /// <param name="objectType"></param>
+        /// <returns></returns>
         public override bool CanConvert(Type objectType)
         {
             return true;

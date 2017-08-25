@@ -9,8 +9,18 @@ using Sitecore.MediaFramework.Entities;
 
 namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
 {
+    /// <summary>
+    /// Play List Synchronizer
+    /// </summary>
     public class PlayListSynchronizer : AssetSynchronizer
     {
+        /// <summary>
+        /// Update Item
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="accountItem"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public override Item UpdateItem(object entity, Item accountItem, Item item)
         {
             PlayList playList = (PlayList)entity;
@@ -37,6 +47,13 @@ namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
             return item;
         }
 
+        /// <summary>
+        /// Need Update
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="accountItem"></param>
+        /// <param name="searchResult"></param>
+        /// <returns></returns>
         public override bool NeedUpdate(object entity, Item accountItem, MediaServiceSearchResult searchResult)
         {
             PlayList playList = (PlayList)entity;
@@ -46,6 +63,12 @@ namespace AgencyOasis.MediaFramework.Brightcove.Synchronize
             return true;
         }
 
+        /// <summary>
+        /// Get Index
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="accountItem"></param>
+        /// <returns></returns>
         public override MediaServiceSearchResult GetSearchResult(object entity, Item accountItem)
         {
             PlayList playlist = (PlayList)entity;

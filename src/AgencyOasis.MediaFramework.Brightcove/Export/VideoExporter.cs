@@ -9,33 +9,51 @@ using FieldIDs = AgencyOasis.MediaFramework.Brightcove.FieldIDs;
 
 namespace AgencyOasis.MediaFramework.Brightcove.Export
 {
-  public abstract class VideoExporter : ExportExecuterBase
-  {
-    protected override object Create(ExportOperation operation)
+    /// <summary>
+    /// Video Exporter
+    /// </summary>
+    public abstract class VideoExporter : ExportExecuterBase
     {
-      return null;
-    }
+        /// <summary>
+        /// Create
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <returns></returns>
+        protected override object Create(ExportOperation operation)
+        {
+            return null;
+        }
 
-    protected override object Update(ExportOperation operation)
-    {
-      IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(operation.Item);
-      if (itemSynchronizer == null)
-        return null;
-      var video = (Video) itemSynchronizer.CreateEntity(operation.Item);
-      if (video.CustomFields != null && video.CustomFields.Count == 0)
-        video.CustomFields = null;
-      var authenticator = new BrightcoveAuthenticator(operation.AccountItem);
-        var result = new VideoProxy(authenticator).Patch(video);
-        if (result == null || result.Id == null)
-        return null;
-        if (result.CustomFields == null)
-        result.CustomFields = video.CustomFields;
-        return result;
-    }
+        /// <summary>
+        /// Update
+        /// </summary>
+        /// <param name="operation"></param>
+        /// <returns></returns>
+        protected override object Update(ExportOperation operation)
+        {
+            IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(operation.Item);
+            if (itemSynchronizer == null)
+                return null;
+            var video = (Video)itemSynchronizer.CreateEntity(operation.Item);
+            if (video.CustomFields != null && video.CustomFields.Count == 0)
+                video.CustomFields = null;
+            var authenticator = new BrightcoveAuthenticator(operation.AccountItem);
+            var result = new VideoProxy(authenticator).Patch(video);
+            if (result == null || result.Id == null)
+                return null;
+            if (result.CustomFields == null)
+                result.CustomFields = video.CustomFields;
+            return result;
+        }
 
-    public override bool IsNew(Item item)
-    {
-        return item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id].Length == 0;
+        /// <summary>
+        /// Is New
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public override bool IsNew(Item item)
+        {
+            return item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id].Length == 0;
+        }
     }
-  }
 }

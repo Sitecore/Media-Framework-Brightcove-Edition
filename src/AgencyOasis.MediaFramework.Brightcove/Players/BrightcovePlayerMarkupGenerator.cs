@@ -14,8 +14,17 @@ using Sitecore.MediaFramework.Players;
 using Sitecore.StringExtensions;
 using Sitecore.Xml;
 
+// --------------------------------------------------------------------------------------------------------------------
+// <summary>
+//   The Brightcove player markup provider.
+// </summary>                                  
+// ------------------------------------------------------------ --------------------------------------------------------
+
 namespace AgencyOasis.MediaFramework.Brightcove.Players
 {
+    /// <summary>
+    /// The ooyala player markup provider.
+    /// </summary>
     public class BrightcovePlayerMarkupGenerator : PlayerMarkupGeneratorBase
     {
         protected readonly Dictionary<string, string> DefaultParameters;
@@ -40,6 +49,15 @@ namespace AgencyOasis.MediaFramework.Brightcove.Players
             this.DefaultParameters[attribute1] = attribute2;
         }
 
+        /// <summary>
+        /// Generate a player markup.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string"/>.
+        /// </returns>
         public override PlayerMarkupResult Generate(MediaGenerateMarkupArgs args)
         {
             PlayerMarkupResult playerMarkupResult = new PlayerMarkupResult();
@@ -62,6 +80,15 @@ namespace AgencyOasis.MediaFramework.Brightcove.Players
             return playerMarkupResult;
         }
 
+        /// <summary>
+        /// Generate a player markup.
+        /// </summary>
+        /// <param name="args">
+        /// The args.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string"/>.
+        /// </returns>
         public override string GetPreviewImage(MediaGenerateMarkupArgs args)
         {
             return PlayerManager.GetPreviewImage(args, Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ThumbnailUrl);

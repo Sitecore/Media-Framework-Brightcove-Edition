@@ -17,6 +17,10 @@ namespace AgencyOasis.MediaFramework.Brightcove.Export
 
         public string DeleteParams { get; set; }
 
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <param name="operation"></param>
         protected override void Delete(ExportOperation operation)
         {
             IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(operation.Item);

@@ -5,6 +5,10 @@ using System;
 
 namespace AgencyOasis.MediaFramework.Brightcove.Entities
 {
+    /// <summary>
+    /// Represents a playlist object from the Brightcove API
+    /// For more information, see http://support.brightcove.com/en/video-cloud/docs/media-api-objects-reference#Playlist
+    /// </summary>
     public class PlayList : AgencyOasis.MediaFramework.Brightcove.Entities.Asset
     {
         [JsonProperty(NullValueHandling = NullValueHandling.Ignore, PropertyName = "video_ids")]
