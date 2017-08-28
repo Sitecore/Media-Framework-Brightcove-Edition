@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{17D81DEE-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{25D2BA55-EF45-470D-8AA0-6B229ACEAC47}"
 	ProjectSection(SolutionItems) = preProject
-		Data\packages\Sitecore Media Framework 3.xml = Data\packages\Sitecore Media Framework 3.xml
+		Data\packages\Sitecore Media Framework 2_2.xml = Data\packages\Sitecore Media Framework 2_2.xml
 	EndProjectSection
 EndProject
 Global
