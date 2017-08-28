@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Brightcove.MediaFramework.Brightcove")]
 [assembly: AssemblyDescription("Sitecore Media Framework Brightcove provider")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Sitecore Corporation")]
+[assembly: AssemblyCompany("Brightcove Corporation")]
 [assembly: AssemblyProduct("Sitecore MediaFramework Brightcove Edition")]
 [assembly: AssemblyCopyright("Copyright © Sitecore Corporation 1999-2017")]
 [assembly: AssemblyTrademark("Sitecore® is a registered trademark of Sitecore Corporation")]

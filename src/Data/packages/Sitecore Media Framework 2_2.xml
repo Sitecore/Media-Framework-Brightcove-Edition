@@ -628,63 +628,6 @@ product names are the property of their respective holders. All rights reserved.
     </items>
     <items>
       <Database>core</Database>
-      <Root>{3DBD71EE-1C27-4ADE-82A9-43079EC9C00C}</Root>
-      <SkipVersions>False</SkipVersions>
-      <Converter>
-        <ItemToEntryConverter>
-          <Transforms>
-            <InstallerConfigurationTransform>
-              <Options>
-                <BehaviourOptions>
-                  <ItemMode>Undefined</ItemMode>
-                  <ItemMergeMode>Undefined</ItemMergeMode>
-                </BehaviourOptions>
-              </Options>
-            </InstallerConfigurationTransform>
-          </Transforms>
-        </ItemToEntryConverter>
-      </Converter>
-      <Include>
-        <ItemNameFilter>
-          <Pattern>^(Brightcove)</Pattern>
-          <FilterSearchType>Regex</FilterSearchType>
-        </ItemNameFilter>
-        <ItemDateFilter>
-          <FilterType>CreatedFilter</FilterType>
-          <NotOlderThan />
-          <ActionDateTo />
-          <ActionDateFrom />
-        </ItemDateFilter>
-        <ItemDateFilter>
-          <FilterType>ModifiedFilter</FilterType>
-          <NotOlderThan />
-          <ActionDateTo />
-          <ActionDateFrom />
-        </ItemDateFilter>
-        <ItemPublishFilter>
-          <PublishDate />
-          <CheckWorkflow>True</CheckWorkflow>
-        </ItemPublishFilter>
-        <ItemTemplateFilter>
-          <Templates />
-        </ItemTemplateFilter>
-        <ItemUserFilter>
-          <FilterType>Created</FilterType>
-          <Accounts />
-        </ItemUserFilter>
-        <ItemUserFilter>
-          <FilterType>Modified</FilterType>
-          <Accounts />
-        </ItemUserFilter>
-        <ItemLanguageFilter>
-          <Languages />
-        </ItemLanguageFilter>
-      </Include>
-      <Exclude />
-      <Name>[Brightcove] Media Application</Name>
-    </items>
-    <items>
-      <Database>core</Database>
       <Root>{0A2731A3-EFF9-4100-89FB-00E9BFB85565}</Root>
       <SkipVersions>False</SkipVersions>
       <Converter>
@@ -742,10 +685,10 @@ product names are the property of their respective holders. All rights reserved.
     </items>
     <xfiles>
       <Entries>
-        <x-item>/layouts/MediaFramework/Brightcove/CustomFields.cshtml</x-item>
-        <x-item>/layouts/MediaFramework/Brightcove/TextTracks.cshtml</x-item>
-        <x-item>/Views/MediaFramework/Brightcove/CustomFields.cshtml</x-item>
-        <x-item>/Views/MediaFramework/Brightcove/VideoCustomFields.cshtml</x-item>
+        <x-item>/layouts/MediaFramework/Brightcove/VideoCustomFields.cshtml</x-item>
+        <x-item>/layouts/MediaFramework/Brightcove/VideoTextTracks.cshtml</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/MVC/Views/Brightcove/VideoTextTracks.cshtml</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/MVC/Views/Brightcove/VideoCustomFields.cshtml</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
