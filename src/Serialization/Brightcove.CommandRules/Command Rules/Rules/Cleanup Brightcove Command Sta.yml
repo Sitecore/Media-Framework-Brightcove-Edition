@@ -1,0 +1,46 @@
+﻿---
+ID: "d7f29c1c-f3c9-4dab-a9d0-4201c36d2d2b"
+Parent: "c3e2c5ec-75fd-46d8-88c3-28d98e3f0eab"
+Template: "7253b883-cb72-4e80-887f-1b350d634dad"
+Path: /sitecore/system/Settings/Rules/Command Rules/Rules/Cleanup Brightcove Command State
+DB: master
+SharedFields:
+- ID: "2282ba71-accc-436a-a716-2e4dcaf71f6e"
+  Hint: Command
+  Value: "mediaFramework:ManualCleanup:Brightcove"
+- ID: "aff1f4c7-5425-49dd-8456-4d3061c77100"
+  Hint: Rules
+  Type: Rules
+  Value: |
+    <ruleset>
+      <rule
+        uid="{95DAD009-5833-43A2-AB5A-1A27CDCC8AFA}">
+        <conditions>
+          <condition
+            id="{83D94CB1-5123-4F67-9DEE-22586E8F2DE9}"
+            uid="131676F409BA402B95E1C838C110EB43"
+            templateid="{C657F8EF-4916-447F-9255-483ED2EEC562}" />
+        </conditions>
+        <actions>
+          <action
+            id="{11478F1A-62F2-4DE5-A927-295FFACD934B}"
+            uid="79BFB0E86AC64D3DB2AB38CC071F6AD1"
+            CommandStateId="{3F2F8F53-B8BA-476E-B93E-EE38C9E3432C}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130620T181100
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "d6092f70-dba9-4f0b-96fc-bf69d7edb31a"
+      Hint: Name
+      Value: Brightcove Import Content

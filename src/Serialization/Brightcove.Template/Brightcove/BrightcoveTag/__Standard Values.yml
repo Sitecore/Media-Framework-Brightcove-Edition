@@ -1,0 +1,26 @@
+﻿---
+ID: "d67f372c-04d9-47d6-9378-0dc3c645d31a"
+Parent: "1f5cf62d-dedc-4712-a8b6-ccc36e27a3f8"
+Template: "1f5cf62d-dedc-4712-a8b6-ccc36e27a3f8"
+Path: /sitecore/templates/MediaFramework/Brightcove/BrightcoveTag/__Standard Values
+DB: master
+SharedFields:
+- ID: "24fd815e-ebce-4d16-90c1-62c66cec95f2"
+  Hint: Name
+  Value: $name
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130718T172100
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

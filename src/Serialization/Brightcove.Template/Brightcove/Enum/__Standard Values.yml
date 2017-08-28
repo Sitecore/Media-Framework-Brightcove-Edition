@@ -1,0 +1,23 @@
+﻿---
+ID: "218cf90e-aab3-4516-a8df-bd009a0d6fa1"
+Parent: "4befdb86-5637-4983-aa5d-4cca70e23bf6"
+Template: "4befdb86-5637-4983-aa5d-4cca70e23bf6"
+Path: /sitecore/templates/MediaFramework/Brightcove/Enum/__Standard Values
+DB: master
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: TreelistEx
+  Value: "{5210D3FA-7BD8-449B-9C89-8A7E20F6AE18}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20091112T130806
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

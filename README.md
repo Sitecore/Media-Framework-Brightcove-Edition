@@ -1,6 +1,12 @@
 # Media-Framework-Brightcove-Edition
 Brightcove Connector for Sitecore Media Framework
 
+Before using, make sure Sitecore Media Framework 2.2 is installed. Install the Brightcove connector via the package.
+
+Modify Unicorn.Brightcove.config to point to the Serialization directory in your source directory.
+
+Then, you can use this solution and publish over your website as usual.
+
 # License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.

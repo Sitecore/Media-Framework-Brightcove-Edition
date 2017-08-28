@@ -1,0 +1,44 @@
+﻿---
+ID: "5ab8e0ea-42da-4174-baed-8be3ea270894"
+Parent: "0e24292f-d7a5-4ba2-bca0-cd5f14a89634"
+Template: "0e24292f-d7a5-4ba2-bca0-cd5f14a89634"
+Path: /sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/__Standard Values
+DB: master
+SharedFields:
+- ID: "70059b46-11d1-45f3-b92e-45df21af8310"
+  Hint: PlaylistType
+  Value: ACTIVATED_NEWEST_TO_OLDEST
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: 
+- ID: "a791f095-2521-4b4d-bef9-21dda221f608"
+  Hint: __Style
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "c0e276bb-8807-40aa-8138-e5c38b0c5dab"
+  Hint: __Quick Actions
+  Type: Multilist
+  Value: "{3A6C91F6-FC45-4ABD-8B8C-EBCA2993E1F7}"
+- ID: "c923961c-5664-43d2-85d2-d194143197df"
+  Hint: Events
+  Type: Multilist
+  Value: 
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20090813T070000
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

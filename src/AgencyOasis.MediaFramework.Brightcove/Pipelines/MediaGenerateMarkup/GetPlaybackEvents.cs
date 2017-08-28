@@ -14,7 +14,7 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
         protected override bool CheckState(MediaGenerateMarkupArgs args)
         {
             if (args.MarkupType == MarkupType.Html && Settings.AnalyticsEnabled)
-                return !Context.PageMode.IsPageEditorEditing;
+                return !Context.PageMode.IsExperienceEditorEditing;
             else
                 return false;
         }

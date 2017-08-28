@@ -1,0 +1,26 @@
+﻿---
+ID: "d6a337f0-e5cf-45e9-b8b6-7e0185c5ae78"
+Parent: "de0f5bb5-1d51-41b2-ba4d-2c176c904bf3"
+Template: "de0f5bb5-1d51-41b2-ba4d-2c176c904bf3"
+Path: /sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/__Standard Values
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 300
+- ID: "e09287ab-76d7-4f11-a759-58be886f85a1"
+  Hint: ShowPlaylist
+  Type: Checkbox
+  Value: 0
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130828T105604
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

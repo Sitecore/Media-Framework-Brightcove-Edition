@@ -1,0 +1,32 @@
+﻿---
+ID: "d0497e69-98e5-421e-add4-eeab4e5b7208"
+Parent: "375c2d14-4251-4855-b930-5455b8bf075d"
+Template: "b2613cc1-a748-46a3-a0db-3774574bd339"
+Path: /sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: MediaFramework/Brightcove/32x32/logo.png
+- ID: "854cc8f6-94ad-4521-a4b6-44ed8f794c98"
+  Hint: Command
+  Value: "MediaFramework:Account:Create(branch={24A40CEF-BCD5-4407-A9D9-FA203141ECAC},settings={AAE37F9C-3A5D-4640-B718-19F396B1ADBA})"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Brightcove Account
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130527T163600
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

@@ -1,0 +1,133 @@
+﻿---
+ID: "eb0a68e7-eb7a-42ee-9349-72c8a188ebee"
+Parent: "ff0bc016-2d01-4f55-a020-ef6fc2fe7559"
+Template: "664e5035-eb8c-4ba1-9731-a098fcc9127a"
+Path: /sitecore/system/Settings/Rules/Insert Options/Rules/MediaFramework Brightcove
+DB: master
+SharedFields:
+- ID: "fa307b86-da2a-44bd-887d-e2057cdb4948"
+  Hint: Rule
+  Type: Rules
+  Value: |
+    <ruleset>
+      <rule
+        uid="{E841143E-0F22-4A55-949E-B96879173FC2}">
+        <conditions>
+          <condition
+            id="{4F5389E9-79B7-4FE1-A43A-EEA4ECD19C94}"
+            uid="A99D441FC5454FC1B8ED2A4E2D9F2859"
+            operatorid="{537244C2-3A3F-4B81-A6ED-02AF494C0563}"
+            value="{E7291614-A88D-4512-92B7-1DAE99309D26}" />
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="BC1D7EF718BE439CBDF377018FBC826B"
+            insertoptionid="{D0497E69-98E5-421E-ADD4-EEAB4E5B7208}" />
+        </actions>
+      </rule>
+      <rule
+        uid="{F9437CF3-16AF-44D3-8771-051EAE0FFB84}">
+        <conditions>
+          <and
+            uid="BF3C53634A874564BBEAB7E5C65920F4">
+            <condition
+              id="{944E1C68-CAF1-468E-87DC-CE85D168D961}"
+              uid="4C5AAE88E67F4FDC8C14A7CC53E83DDE"
+              operatorid="{537244C2-3A3F-4B81-A6ED-02AF494C0563}"
+              value="Media Content" />
+            <and
+              uid="3E48E6656CEA469E994D60DD0EA25407">
+              <condition
+                id="{AF2FBD9A-DED2-42B5-B38D-BAC45D301296}"
+                uid="4D3ACAD351B846FE926042A773C38458"
+                templateid="{C657F8EF-4916-447F-9255-483ED2EEC562}" />
+              <condition
+                id="{47E9EE27-3642-4EB3-A1A8-A49AE6263E87}"
+                uid="2A7DBA7A596B494BAE6711A2D51DE87A" />
+            </and>
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="69EE9C408D5D433DBBC02B1E22D143D8"
+            insertoptionid="{1356E0A8-C8DD-4F38-8D17-B5A463027317}" />
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="893212F0E9B8479B93D697D628E83E1F"
+            insertoptionid="{0E24292F-D7A5-4BA2-BCA0-CD5F14A89634}" />
+        </actions>
+      </rule>
+      <rule
+        uid="{A7CC5208-E288-4EB1-BFE6-1E53965DD5A6}">
+        <conditions>
+          <and
+            uid="ACD07B90CF7A4DF9946A608FE7527E10">
+            <condition
+              id="{944E1C68-CAF1-468E-87DC-CE85D168D961}"
+              uid="FD1FF57B95814D2789F506367D54C34E"
+              operatorid="{537244C2-3A3F-4B81-A6ED-02AF494C0563}"
+              value="Players" />
+            <condition
+              id="{AF2FBD9A-DED2-42B5-B38D-BAC45D301296}"
+              uid="70100AF2AE9F4FB1B9C6468D7428B0D2"
+              templateid="{C657F8EF-4916-447F-9255-483ED2EEC562}" />
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="2E9DFA355F5F491090A2C1336FE19E97"
+            insertoptionid="{6506FE28-3F57-48B2-B66A-EF50C97714A9}" />
+        </actions>
+      </rule>
+      <rule
+        uid="{99C25841-0369-4914-B760-901294DC8F7B}">
+        <conditions>
+          <and
+            uid="79A421565EBF440D871E2CE7971C833F">
+            <condition
+              id="{944E1C68-CAF1-468E-87DC-CE85D168D961}"
+              uid="F9E27DCB36FB4FD88F45A9BFF22DCD78"
+              operatorid="{537244C2-3A3F-4B81-A6ED-02AF494C0563}"
+              value="Tags" />
+            <and
+              uid="83BF22FC6712450084681071C23AEEE7">
+              <condition
+                id="{AF2FBD9A-DED2-42B5-B38D-BAC45D301296}"
+                uid="8F62C2A4A5204F98B47818DB15EBAED6"
+                templateid="{C657F8EF-4916-447F-9255-483ED2EEC562}" />
+              <condition
+                id="{47E9EE27-3642-4EB3-A1A8-A49AE6263E87}"
+                uid="4AE83FED41EC425C9CDAA6B857435AF7" />
+            </and>
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{918FFCF0-F9E1-4DB6-A191-3EFA5A91C583}"
+            uid="FF3DF1C51E244212BF898108EE92B34C"
+            insertoptionid="{1F5CF62D-DEDC-4712-A8B6-CCC36E27A3F8}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: MediaFramework Brightcove
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T180131
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "9e0287d9-af90-41ad-8d36-332375e194d6"
+      Hint: Name
+      Value: MediaFramework Brightcove Account

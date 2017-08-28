@@ -1,0 +1,45 @@
+﻿---
+ID: "73f34ccd-c300-4675-b00a-f8ea811210fa"
+Parent: "f2951b80-4390-477e-a835-53ca9ac5fc4a"
+Template: "97b61451-9a75-4f59-93a5-dbd8d4f44421"
+Path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Import Content/Brightcove Import All
+DB: core
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: applications/32x32/undo.png
+- ID: "39c4902e-9960-4469-aeef-e878e9c8218f"
+  Hint: __Hidden
+  Type: checkbox
+  Value: 0
+- ID: "3f5bd18e-8cee-4cd5-9ee3-77863947b312"
+  Hint: Menu
+  Value: /sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove
+- ID: "f5a07916-7bca-4fba-857c-a5d166c332d4"
+  Hint: Icon
+  Value: applications/24x24/undo.png
+- ID: "fc6b80f1-406d-47f0-a2b3-fcd7a8ea9d74"
+  Hint: Click
+  Value: "mediaFramework:ManualImport:Brightcove(scope=import_brightcove_content)"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b11f9f5f-88fc-48c5-9501-2e827ef40ead"
+    Hint: Header
+    Value: Import All
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Brightcove Import All
+  - ID: "db8c4e34-586c-4ded-bc95-b993fc3a01a8"
+    Hint: Tooltip
+    Value: Import all content for the account
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130717T154200
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

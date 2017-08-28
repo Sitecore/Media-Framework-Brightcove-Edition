@@ -27,7 +27,6 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.MediaF
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.MediaFramework.Mvc.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.RestSharp.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.ContentSearch.Linq.dll
-C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.ContentSearch.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Analytics.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Mvc.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Sitecore.Analytics.Model.dll
@@ -38,3 +37,12 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.pdb
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Brightcove.MediaFramework.Brightcove.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Brightcove.MediaFramework.Brightcove.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Web.dll.config
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Configy.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Kamsar.WebConsole.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\MicroCHAP.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Rainbow.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Rainbow.Storage.Sc.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Rainbow.Storage.Yaml.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Unicorn.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\Newtonsoft.Json.dll

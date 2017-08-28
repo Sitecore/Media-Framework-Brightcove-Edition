@@ -29,7 +29,7 @@ namespace Brightcove.MediaFramework.Brightcove.Commands
             }
             try
             {
-                Windows.RunApplication(application, application.Appearance.Icon, application.DisplayName, urlString.ToString());
+                Sitecore.Shell.Framework.Windows.RunApplication(application, application.Appearance.Icon, application.DisplayName, urlString.ToString());
             }
             catch (Exception ex)
             {

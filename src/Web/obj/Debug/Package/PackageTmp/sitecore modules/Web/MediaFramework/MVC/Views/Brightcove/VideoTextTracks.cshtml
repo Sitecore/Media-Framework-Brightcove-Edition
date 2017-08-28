@@ -1,0 +1,125 @@
+﻿@using Brightcove.MediaFramework.Brightcove.Entities.ViewModels
+@using Sitecore
+@using Sitecore.Globalization
+@model VideoTextTracks
+
+@{
+    var index = -1;
+}
+
+<h1 class="video-name">@Model.Video.Name</h1>
+<h2 class="video-id">@Model.Video.Id</h2>
+@if (@Model.Tracks != null && @Model.Tracks.Count > 0)
+{
+    <div class="video-entry-start">
+        @if (@Model.UploadingTracks)
+        {
+            <div class="upload-message">@Translate.Text("Uploaded text tracks are being processed. They will appear when processing is finished.")</div>
+        }
+        <table cellpadding="10">
+            <tbody>
+                <tr>
+                    <th>Label</th>
+                    <th>Lang.</th>
+                    <th>Kind</th>
+                    <th>Url</th>
+                    <th>Mime</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+                @foreach (var item in @Model.Tracks)
+                {
+                    index++;
+                    <tr class="@string.Format("{0}", item.Default ? "default-row" : "")">
+                        <td class="td-label">
+                            <label title="@item.Label">
+                                @item.Label
+                            </label>
+                            <input style='display: none;' type='text' name='videoTextTracks.Tracks[@index].Label' value='@item.Label' />
+                        </td>
+                        <td class="td-lang">
+                            <label title="@item.SrcLang">
+                                @item.SrcLang
+                            </label>
+                            <input style='display: none;' type='text' name='videoTextTracks.Tracks[@index].SrcLang' value='@item.SrcLang' />
+                        </td>
+                        <td class="td-kind">
+                            <label title="@item.Kind">
+                                @item.Kind
+                            </label>
+                            <input style='display: none;' type='text' name='videoTextTracks.Tracks[@index].Kind' value='@item.Kind' />
+                        </td>
+                        <td class="td-src">
+                            <label title="@item.Src">
+                                @item.Src
+                            </label>
+                            <input style='display: none;' type='text' name='videoTextTracks.Tracks[@index].Src' value='@item.Src' />
+                            <input class='is-upload' name='videoTextTracks.Tracks[@index].IsUpload' type='hidden' value='false' />
+                        </td>
+                        <td class="td-mimetype">
+                            <label title="@item.MimeType">
+                                @item.MimeType
+                            </label>
+                            <input style='display: none;' type='text' name='videoTextTracks.Tracks[@index].MimeType' value='@item.MimeType' />
+                        </td>
+                        <td class="td-delete">
+                            <input id='deletetrack' class="enbl-dsbl" name='deletecheckbox[@index]' type='checkbox' />
+                            <input class='is-delete' name='videoTextTracks.Tracks[@index].IsDelete' type='hidden' value='false' />
+                            <input class='is-default' name='videoTextTracks.Tracks[@index].Default' type='hidden' value=@string.Format("{0}", item.Default ? "true" : "false") />
+                        </td>
+                        <td class="td-edit"><button id="edittrack" class="edittrack btn btn-success fileinput-button enbl-dsbl" type="button">@Translate.Text("Edit")</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="submit-buttons-start">
+            <input id="tracksfound" type="hidden" value="true" />
+            <input id="addTrackButton" class="btn btn-primary start enbl-dsbl" type="submit" value="@Translate.Text("Add Text Track")" />
+            <input id="submitButton" class="btn btn-primary start enbl-dsbl" type="submit" value="@Translate.Text("Save")" disabled />
+            <div class="submitbtnloading loading">
+                <div id="loadingcontent">
+                    <p id="loadingspinner">
+                        <img src="~/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif" />
+                        <div class="message-board"></div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="video-entry-start">
+        <div class="no-fields">@Translate.Text("There are no text tracks associated with this video.")</div>
+        @if (@Model.UploadingTracks)
+        {
+            <div class="upload-message">@Translate.Text("Uploaded text tracks are being processed. They will appear when processing is finished.")</div>
+        }
+        <table cellpadding="10" style="display:none">
+            <tbody>
+            <tr>
+                <th>Label</th>
+                <th>Lang.</th>
+                <th>Kind</th>
+                <th>Url</th>
+                <th>Mime</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+            </tbody>
+        </table>
+        <div class="submit-buttons-start">
+            <input id="tracksfound" type="hidden" value="false"/>
+            <input id="addTrackButton" class="btn btn-primary start enbl-dsbl" type="submit" value="@Translate.Text("Add Text Track")"/>
+            <input id="submitButton" class="btn btn-primary start enbl-dsbl" type="submit" value="@Translate.Text("Save")" disabled />
+            <div class="submitbtnloading loading">
+                <div id="loadingcontent">
+                    <p id="loadingspinner">
+                        <img src="~/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif"/>
+                        <div class="message-board"></div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

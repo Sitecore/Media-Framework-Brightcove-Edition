@@ -9,3 +9,7 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramew
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\obj\Debug\Brightcove.MediaFramework.Brightcove.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\obj\Debug\Brightcove.MediaFramework.Brightcove.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Sitecore.Kernel.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Configy.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\Kamsar.WebConsole.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\AgencyOasis.MediaFramework.Brightcove\bin\Debug\MicroCHAP.dll
