@@ -7,13 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brightcove.MediaFramework.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6C4132F-37F9-4719-8A65-A33A095C4191}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".tds", ".tds", "{7DBCF463-70B4-40B1-8130-1DC864D9394B}"
-	ProjectSection(SolutionItems) = preProject
-		TdsGlobal.config = TdsGlobal.config
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{3113595F-4B0F-4F41-AACA-62990EFA6729}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{17D81DEE-EECA-4938-B14F-693F3DDBA059}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{25D2BA55-EF45-470D-8AA0-6B229ACEAC47}"
@@ -50,10 +43,6 @@ Global
 		{B6C4132F-37F9-4719-8A65-A33A095C4191}.QA-AOBrightcove|Any CPU.Build.0 = QA-AOBrightcove|Any CPU
 		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3113595F-4B0F-4F41-AACA-62990EFA6729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3113595F-4B0F-4F41-AACA-62990EFA6729}.DEV-AOBrightcove|Any CPU.ActiveCfg = Debug|Any CPU
-		{3113595F-4B0F-4F41-AACA-62990EFA6729}.QA-AOBrightcove|Any CPU.ActiveCfg = QA-AOBrightcove|Any CPU
-		{3113595F-4B0F-4F41-AACA-62990EFA6729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,0 @@
-D:\Projects\AgencyOasis\Brightcove\2.2.1\Build\bin\Debug\Build.dll
-D:\Projects\AgencyOasis\Brightcove\2.2.1\Build\bin\Debug\Build.pdb
-D:\Projects\AgencyOasis\Brightcove\2.2.1\Build\obj\Debug\Build.csprojResolveAssemblyReference.cache
-D:\Projects\AgencyOasis\Brightcove\2.2.1\Build\obj\Debug\Build.dll
-D:\Projects\AgencyOasis\Brightcove\2.2.1\Build\obj\Debug\Build.pdb
