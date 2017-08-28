@@ -143,7 +143,7 @@
     <Content Include="layouts\MediaFramework\Brightcove\VideoTextTracks.cshtml" />
     <Content Include="App_Config\Include\Rainbow.config" />
     <None Include="App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled" />
-    <Content Include="packages.config" />
+    <None Include="packages.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
@@ -154,7 +154,7 @@
     <Content Include="sitecore modules\Web\MediaFramework\js\Analytics\brightcove.js" />
     <Content Include="sitecore modules\Web\MediaFramework\MVC\Views\Brightcove\VideoCustomFields.cshtml" />
     <Content Include="sitecore modules\Web\MediaFramework\MVC\Views\Brightcove\VideoTextTracks.cshtml" />
-    <Content Include="web.config" />
+    <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -169,7 +169,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AgencyOasis.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj">
+    <ProjectReference Include="..\Brightcove.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj">
       <Project>{c4ce22b6-2f6f-456d-a502-7914dbc3cea8}</Project>
       <Name>Brightcove.MediaFramework.Brightcove</Name>
     </ProjectReference>

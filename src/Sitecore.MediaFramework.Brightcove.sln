@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brightcove.MediaFramework.Brightcove", "AgencyOasis.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj", "{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brightcove.MediaFramework.Brightcove", "Brightcove.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj", "{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6C4132F-37F9-4719-8A65-A33A095C4191}"
 EndProject
@@ -17,6 +17,30 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{393F6BF2-2B06-4164-8A94-A814060769EA}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{9E232A00-2292-4F44-890E-C1B528A8F3C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{4ADE3BA2-A085-4802-B983-73A722ED4EA1}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Sitecore\Newtonsoft.Json.dll = Lib\Sitecore\Newtonsoft.Json.dll
+		Lib\Sitecore\RestSharp.dll = Lib\Sitecore\RestSharp.dll
+		Lib\Sitecore\Sitecore.Analytics.Aggregation.dll = Lib\Sitecore\Sitecore.Analytics.Aggregation.dll
+		Lib\Sitecore\Sitecore.Analytics.Core.dll = Lib\Sitecore\Sitecore.Analytics.Core.dll
+		Lib\Sitecore\Sitecore.Analytics.dll = Lib\Sitecore\Sitecore.Analytics.dll
+		Lib\Sitecore\Sitecore.Analytics.Model.dll = Lib\Sitecore\Sitecore.Analytics.Model.dll
+		Lib\Sitecore\Sitecore.ContentSearch.dll = Lib\Sitecore\Sitecore.ContentSearch.dll
+		Lib\Sitecore\Sitecore.ContentSearch.Linq.dll = Lib\Sitecore\Sitecore.ContentSearch.Linq.dll
+		Lib\Sitecore\Sitecore.ExperienceAnalytics.dll = Lib\Sitecore\Sitecore.ExperienceAnalytics.dll
+		Lib\Sitecore\Sitecore.Integration.Common.dll = Lib\Sitecore\Sitecore.Integration.Common.dll
+		Lib\Sitecore\Sitecore.Kernel.dll = Lib\Sitecore\Sitecore.Kernel.dll
+		Lib\Sitecore\Sitecore.MediaFramework.Brightcove.dll = Lib\Sitecore\Sitecore.MediaFramework.Brightcove.dll
+		Lib\Sitecore\Sitecore.MediaFramework.dll = Lib\Sitecore\Sitecore.MediaFramework.dll
+		Lib\Sitecore\Sitecore.MediaFramework.Migration.dll = Lib\Sitecore\Sitecore.MediaFramework.Migration.dll
+		Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll = Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll
+		Lib\Sitecore\Sitecore.Mvc.dll = Lib\Sitecore\Sitecore.Mvc.dll
+		Lib\Sitecore\Sitecore.RestSharp.dll = Lib\Sitecore\Sitecore.RestSharp.dll
+		Lib\Sitecore\Sitecore.Services.Infrastructure.dll = Lib\Sitecore\Sitecore.Services.Infrastructure.dll
 	EndProjectSection
 EndProject
 Global
@@ -49,6 +73,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{25D2BA55-EF45-470D-8AA0-6B229ACEAC47} = {17D81DEE-EECA-4938-B14F-693F3DDBA059}
+		{4ADE3BA2-A085-4802-B983-73A722ED4EA1} = {9E232A00-2292-4F44-890E-C1B528A8F3C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
