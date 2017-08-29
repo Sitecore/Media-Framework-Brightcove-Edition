@@ -1,9 +1,15 @@
 # Media-Framework-Brightcove-Edition
 Brightcove Connector for Sitecore Media Framework
 
-Before using, make sure Sitecore Media Framework 2.2 is installed. Install the Brightcove connector via the package.
+1) Install Sitecore 8.2 rev 161221 with Sitecore Instance Manager.
+http://dl.sitecore.net/updater/qa/sim/
 
-Modify Unicorn.Brightcove.config to point to the Serialization directory in your source directory.
+2) Install Sitecore Media Framework 2.2
+https://dev.sitecore.net/Downloads/Sitecore_Media_Framework/2x/Sitecore_Media_Framework_22.aspx
+ 
+3) Install the Brightcove connector via the package.
+
+4) Modify Unicorn.Brightcove.config to point to the Serialization directory in your source directory.
 
 Then, you can use this solution and publish over your website as usual.
 
