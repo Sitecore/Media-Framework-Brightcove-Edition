@@ -8,26 +8,30 @@
       <License />
       <Comment />
       <Attributes />
-      <Readme>Sitecore Media Framework Brightcove Edition 2.2 rev. 170828
--------------------------------------------------------------
-Date: 28-Aug-2017
--------------------------------------------------------------
-Prerequisites:
--  Sitecore Media Framework 2.1 rev. 150625 OR
--  Sitecore Media Framework 2.2
--------------------------------------------------------------
-Sitecore Media Framework Brightcove Edition 2.2 runs on:
--  Sitecore Experience Platform 8.1 Update-1
--  Sitecore Experience Platform 8.2 Update-2
--------------------------------------------------------------
-Sitecore Media Framework Brightcove Edition 2.2 has been 
-tested on:
--  Sitecore Experience Platform 8.1 Update-1
--  Sitecore Experience Platform 8.2 Update-2
--------------------------------------------------------------
-Sitecore® is a registered trademark. All other brand and
-product names are the property of their respective holders. All rights reserved.
-</Readme>
+      <Readme>
+        Sitecore Media Framework Brightcove Edition 2.2 rev. 170828
+        -------------------------------------------------------------
+        Date: 28-Aug-2017
+        -------------------------------------------------------------
+        Post installation: Enable Website\App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.Extended.config
+        Modify your website value (replacing [PUT YOUR WEB SITE URL HERE]) and confirm target databases for ContentDatabaseName and PublishDatabaseName.
+        -------------------------------------------------------------
+        Prerequisites:
+        -  Sitecore Media Framework 2.1 rev. 150625 OR
+        -  Sitecore Media Framework 2.2
+        -------------------------------------------------------------
+        Sitecore Media Framework Brightcove Edition 2.2 runs on:
+        -  Sitecore Experience Platform 8.1 Update-1
+        -  Sitecore Experience Platform 8.2 Update-2
+        -------------------------------------------------------------
+        Sitecore Media Framework Brightcove Edition 2.2 has been
+        tested on:
+        -  Sitecore Experience Platform 8.1 Update-1
+        -  Sitecore Experience Platform 8.2 Update-2
+        -------------------------------------------------------------
+        Sitecore® is a registered trademark. All other brand and
+        product names are the property of their respective holders. All rights reserved.
+      </Readme>
       <Publisher>Brightcove</Publisher>
       <PostStep>Sitecore.MediaFramework.PostStep,Sitecore.MediaFramework</PostStep>
       <PackageID />
