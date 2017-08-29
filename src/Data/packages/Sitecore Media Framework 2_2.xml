@@ -123,6 +123,7 @@ product names are the property of their respective holders. All rights reserved.
         <x-item>/App_Config/Include/Sitecore.ContentSearch.MediaFramework.Brightcove.config</x-item>
         <x-item>/App_Config/Include/Sitecore.MediaFramework.Services.Brightcove.config</x-item>
         <x-item>/App_Config/Include/Sitecore.RestSharp.Brightcove.config</x-item>
+        <x-item>/App_Config/Include/Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
@@ -488,6 +489,7 @@ product names are the property of their respective holders. All rights reserved.
     <xfiles>
       <Entries>
         <x-item>/sitecore modules/Web/MediaFramework/js/Analytics/brightcove.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
@@ -709,6 +711,22 @@ product names are the property of their respective holders. All rights reserved.
       <Exclude />
       <Name>[Brightcove] Application Layout and Views</Name>
     </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/{04704D09-7690-4103-A000-CB6063F0339F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Custom Fields/{F2375A5D-B094-4A9C-8F7C-C7699178D603}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Text Tracks/{C4D485C4-ED0C-40EF-B576-A839AE62D00D}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Media Application</Name>
+    </xitems>
   </Sources>
   <Converter>
     <TrivialConverter>
