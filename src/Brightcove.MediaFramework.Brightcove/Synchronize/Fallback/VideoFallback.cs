@@ -1,8 +1,6 @@
 ﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
-using Sitecore.MediaFramework.Brightcove.Synchronize.Fallback;
 using Sitecore.MediaFramework.Entities;
 using VideoSearchResult = Brightcove.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
 
@@ -19,16 +17,16 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.Fallback
     protected override MediaServiceSearchResult GetSearchResult(Item item)
     {
       VideoSearchResult videoSearchResult = (VideoSearchResult) base.GetSearchResult(item);
-      videoSearchResult.CreationDate = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.CreationDate];
-      videoSearchResult.LongDescription = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LongDescription];
-      videoSearchResult.PublishedDate = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.PublishedDate];
-      videoSearchResult.LastModifiedDate = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LastModifiedDate];
-      videoSearchResult.Economics = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.Economics];
-      videoSearchResult.LinkURL = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LinkUrl];
-      videoSearchResult.LinkText = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LinkText];
-      videoSearchResult.Tags = ID.ParseArray(item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.Tags]);
-      videoSearchResult.VideoStillURL = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.VideoStillUrl];
-      videoSearchResult.CustomFields = item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.CustomFields];
+      videoSearchResult.CreationDate = item[FieldIDs.Video.CreationDate];
+      videoSearchResult.LongDescription = item[FieldIDs.Video.LongDescription];
+      videoSearchResult.PublishedDate = item[FieldIDs.Video.PublishedDate];
+      videoSearchResult.LastModifiedDate = item[FieldIDs.Video.LastModifiedDate];
+      videoSearchResult.Economics = item[FieldIDs.Video.Economics];
+      videoSearchResult.LinkURL = item[FieldIDs.Video.LinkUrl];
+      videoSearchResult.LinkText = item[FieldIDs.Video.LinkText];
+      videoSearchResult.Tags = ID.ParseArray(item[FieldIDs.Video.Tags]);
+      videoSearchResult.VideoStillURL = item[FieldIDs.Video.VideoStillUrl];
+      videoSearchResult.CustomFields = item[FieldIDs.Video.CustomFields];
       return (MediaServiceSearchResult) videoSearchResult;
     }
   }

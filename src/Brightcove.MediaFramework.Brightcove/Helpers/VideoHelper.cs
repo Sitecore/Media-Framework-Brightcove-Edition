@@ -15,7 +15,7 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Integration.Common.Utils;
 using Sitecore.MediaFramework.Account;
-using Sitecore.MediaFramework.Brightcove;
+
 using Sitecore.SecurityModel;
 using Brightcove.MediaFramework.Brightcove.Entities;
 
@@ -26,7 +26,7 @@ namespace Brightcove.MediaFramework.Brightcove.Helpers
         public static MediaServiceSearchResult GetSearchResult(string entity, Item ancesterItem = null)
         {
             if (ancesterItem == null) ancesterItem = Factory.GetDatabase("master").GetItem(Sitecore.MediaFramework.ItemIDs.AccountsRoot);
-            return (MediaServiceSearchResult)GetSearchResultForAncesterFilter<VideoSearchResult>(Sitecore.MediaFramework.Brightcove.Constants.IndexName, ancesterItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == entity));
+            return (MediaServiceSearchResult)GetSearchResultForAncesterFilter<VideoSearchResult>(Constants.IndexName, ancesterItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == entity));
         }
 
         public static TSearchResult GetSearchResultForAncesterFilter<TSearchResult>(string indexName, Item ancesterItem, Expression<Func<TSearchResult, bool>> selector) where TSearchResult : MediaServiceSearchResult, new()

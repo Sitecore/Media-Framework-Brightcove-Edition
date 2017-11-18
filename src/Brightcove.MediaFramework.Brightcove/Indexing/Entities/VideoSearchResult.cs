@@ -2,7 +2,7 @@
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Converters;
 using Sitecore.Data;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
+
 
 namespace Brightcove.MediaFramework.Brightcove.Indexing.Entities
 {

@@ -68,7 +68,7 @@ namespace Brightcove.MediaFramework.Brightcove.Export
 
         public override bool IsNew(Item item)
         {
-            return item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id].Length == 0;
+            return item[FieldIDs.MediaElement.Id].Length == 0;
         }
     }
 }

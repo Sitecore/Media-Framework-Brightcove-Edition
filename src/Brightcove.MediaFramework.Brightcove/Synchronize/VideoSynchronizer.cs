@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 using System.Web;
 using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
+
 using Sitecore.MediaFramework.Entities;
 using VideoSearchResult = Brightcove.MediaFramework.Brightcove.Indexing.Entities.VideoSearchResult;
 
@@ -26,20 +26,20 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
             using (new EditContext(item))
             {
                 item.Name = ItemUtil.ProposeValidItemName(video.Name);
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id] = video.Id;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Name] = video.Name;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ReferenceId] = video.ReferenceId;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ThumbnailUrl] = (video.Images != null && video.Images.Thumbnail != null) ? video.Images.Thumbnail.Src : null;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ShortDescription] = video.ShortDescription;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.CreationDate] = video.CreationDate.ToString();
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LongDescription] = video.LongDescription;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.PublishedDate] = video.PublishedDate.ToString();
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LastModifiedDate] = video.LastModifiedDate.ToString();
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.Economics] = video.Economics.ToString();
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LinkUrl] = video.Link != null ? video.Link.URL : null;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.LinkText] = video.Link != null ? video.Link.Text : null;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.VideoStillUrl] = (video.Images != null && video.Images.Poster != null) ? video.Images.Poster.Src : null;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.Video.CustomFields] = this.GetCustomFields(video);
+                item[FieldIDs.MediaElement.Id] = video.Id;
+                item[FieldIDs.MediaElement.Name] = video.Name;
+                item[FieldIDs.MediaElement.ReferenceId] = video.ReferenceId;
+                item[FieldIDs.MediaElement.ThumbnailUrl] = (video.Images != null && video.Images.Thumbnail != null) ? video.Images.Thumbnail.Src : null;
+                item[FieldIDs.MediaElement.ShortDescription] = video.ShortDescription;
+                item[FieldIDs.Video.CreationDate] = video.CreationDate.ToString();
+                item[FieldIDs.Video.LongDescription] = video.LongDescription;
+                item[FieldIDs.Video.PublishedDate] = video.PublishedDate.ToString();
+                item[FieldIDs.Video.LastModifiedDate] = video.LastModifiedDate.ToString();
+                item[FieldIDs.Video.Economics] = video.Economics.ToString();
+                item[FieldIDs.Video.LinkUrl] = video.Link != null ? video.Link.URL : null;
+                item[FieldIDs.Video.LinkText] = video.Link != null ? video.Link.Text : null;
+                item[FieldIDs.Video.VideoStillUrl] = (video.Images != null && video.Images.Poster != null) ? video.Images.Poster.Src : null;
+                item[FieldIDs.Video.CustomFields] = this.GetCustomFields(video);
                 item[FieldIDs.Video.Duration] = video.Duration.HasValue ? video.Duration.ToString() : string.Empty;
                 item[FieldIDs.Video.IngestJobId] = video.IngestJobId;
 
@@ -70,7 +70,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
         public override MediaServiceSearchResult GetSearchResult(object entity, Item accountItem)
         {
             Video video = (Video)entity;
-            return (MediaServiceSearchResult)this.GetSearchResult<VideoSearchResult>(Sitecore.MediaFramework.Brightcove.Constants.IndexName, accountItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == video.Id));
+            return (MediaServiceSearchResult)this.GetSearchResult<VideoSearchResult>(Constants.IndexName, accountItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == video.Id));
         }
 
         public override MediaServiceEntityData GetMediaData(object entity)

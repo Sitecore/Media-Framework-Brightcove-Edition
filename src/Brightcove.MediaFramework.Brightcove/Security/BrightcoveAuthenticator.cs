@@ -14,7 +14,7 @@ namespace Brightcove.MediaFramework.Brightcove.Security
 
         public BrightcoveAuthenticator(Item accountItem)
         {
-            this.PublisherId = accountItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Account.PublisherId];
+            this.PublisherId = accountItem[FieldIDs.Account.PublisherId];
             this.ClientId = accountItem[FieldIDs.Account.ClientId];
             this.ClientSecret = accountItem[FieldIDs.Account.ClientSecret];
         }

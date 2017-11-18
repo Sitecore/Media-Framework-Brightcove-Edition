@@ -4,8 +4,9 @@ using System.Linq;
 using Brightcove.MediaFramework.Brightcove.Proxy.CMS;
 using RestSharp;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove.Entities;
+
 using Video = Brightcove.MediaFramework.Brightcove.Entities.Video;
+using Brightcove.MediaFramework.Brightcove.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Import
 {

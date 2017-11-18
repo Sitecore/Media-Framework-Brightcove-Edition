@@ -6,8 +6,8 @@ using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
-using Sitecore.MediaFramework.Brightcove.Entities;
+
+
 using Sitecore.MediaFramework.Synchronize;
 using PlayList = Brightcove.MediaFramework.Brightcove.Entities.PlayList;
 using PlaylistType = Brightcove.MediaFramework.Brightcove.Entities.PlaylistType;
@@ -19,19 +19,19 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.EntityCreators
     public virtual object CreateEntity(Item item)
     {
       PlaylistType result1;
-      Enum.TryParse<PlaylistType>(item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.PlaylistType], true, out result1);
+      Enum.TryParse<PlaylistType>(item[FieldIDs.PlayerList.PlaylistType], true, out result1);
       TagInclusion result2 = TagInclusion.OR;
-      Enum.TryParse<TagInclusion>(item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.TagInclusion], true, out result2);
+      Enum.TryParse<TagInclusion>(item[FieldIDs.PlayerList.TagInclusion], true, out result2);
       PlayList playList = new PlayList();
-      playList.Id = item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id];
-      playList.ReferenceId = item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ReferenceId];
-      playList.ShortDescription = item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ShortDescription];
-      playList.Name = item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Name];
+      playList.Id = item[FieldIDs.MediaElement.Id];
+      playList.ReferenceId = item[FieldIDs.MediaElement.ReferenceId];
+      playList.ShortDescription = item[FieldIDs.MediaElement.ShortDescription];
+      playList.Name = item[FieldIDs.MediaElement.Name];
       playList.PlaylistType = result1.ToString();
-      playList.VideoIds = this.GetValues(item.Fields[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.VideoIds], Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id);
+      playList.VideoIds = this.GetValues(item.Fields[FieldIDs.PlayerList.VideoIds], FieldIDs.MediaElement.Id);
         playList.PlayListSearch = new PlayListSearch();
         playList.PlayListSearch.TagInclusion = result2;
-      playList.PlayListSearch.FilterTags = this.GetValues(item.Fields[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.FilterTags], Sitecore.MediaFramework.Brightcove.FieldIDs.Tag.Name);
+      playList.PlayListSearch.FilterTags = this.GetValues(item.Fields[FieldIDs.PlayerList.FilterTags], FieldIDs.Tag.Name);
       return (object) playList;
     }
 

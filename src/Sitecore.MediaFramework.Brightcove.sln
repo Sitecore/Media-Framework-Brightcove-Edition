@@ -19,30 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{9E232A00-2292-4F44-890E-C1B528A8F3C9}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sitecore", "Sitecore", "{4ADE3BA2-A085-4802-B983-73A722ED4EA1}"
-	ProjectSection(SolutionItems) = preProject
-		Lib\Sitecore\Newtonsoft.Json.dll = Lib\Sitecore\Newtonsoft.Json.dll
-		Lib\Sitecore\RestSharp.dll = Lib\Sitecore\RestSharp.dll
-		Lib\Sitecore\Sitecore.Analytics.Aggregation.dll = Lib\Sitecore\Sitecore.Analytics.Aggregation.dll
-		Lib\Sitecore\Sitecore.Analytics.Core.dll = Lib\Sitecore\Sitecore.Analytics.Core.dll
-		Lib\Sitecore\Sitecore.Analytics.dll = Lib\Sitecore\Sitecore.Analytics.dll
-		Lib\Sitecore\Sitecore.Analytics.Model.dll = Lib\Sitecore\Sitecore.Analytics.Model.dll
-		Lib\Sitecore\Sitecore.ContentSearch.dll = Lib\Sitecore\Sitecore.ContentSearch.dll
-		Lib\Sitecore\Sitecore.ContentSearch.Linq.dll = Lib\Sitecore\Sitecore.ContentSearch.Linq.dll
-		Lib\Sitecore\Sitecore.ExperienceAnalytics.dll = Lib\Sitecore\Sitecore.ExperienceAnalytics.dll
-		Lib\Sitecore\Sitecore.Integration.Common.dll = Lib\Sitecore\Sitecore.Integration.Common.dll
-		Lib\Sitecore\Sitecore.Kernel.dll = Lib\Sitecore\Sitecore.Kernel.dll
-		Lib\Sitecore\Sitecore.MediaFramework.Brightcove.dll = Lib\Sitecore\Sitecore.MediaFramework.Brightcove.dll
-		Lib\Sitecore\Sitecore.MediaFramework.dll = Lib\Sitecore\Sitecore.MediaFramework.dll
-		Lib\Sitecore\Sitecore.MediaFramework.Migration.dll = Lib\Sitecore\Sitecore.MediaFramework.Migration.dll
-		Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll = Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll
-		Lib\Sitecore\Sitecore.Mvc.dll = Lib\Sitecore\Sitecore.Mvc.dll
-		Lib\Sitecore\Sitecore.RestSharp.dll = Lib\Sitecore\Sitecore.RestSharp.dll
-		Lib\Sitecore\Sitecore.Services.Infrastructure.dll = Lib\Sitecore\Sitecore.Services.Infrastructure.dll
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework", "Sitecore.MediaFramework\Sitecore.MediaFramework.csproj", "{288E6E2F-9027-4746-B6C9-1D0A04E484AA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework.Migration", "Sitecore.MediaFramework.Migration\Sitecore.MediaFramework.Migration.csproj", "{91856649-155C-47A7-ACDB-2E3596C75B0C}"
@@ -126,7 +102,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{25D2BA55-EF45-470D-8AA0-6B229ACEAC47} = {17D81DEE-EECA-4938-B14F-693F3DDBA059}
-		{4ADE3BA2-A085-4802-B983-73A722ED4EA1} = {9E232A00-2292-4F44-890E-C1B528A8F3C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45

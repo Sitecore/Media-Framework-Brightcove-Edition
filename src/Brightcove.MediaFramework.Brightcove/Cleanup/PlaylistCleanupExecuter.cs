@@ -1,5 +1,5 @@
 ﻿using Brightcove.MediaFramework.Brightcove.Entities;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.MediaFramework.Cleanup;
 
 namespace Brightcove.MediaFramework.Brightcove.Cleanup

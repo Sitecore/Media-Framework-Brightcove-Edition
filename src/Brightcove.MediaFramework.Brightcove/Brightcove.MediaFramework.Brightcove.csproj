@@ -73,66 +73,49 @@
       <HintPath>..\Lib\Sitecore\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RestSharp">
-      <HintPath>..\Lib\Sitecore\RestSharp.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="RestSharp, Version=104.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.Analytics.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.Analytics, Version=11.18.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Core, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.Analytics.Core.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.Analytics.Core, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.Core.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Model, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.Analytics.Model.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.Analytics.Model, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.Model.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.Model.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.ContentSearch.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.ContentSearch, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.NoReferences.9.0.171002\lib\NET462\Sitecore.ContentSearch.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.ContentSearch.Linq.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.Linq.NoReferences.9.0.171002\lib\NET462\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Integration.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\Sitecore\Sitecore.Integration.Common.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\packages\Sitecore.Integration.Common.NoReferences.2.2.160927\lib\NET452\Sitecore.Integration.Common.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.171002\lib\NET462\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.MediaFramework">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sitecore.MediaFramework.Brightcove">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.Brightcove.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sitecore.MediaFramework.Mvc">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.Mvc">
-      <HintPath>..\Lib\Sitecore\Sitecore.Mvc.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.Mvc, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Mvc.NoReferences.9.0.171002\lib\NET462\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.RestSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Sitecore\Sitecore.RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Services.Infrastructure">
-      <HintPath>..\Lib\Sitecore\Sitecore.Services.Infrastructure.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="Sitecore.Services.Infrastructure, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Services.Infrastructure.NoReferences.9.0.171002\lib\NET462\Sitecore.Services.Infrastructure.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -164,7 +147,15 @@
     <Compile Include="Analytics\EventTrigger.cs" />
     <Compile Include="Analytics\PlaylistEventTrigger.cs" />
     <Compile Include="Analytics\VideoEventTrigger.cs" />
+    <Compile Include="Entities\Economics.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\TagInclusion.cs" />
     <Compile Include="Entities\VideoSharing.cs" />
+    <Compile Include="Indexing\Entities\AssetSearchResult.cs" />
+    <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
+    <Compile Include="Indexing\Entities\TagSearchResult.cs" />
+    <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
+    <Compile Include="TemplateIDs.cs" />
     <Compile Include="Pipelines\MediaGenerateMarkup\GetPlaybackEvents.cs" />
     <Compile Include="TextResult.cs" />
     <Compile Include="Commands\TextTracks.cs" />
@@ -278,8 +269,18 @@
     <Compile Include="Upload\VideoUploadExecutorBase.cs" />
     <Compile Include="Upload\VideoUploader.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Sitecore.MediaFramework.Mvc\Sitecore.MediaFramework.Mvc.csproj">
+      <Project>{d641d8fe-7a26-400c-98ab-62da576bbc32}</Project>
+      <Name>Sitecore.MediaFramework.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.MediaFramework\Sitecore.MediaFramework.csproj">
+      <Project>{288e6e2f-9027-4746-b6c9-1d0a04e484aa}</Project>
+      <Name>Sitecore.MediaFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Brightcove.MediaFramework.Brightcove.Json.Converters;
 using Newtonsoft.Json;
-using Sitecore.MediaFramework.Brightcove.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Entities
 {

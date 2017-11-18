@@ -23,7 +23,7 @@ namespace Brightcove.MediaFramework.Brightcove.Commands
             Item obj = Enumerable.FirstOrDefault<Item>((IEnumerable<Item>)context.Items);
             if (obj != null)
             {
-                urlString.Parameters.Add("videoId", obj.Fields[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id].Value);
+                urlString.Parameters.Add("videoId", obj.Fields[FieldIDs.MediaElement.Id].Value);
                 urlString.Parameters.Add("accountItemId", AccountManager.GetAccountItemForDescendant(Database.GetDatabase(obj.Database.Name).GetItem(obj.ID.ToString())).ID.ToString().Replace("{", "").Replace("}", ""));
                 urlString.Parameters.Add("type", "norm");
             }
@@ -50,7 +50,7 @@ namespace Brightcove.MediaFramework.Brightcove.Commands
         public override CommandState QueryState(CommandContext context)
         {
             Item obj = this.GetItem(context);
-            return obj != null && obj.TemplateID.Equals(Sitecore.MediaFramework.Brightcove.TemplateIDs.Video) ? CommandState.Enabled : CommandState.Hidden;
+            return obj != null && obj.TemplateID.Equals(TemplateIDs.Video) ? CommandState.Enabled : CommandState.Hidden;
         }
     }
 }

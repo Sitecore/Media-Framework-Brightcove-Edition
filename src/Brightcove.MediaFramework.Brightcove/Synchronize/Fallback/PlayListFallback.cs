@@ -1,9 +1,8 @@
 ﻿using Brightcove.MediaFramework.Brightcove.Entities;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 using Sitecore.Data;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
-using Sitecore.MediaFramework.Brightcove.Synchronize.Fallback;
+
 using Sitecore.MediaFramework.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Synchronize.Fallback
@@ -19,9 +18,9 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.Fallback
     protected override MediaServiceSearchResult GetSearchResult(Item item)
     {
       PlaylistSearchResult playlistSearchResult = (PlaylistSearchResult) base.GetSearchResult(item);
-      playlistSearchResult.PlaylistType = item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.PlaylistType];
-      playlistSearchResult.FilterTags = ID.ParseArray(item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.FilterTags]);
-      playlistSearchResult.VideoIds = ID.ParseArray(item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.VideoIds]);
+      playlistSearchResult.PlaylistType = item[FieldIDs.PlayerList.PlaylistType];
+      playlistSearchResult.FilterTags = ID.ParseArray(item[FieldIDs.PlayerList.FilterTags]);
+      playlistSearchResult.VideoIds = ID.ParseArray(item[FieldIDs.PlayerList.VideoIds]);
       return (MediaServiceSearchResult) playlistSearchResult;
     }
   }

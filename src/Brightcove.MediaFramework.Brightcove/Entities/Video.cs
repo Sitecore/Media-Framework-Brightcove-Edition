@@ -26,7 +26,7 @@ namespace Brightcove.MediaFramework.Brightcove.Entities
 
         [JsonProperty("economics", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(StringEnumConverter))]
-        public Sitecore.MediaFramework.Brightcove.Entities.Economics? Economics { get; set; }
+        public Entities.Economics? Economics { get; set; }
 
         [JsonProperty("link", NullValueHandling = NullValueHandling.Ignore)]
         public VideoLink Link { get; set; }

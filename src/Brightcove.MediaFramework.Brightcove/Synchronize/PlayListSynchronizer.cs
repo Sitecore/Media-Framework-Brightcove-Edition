@@ -2,10 +2,8 @@
 using System.Linq.Expressions;
 using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
-using Sitecore.MediaFramework.Brightcove.Synchronize;
 using Sitecore.MediaFramework.Entities;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Synchronize
 {
@@ -27,14 +25,14 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
             using (new EditContext(item))
             {
                 item.Name = ItemUtil.ProposeValidItemName(playList.Name);
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Name] = playList.Name;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.PlaylistType] = playList.PlaylistType;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id] = playList.Id;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ShortDescription] = playList.ShortDescription;
-                item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ReferenceId] = playList.ReferenceId;
+                item[FieldIDs.MediaElement.Name] = playList.Name;
+                item[FieldIDs.PlayerList.PlaylistType] = playList.PlaylistType;
+                item[FieldIDs.MediaElement.Id] = playList.Id;
+                item[FieldIDs.MediaElement.ShortDescription] = playList.ShortDescription;
+                item[FieldIDs.MediaElement.ReferenceId] = playList.ReferenceId;
                 if (playList.PlayListSearch != null)
                 {
-                    item[Sitecore.MediaFramework.Brightcove.FieldIDs.PlayerList.TagInclusion] =
+                    item[FieldIDs.PlayerList.TagInclusion] =
                         playList.PlayListSearch.TagInclusion.ToString();
                 }
                 item[FieldIDs.Playlist.CreationDate] = playList.CreationDate.HasValue ?
@@ -72,7 +70,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
         public override MediaServiceSearchResult GetSearchResult(object entity, Item accountItem)
         {
             PlayList playlist = (PlayList)entity;
-            return (MediaServiceSearchResult)this.GetSearchResult<PlaylistSearchResult>(Sitecore.MediaFramework.Brightcove.Constants.IndexName, accountItem, (Expression<Func<PlaylistSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Playlist && i.Id == playlist.Id));
+            return (MediaServiceSearchResult)this.GetSearchResult<PlaylistSearchResult>(Constants.IndexName, accountItem, (Expression<Func<PlaylistSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Playlist && i.Id == playlist.Id));
         }
 
         public override MediaServiceEntityData GetMediaData(object entity)

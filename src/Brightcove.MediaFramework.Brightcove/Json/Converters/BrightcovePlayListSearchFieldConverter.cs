@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Linq;
 using Brightcove.MediaFramework.Brightcove.Entities;
 using Newtonsoft.Json;
-using Sitecore.MediaFramework.Brightcove.Entities;
+
 
 namespace Brightcove.MediaFramework.Brightcove.Json.Converters
 {

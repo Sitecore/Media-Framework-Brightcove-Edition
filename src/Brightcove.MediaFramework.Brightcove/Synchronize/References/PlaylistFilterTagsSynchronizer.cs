@@ -8,9 +8,10 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Integration.Common.Utils;
 using Sitecore.MediaFramework;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
+
 using Sitecore.MediaFramework.Synchronize;
 using Sitecore.MediaFramework.Synchronize.References;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
 {
@@ -20,12 +21,12 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
         {
             if (entity.PlayListSearch == null || entity.PlayListSearch.FilterTags == null || entity.PlayListSearch.FilterTags.Count == 0)
                 return new List<ID>(0);
-            Expression<Func<TagSearchResult, bool>> ancestorFilter = ContentSearchUtil.GetAncestorFilter<TagSearchResult>(accountItem, Sitecore.MediaFramework.Brightcove.TemplateIDs.Tag);
+            Expression<Func<TagSearchResult, bool>> ancestorFilter = ContentSearchUtil.GetAncestorFilter<TagSearchResult>(accountItem, TemplateIDs.Tag);
             Expression<Func<TagSearchResult, bool>> second = Enumerable.Aggregate<string, Expression<Func<TagSearchResult, bool>>>((IEnumerable<string>)entity.PlayListSearch.FilterTags, PredicateBuilder.False<TagSearchResult>(), (Func<Expression<Func<TagSearchResult, bool>>, string, Expression<Func<TagSearchResult, bool>>>)((current, tmp) => PredicateBuilder.Or<TagSearchResult>(current, (Expression<Func<TagSearchResult, bool>>)(i => i.TagName == tmp))));
-            List<TagSearchResult> all = ContentSearchUtil.FindAll<TagSearchResult>(Sitecore.MediaFramework.Brightcove.Constants.IndexName, PredicateBuilder.And<TagSearchResult>(ancestorFilter, second));
+            List<TagSearchResult> all = ContentSearchUtil.FindAll<TagSearchResult>(Constants.IndexName, PredicateBuilder.And<TagSearchResult>(ancestorFilter, second));
             if (all.Count < entity.PlayListSearch.FilterTags.Count)
             {
-                IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(typeof(Sitecore.MediaFramework.Brightcove.Entities.Tag));
+                IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(typeof(Entities.Tag));
                 if (itemSynchronizer != null)
                 {
                     foreach (string str in entity.PlayListSearch.FilterTags)
@@ -33,7 +34,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
                         string tagName = str;
                         if (!Enumerable.Any<TagSearchResult>((IEnumerable<TagSearchResult>)all, (Func<TagSearchResult, bool>)(i => i.Name == tagName)))
                         {
-                            TagSearchResult tagSearchResult = itemSynchronizer.Fallback((object)new Sitecore.MediaFramework.Brightcove.Entities.Tag()
+                            TagSearchResult tagSearchResult = itemSynchronizer.Fallback((object)new Entities.Tag()
                             {
                                 Name = tagName
                             }, accountItem) as TagSearchResult;

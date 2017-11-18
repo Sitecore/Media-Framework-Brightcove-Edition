@@ -8,9 +8,10 @@ using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Integration.Common.Utils;
 using Sitecore.MediaFramework;
-using Sitecore.MediaFramework.Brightcove.Indexing.Entities;
+
 using Sitecore.MediaFramework.Synchronize;
 using Sitecore.MediaFramework.Synchronize.References;
+using Brightcove.MediaFramework.Brightcove.Indexing.Entities;
 
 namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
 {
@@ -20,9 +21,9 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
     {
       if (entity.VideoIds == null || entity.VideoIds.Count == 0)
         return new List<ID>(0);
-      Expression<Func<VideoSearchResult, bool>> ancestorFilter = ContentSearchUtil.GetAncestorFilter<VideoSearchResult>(accountItem, Sitecore.MediaFramework.Brightcove.TemplateIDs.Video);
+      Expression<Func<VideoSearchResult, bool>> ancestorFilter = ContentSearchUtil.GetAncestorFilter<VideoSearchResult>(accountItem, TemplateIDs.Video);
       Expression<Func<VideoSearchResult, bool>> second = Enumerable.Aggregate<string, Expression<Func<VideoSearchResult, bool>>>((IEnumerable<string>) entity.VideoIds, PredicateBuilder.False<VideoSearchResult>(), (Func<Expression<Func<VideoSearchResult, bool>>, string, Expression<Func<VideoSearchResult, bool>>>) ((current, tmp) => PredicateBuilder.Or<VideoSearchResult>(current, (Expression<Func<VideoSearchResult, bool>>) (i => i.Id == tmp))));
-      List<VideoSearchResult> all = ContentSearchUtil.FindAll<VideoSearchResult>(Sitecore.MediaFramework.Brightcove.Constants.IndexName, PredicateBuilder.And<VideoSearchResult>(ancestorFilter, second));
+      List<VideoSearchResult> all = ContentSearchUtil.FindAll<VideoSearchResult>(Constants.IndexName, PredicateBuilder.And<VideoSearchResult>(ancestorFilter, second));
       if (all.Count < entity.VideoIds.Count)
       {
         IItemSynchronizer itemSynchronizer1 = MediaFrameworkContext.GetItemSynchronizer(typeof (Video));

@@ -72,15 +72,6 @@
       <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.171002\lib\NET462\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.MediaFramework">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.MediaFramework.Migration">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.Migration.dll</HintPath>
-    </Reference>
-    <Reference Include="Sitecore.MediaFramework.Mvc">
-      <HintPath>..\Lib\Sitecore\Sitecore.MediaFramework.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
@@ -172,6 +163,18 @@
     <ProjectReference Include="..\Brightcove.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj">
       <Project>{c4ce22b6-2f6f-456d-a502-7914dbc3cea8}</Project>
       <Name>Brightcove.MediaFramework.Brightcove</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.MediaFramework.Migration\Sitecore.MediaFramework.Migration.csproj">
+      <Project>{91856649-155c-47a7-acdb-2e3596c75b0c}</Project>
+      <Name>Sitecore.MediaFramework.Migration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.MediaFramework.Mvc\Sitecore.MediaFramework.Mvc.csproj">
+      <Project>{d641d8fe-7a26-400c-98ab-62da576bbc32}</Project>
+      <Name>Sitecore.MediaFramework.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.MediaFramework\Sitecore.MediaFramework.csproj">
+      <Project>{288e6e2f-9027-4746-b6c9-1d0a04e484aa}</Project>
+      <Name>Sitecore.MediaFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

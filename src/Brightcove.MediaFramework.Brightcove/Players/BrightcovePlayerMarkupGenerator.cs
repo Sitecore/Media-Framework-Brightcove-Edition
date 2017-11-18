@@ -8,7 +8,7 @@ using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.MediaFramework.Account;
-using Sitecore.MediaFramework.Brightcove;
+
 using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
 using Sitecore.MediaFramework.Players;
 using Sitecore.StringExtensions;
@@ -91,12 +91,12 @@ namespace Brightcove.MediaFramework.Brightcove.Players
         /// </returns>
         public override string GetPreviewImage(MediaGenerateMarkupArgs args)
         {
-            return PlayerManager.GetPreviewImage(args, Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.ThumbnailUrl);
+            return PlayerManager.GetPreviewImage(args, FieldIDs.MediaElement.ThumbnailUrl);
         }
 
         public override Item GetDefaultPlayer(MediaGenerateMarkupArgs args)
         {
-            ID fieldId = args.MediaItem.TemplateID == TemplateIDs.Video ? Sitecore.MediaFramework.Brightcove.FieldIDs.AccountSettings.DefaultVideoPlayer : Sitecore.MediaFramework.Brightcove.FieldIDs.AccountSettings.DefaultPlaylistPlayer;
+            ID fieldId = args.MediaItem.TemplateID == TemplateIDs.Video ? FieldIDs.AccountSettings.DefaultVideoPlayer : FieldIDs.AccountSettings.DefaultPlaylistPlayer;
             ReferenceField referenceField = (ReferenceField)AccountManager.GetSettingsField(args.AccountItem, fieldId);
             if (referenceField == null)
                 return (Item)null;
@@ -105,7 +105,7 @@ namespace Brightcove.MediaFramework.Brightcove.Players
 
         public override string GetMediaId(Item item)
         {
-            return item[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id];
+            return item[FieldIDs.MediaElement.Id];
         }
 
         protected virtual Dictionary<string, string> GetPlayerParameters(MediaGenerateMarkupArgs args, ref string scriptUrl)
@@ -128,35 +128,35 @@ namespace Brightcove.MediaFramework.Brightcove.Players
             }
 
             // Set autoplay for player
-            if (args.PlayerItem != null && args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.AutoStart] == "1")
+            if (args.PlayerItem != null && args.PlayerItem[FieldIDs.Player.AutoStart] == "1")
             {
-                dictionary["autoplay"] = args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.AutoStart];
+                dictionary["autoplay"] = args.PlayerItem[FieldIDs.Player.AutoStart];
             }
 
             // Set player id for player
-            if (args.PlayerItem != null && !args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.Id].IsNullOrEmpty())
+            if (args.PlayerItem != null && !args.PlayerItem[FieldIDs.Player.Id].IsNullOrEmpty())
             {
-                dictionary["data-player"] = args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.Id];
-                scriptUrl = scriptUrl.Replace(PlayerToken, args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.Id]);
+                dictionary["data-player"] = args.PlayerItem[FieldIDs.Player.Id];
+                scriptUrl = scriptUrl.Replace(PlayerToken, args.PlayerItem[FieldIDs.Player.Id]);
             }
 
             // Set account id for player
-            if (args.AccountItem != null && !args.AccountItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Account.PublisherId].IsNullOrEmpty())
+            if (args.AccountItem != null && !args.AccountItem[FieldIDs.Account.PublisherId].IsNullOrEmpty())
             {
-                dictionary["data-account"] = args.AccountItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Account.PublisherId];
-                scriptUrl = scriptUrl.Replace(AccountToken, args.AccountItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Account.PublisherId]);
+                dictionary["data-account"] = args.AccountItem[FieldIDs.Account.PublisherId];
+                scriptUrl = scriptUrl.Replace(AccountToken, args.AccountItem[FieldIDs.Account.PublisherId]);
             }
 
             // Set video/playlist id attribute for player
-            if (args.MediaItem != null && !args.MediaItem[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id].IsNullOrEmpty())
+            if (args.MediaItem != null && !args.MediaItem[FieldIDs.MediaElement.Id].IsNullOrEmpty())
             {
                 if (args.MediaItem.TemplateID.Equals(TemplateIDs.Video))
                 {
-                    dictionary["data-video-id"] = args.MediaItem[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id];
+                    dictionary["data-video-id"] = args.MediaItem[FieldIDs.MediaElement.Id];
                 }
                 else
                 {
-                    dictionary["data-playlist-id"] = args.MediaItem[Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id];
+                    dictionary["data-playlist-id"] = args.MediaItem[FieldIDs.MediaElement.Id];
                 }
             }
             return dictionary;
@@ -166,8 +166,8 @@ namespace Brightcove.MediaFramework.Brightcove.Players
         {
             if (args.AccountItem != null && args.PlayerItem != null)
             {
-                var publisherId = args.AccountItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Account.PublisherId];
-                var playerId = args.PlayerItem[Sitecore.MediaFramework.Brightcove.FieldIDs.Player.Id];
+                var publisherId = args.AccountItem[FieldIDs.Account.PublisherId];
+                var playerId = args.PlayerItem[FieldIDs.Player.Id];
 
                 if (!publisherId.IsNullOrEmpty() && !playerId.IsNullOrEmpty())
                 {

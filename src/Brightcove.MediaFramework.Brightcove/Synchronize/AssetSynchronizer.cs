@@ -1,6 +1,6 @@
 ﻿using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Data.Items;
-using Sitecore.MediaFramework.Brightcove;
+
 using Sitecore.MediaFramework.Entities;
 using Sitecore.MediaFramework.Export;
 using Sitecore.MediaFramework.Synchronize;
@@ -12,7 +12,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
     public override Item SyncItem(object entity, Item accountItem)
     {
       Asset asset = (Asset) entity;
-      if (ExportQueueManager.IsExist(accountItem, Sitecore.MediaFramework.Brightcove.FieldIDs.MediaElement.Id, asset.Id))
+      if (ExportQueueManager.IsExist(accountItem, FieldIDs.MediaElement.Id, asset.Id))
         return (Item) null;
       return base.SyncItem(entity, accountItem);
     }
