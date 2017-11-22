@@ -160,9 +160,6 @@
                </div> 
             </div>
             <div class="span3 buttons">
-             <%--  <button class="btn btn-warning external-cancel" accid={%=o.account.id%}>
-                   <%:Translate.Text(Translations.Cancel) %>
-               </button> --%>
             </div>
         </div>
     </script>
