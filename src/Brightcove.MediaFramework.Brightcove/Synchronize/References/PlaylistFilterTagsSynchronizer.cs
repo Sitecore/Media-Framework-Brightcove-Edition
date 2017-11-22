@@ -23,7 +23,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize.References
                 return new List<ID>(0);
             Expression<Func<TagSearchResult, bool>> ancestorFilter = ContentSearchUtil.GetAncestorFilter<TagSearchResult>(accountItem, TemplateIDs.Tag);
             Expression<Func<TagSearchResult, bool>> second = Enumerable.Aggregate<string, Expression<Func<TagSearchResult, bool>>>((IEnumerable<string>)entity.PlayListSearch.FilterTags, PredicateBuilder.False<TagSearchResult>(), (Func<Expression<Func<TagSearchResult, bool>>, string, Expression<Func<TagSearchResult, bool>>>)((current, tmp) => PredicateBuilder.Or<TagSearchResult>(current, (Expression<Func<TagSearchResult, bool>>)(i => i.TagName == tmp))));
-            List<TagSearchResult> all = ContentSearchUtil.FindAll<TagSearchResult>(Constants.IndexName, PredicateBuilder.And<TagSearchResult>(ancestorFilter, second));
+            List<TagSearchResult> all = ContentSearchUtil.FindAll<TagSearchResult>(Configuration.Settings.IndexName, PredicateBuilder.And<TagSearchResult>(ancestorFilter, second));
             if (all.Count < entity.PlayListSearch.FilterTags.Count)
             {
                 IItemSynchronizer itemSynchronizer = MediaFrameworkContext.GetItemSynchronizer(typeof(Entities.Tag));

@@ -70,7 +70,7 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
         public override MediaServiceSearchResult GetSearchResult(object entity, Item accountItem)
         {
             PlayList playlist = (PlayList)entity;
-            return (MediaServiceSearchResult)this.GetSearchResult<PlaylistSearchResult>(Constants.IndexName, accountItem, (Expression<Func<PlaylistSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Playlist && i.Id == playlist.Id));
+            return (MediaServiceSearchResult)this.GetSearchResult<PlaylistSearchResult>(Configuration.Settings.IndexName, accountItem, (Expression<Func<PlaylistSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Playlist && i.Id == playlist.Id));
         }
 
         public override MediaServiceEntityData GetMediaData(object entity)

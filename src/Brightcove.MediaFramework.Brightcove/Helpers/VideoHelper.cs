@@ -26,7 +26,7 @@ namespace Brightcove.MediaFramework.Brightcove.Helpers
         public static MediaServiceSearchResult GetSearchResult(string entity, Item ancesterItem = null)
         {
             if (ancesterItem == null) ancesterItem = Factory.GetDatabase("master").GetItem(Sitecore.MediaFramework.ItemIDs.AccountsRoot);
-            return (MediaServiceSearchResult)GetSearchResultForAncesterFilter<VideoSearchResult>(Constants.IndexName, ancesterItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == entity));
+            return (MediaServiceSearchResult)GetSearchResultForAncesterFilter<VideoSearchResult>(Configuration.Settings.IndexName, ancesterItem, (Expression<Func<VideoSearchResult, bool>>)(i => i.TemplateId == TemplateIDs.Video && i.Id == entity));
         }
 
         public static TSearchResult GetSearchResultForAncesterFilter<TSearchResult>(string indexName, Item ancesterItem, Expression<Func<TSearchResult, bool>> selector) where TSearchResult : MediaServiceSearchResult, new()

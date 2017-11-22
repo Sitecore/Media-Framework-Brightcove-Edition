@@ -72,3 +72,4 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.Razo
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.WebPages.Razor.xml
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Net.Http.Formatting.xml
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.WebPages.Deployment.xml
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\layouts\MediaFramework\Upload.aspx

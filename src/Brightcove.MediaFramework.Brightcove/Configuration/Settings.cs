@@ -24,6 +24,13 @@ namespace Brightcove.MediaFramework.Brightcove.Configuration
                 return Sitecore.Configuration.Settings.GetIntSetting("Brightcove.ImportLimit", 20);
             }
         }
+        public static string IndexName
+        {
+            get
+            {
+                return Sitecore.Configuration.Settings.GetSetting("Brightcove.IndexName", "sitecore_master_index");
+            }
+        }
 
         public static string BrightcoveTextTracksMimeTypes
         {
