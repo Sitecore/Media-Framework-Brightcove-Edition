@@ -17,14 +17,14 @@
 
   var model = ((ExperienceAnalyticsListControlViewModel)RenderingContext.Current.Rendering.Model);
   
-  helper.MakeDataProvider("DataProvider", wrapperId, "sitecore/api/mediaframework/reports/" + model.DataSource);
+  helper.MakeDataProvider("DataProvider", wrapperId, "sitecore/api/mediaframework/mfreports/" + model.DataSource);
   
   helper.CreateRenderingAt(Globals.Bcl.Renderings.ListAndGrids.ListControl, "ListControl", wrapperId, null, model.ColumnsItemID);
   helper.MakeBorder("Border", wrapperId, border =>
   {
     helper.MakeButton("Button", border, Globals.System.Texts.ShowMore.Guid.ToString());
   }, "true", true, "Center");
-  helper.MakeProgressIndicator("ProgressIndicator", wrapperId, Model.Control.ControlId, string.Empty);
+  helper.MakeProgressIndicator("ProgressIndicator", wrapperId, Model.Control.ControlId);
 }
 
 <div @Model.Control.HtmlAttributes>

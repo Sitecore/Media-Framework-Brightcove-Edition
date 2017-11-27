@@ -199,7 +199,7 @@ define(["sitecore", "experienceAnalytics", "experienceAnalyticsDvcBase"], functi
 
         var dataSource = this.model.get("dataSource");
         dataParameters = {
-          url: "/sitecore/api/mediaframework/reports/" + dataSource + "/" + subsite,
+          url: "/sitecore/api/mediaframework/mfreports/" + dataSource + "/" + subsite,
           parameters: parameters,
           onSuccess: this.updateListControl.bind(this)
         };

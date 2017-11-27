@@ -188,7 +188,7 @@
     <Compile Include="Analytics\Dashboard\Layouts\Renderings\ExperienceAnalyticsListControlViewModel.cs" />
     <Compile Include="Analytics\Dashboard\ReportData.cs" />
     <Compile Include="Analytics\Dashboard\ReportResponse.cs" />
-    <Compile Include="Analytics\Dashboard\ReportsController.cs" />
+    <Compile Include="Analytics\Dashboard\MFReportsController.cs" />
     <Compile Include="Data\Analytics\MediaEventData.cs" />
     <Compile Include="Data\Analytics\MediaFrameworkEvents.cs" />
     <Compile Include="Data\Analytics\MediaFrameworkEventsKey.cs" />
@@ -196,6 +196,7 @@
     <Compile Include="Data\Analytics\MediaFrameworkMedia.cs" />
     <Compile Include="Data\Analytics\MediaFrameworkMediaKey.cs" />
     <Compile Include="Data\Analytics\MediaFrameworkMediaValue.cs" />
+    <Compile Include="Dimensions\ByStreamedVideo.cs" />
     <Compile Include="Pipelines\AnalyticsAggregation\Interactions\MediaEventsAggregation.cs" />
     <Compile Include="Analytics\EventProperties.cs" />
     <Compile Include="Analytics\EventTrigger.cs" />

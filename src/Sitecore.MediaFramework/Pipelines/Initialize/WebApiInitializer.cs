@@ -23,11 +23,11 @@ namespace Sitecore.MediaFramework.Pipelines.Initialize
     {
       var routes = configuration.Routes;
       routes.MapHttpRoute(
-        "Reports",
-        "sitecore/api/mediaframework/reports/{datasource}/{sitename}",
+        "MFReports",
+        "sitecore/api/mediaframework/mfreports/{datasource}/{sitename}",
         new
           {
-            controller = "Reports",
+            controller = "MFReports",
             action = "Get"
           });
     }

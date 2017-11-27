@@ -29,7 +29,7 @@ namespace Sitecore.MediaFramework.Analytics.Dashboard
     using Sitecore.Services.Infrastructure.Web.Http;
     using Xdb.Reporting;
 
-    public class ReportsController : ServicesApiController
+    public class MFReportsController : ServicesApiController
   {
     [HttpGet]
     public IHttpActionResult Get(string datasource, string siteName)
