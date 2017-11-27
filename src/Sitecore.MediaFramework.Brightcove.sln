@@ -8,6 +8,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6C4132F-37F9-4719-8A65-A33A095C4191}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{17D81DEE-EECA-4938-B14F-693F3DDBA059}"
+	ProjectSection(SolutionItems) = preProject
+		Data\Sitecore Media Framework Reporting Data Update Script.sql = Data\Sitecore Media Framework Reporting Data Update Script.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{25D2BA55-EF45-470D-8AA0-6B229ACEAC47}"
 	ProjectSection(SolutionItems) = preProject
