@@ -30,6 +30,22 @@ namespace Brightcove.MediaFramework.Brightcove.Analytics
 
                 if (Tracker.Current.CurrentPage != null)
                 {
+                    switch (eventData.Name.ToLowerInvariant()){
+                        case "playbackstarted":
+                            eventData.PageEventDefinitionId = ItemIDs.PageEvents.PlaybackStarted.ToGuid();
+                            break;
+                        case "playbackcompleted":
+                            eventData.PageEventDefinitionId = ItemIDs.PageEvents.PlaybackCompleted.ToGuid();
+                            break;
+                        case "playbackchanged":
+                            eventData.PageEventDefinitionId = ItemIDs.PageEvents.PlaybackChanged.ToGuid();
+                            break;
+                        case "playbackerror":
+                            eventData.PageEventDefinitionId = ItemIDs.PageEvents.PlaybackError.ToGuid();
+                            break;
+                        default:
+                            break;
+                    }
                     Tracker.Current.CurrentPage.Register(eventData);
                 }
             }
