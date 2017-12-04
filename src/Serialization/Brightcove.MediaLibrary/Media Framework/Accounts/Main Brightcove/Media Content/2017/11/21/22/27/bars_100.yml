@@ -1,0 +1,42 @@
+﻿---
+ID: "5f2838c5-4433-3df8-8b13-8d8b174b2b03"
+Parent: "ee281227-d9d6-43ad-b24e-470026033f33"
+Template: "6a5c6835-6e11-4602-a11d-b626e9255397"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Media Content/2017/11/21/22/27/bars_100
+DB: master
+SharedFields:
+- ID: "00270bac-f30a-4b54-8aa6-614159522f5b"
+  Hint: CreationDate
+  Value: "8/16/2017 10:29:46 PM"
+- ID: "161a7c32-673b-43da-9d1f-9d2a2226fcd6"
+  Hint: VideoStillURL
+  Value: "http://f1.media.brightcove.com/8/5498268458001/5498268458001_5543172497001_5543155703001-vs.jpg?pubId=5498268458001&videoId=5543155703001"
+- ID: "25f40ee3-e453-4899-a728-e9db0ed6e6e3"
+  Hint: Duration
+  Value: 4095
+- ID: "2ecde5d3-bfde-4a5f-8d20-7c6dba2bbfa0"
+  Hint: ThumbnailURL
+  Value: "http://f1.media.brightcove.com/8/5498268458001/5498268458001_5543169142001_5543155703001-th.jpg?pubId=5498268458001&videoId=5543155703001"
+- ID: "42136a7a-fca2-4f5f-836a-9ec2a0da2534"
+  Hint: LongDescription
+  Value: long description
+- ID: "437a7d9f-7a50-4955-b3ae-583eba5ad35a"
+  Hint: Name
+  Value: bars_100
+- ID: "4b223ffd-5972-4a8d-8cf7-08793e99bca2"
+  Hint: PublishedDate
+  Value: "11/6/2017 3:55:10 PM"
+- ID: "87e30397-7707-41d5-a4c9-500b01d80f5e"
+  Hint: LastModifiedDate
+  Value: "11/21/2017 11:32:28 PM"
+- ID: "a5b025c5-2f6b-45af-bee6-92883d9291d6"
+  Hint: ID
+  Value: 5543155703001
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T222748Z

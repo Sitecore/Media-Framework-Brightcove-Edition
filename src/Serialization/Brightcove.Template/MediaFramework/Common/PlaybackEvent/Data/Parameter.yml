@@ -1,0 +1,44 @@
+﻿---
+ID: "e1e68b6b-5c30-41d3-b6c9-7089b5ce1b34"
+Parent: "aed31ae2-9b10-4060-bb2e-94b14c64fce5"
+Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
+Path: /sitecore/templates/MediaFramework/Common/PlaybackEvent/Data/Parameter
+DB: master
+SharedFields:
+- ID: "21828437-ea4b-40a1-8c61-4ce60ea41db6"
+  Hint: Validate Button
+  Type: tree list
+  Value: 
+- ID: "337e20e1-999a-4eea-85ad-b58a03ae75cc"
+  Hint: Quick Action Bar
+  Type: tree list
+  Value: 
+- ID: "9c903e29-650d-4af2-b9bd-526d5c14a1a5"
+  Hint: Validator Bar
+  Type: tree list
+  Value: 
+- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
+  Hint: Type
+  Value: "Single-Line Text"
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
+  Hint: Shared
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Parameter
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Parameter
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T120918

@@ -1,0 +1,22 @@
+﻿---
+ID: "5ef99334-d989-3987-b08c-de3609c00abe"
+Parent: "df87b4e7-facb-40c0-9f54-5bf527e18bc8"
+Template: "1f5cf62d-dedc-4712-a8b6-ccc36e27a3f8"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Tags/2017/11/21/22/27/sample
+DB: master
+SharedFields:
+- ID: "24fd815e-ebce-4d16-90c1-62c66cec95f2"
+  Hint: Name
+  Value: sample
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: sample
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T222747Z

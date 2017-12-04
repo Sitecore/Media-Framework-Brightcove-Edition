@@ -1,0 +1,38 @@
+﻿---
+ID: "a614663c-d04e-4c43-b44a-6e80e71c4de9"
+Parent: "2d40c1c7-d718-4c57-a077-18048dec3f44"
+Template: "3c8bd8a1-280b-4278-bb8b-21fa3b87af0f"
+Path: /sitecore/system/Settings/Html Editor Profiles/Rich Text Full/Toolbar 1/Embed Link
+DB: core
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Multimedia/32x32/add_to_list_h.png
+- ID: "7cf6da87-047d-447d-99e9-d1e355330db3"
+  Hint: Click
+  Value: EmbedLink
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 1576
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Embed Media Link
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130710T181000
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "c8f93afe-bfd4-4e8f-9c61-152559854661"
+      Hint: __Valid from
+      Value: 

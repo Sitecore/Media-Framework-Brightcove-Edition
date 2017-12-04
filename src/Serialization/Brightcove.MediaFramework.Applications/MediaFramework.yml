@@ -1,0 +1,18 @@
+﻿---
+ID: "4c73dbd2-03f4-483c-84b8-6f1c2c62d6dd"
+Parent: "22f17462-9683-401e-8849-303d97f57090"
+Template: "239f9cf4-e5a0-44e0-b342-0f32cd4c6d8b"
+Path: /sitecore/content/Applications/Media/MediaFramework
+DB: core
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171120T230431Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin

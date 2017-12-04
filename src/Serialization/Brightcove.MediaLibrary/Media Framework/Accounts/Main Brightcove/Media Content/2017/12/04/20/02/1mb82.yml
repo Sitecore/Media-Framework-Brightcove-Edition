@@ -1,0 +1,33 @@
+﻿---
+ID: "4eea2f07-67eb-3ae9-8c0b-0d69140c9480"
+Parent: "6aea5789-2ba3-4f5c-b405-0087a111437c"
+Template: "6a5c6835-6e11-4602-a11d-b626e9255397"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Media Content/2017/12/04/20/02/1mb82
+DB: master
+SharedFields:
+- ID: "00270bac-f30a-4b54-8aa6-614159522f5b"
+  Hint: CreationDate
+  Value: "12/4/2017 7:01:48 PM"
+- ID: "2af799d0-c019-4518-b166-0513c37218e8"
+  Hint: ShortDescription
+  Value: 1mb82
+- ID: "437a7d9f-7a50-4955-b3ae-583eba5ad35a"
+  Hint: Name
+  Value: 1mb82
+- ID: "4b223ffd-5972-4a8d-8cf7-08793e99bca2"
+  Hint: PublishedDate
+  Value: "12/4/2017 7:01:48 PM"
+- ID: "87e30397-7707-41d5-a4c9-500b01d80f5e"
+  Hint: LastModifiedDate
+  Value: "12/4/2017 7:03:27 PM"
+- ID: "a5b025c5-2f6b-45af-bee6-92883d9291d6"
+  Hint: ID
+  Value: 5667350297001
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171204T200254Z

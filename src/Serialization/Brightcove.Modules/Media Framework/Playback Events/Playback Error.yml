@@ -1,0 +1,31 @@
+﻿---
+ID: "0c671a52-9c1d-4d89-b585-e67d250b7746"
+Parent: "ef5c30f0-26e3-46d9-83b2-fe8634b9dfdc"
+Template: "3a2c7fc4-bcd6-4b8b-bed7-a45e023b31db"
+Path: /sitecore/system/Modules/Media Framework/Playback Events/Playback Error
+DB: master
+SharedFields:
+- ID: "7ccb928c-7eb0-465a-a755-d4bd7256bd58"
+  Hint: PageEvent
+  Value: PlaybackError
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T132012
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T132012
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

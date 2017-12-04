@@ -1,0 +1,14 @@
+﻿---
+ID: "c942c56e-4a48-4469-adf9-d4cf0314aa6d"
+Parent: "1e139d7d-1253-4378-983f-c40fe4a52583"
+Template: "adb6ca4f-03ef-4f47-b9ac-9ce2ba53ff97"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Media Content/2017/11/22/17
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171122T171155Z

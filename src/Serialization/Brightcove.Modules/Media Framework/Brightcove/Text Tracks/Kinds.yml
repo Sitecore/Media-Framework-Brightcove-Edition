@@ -1,0 +1,23 @@
+﻿---
+ID: "fbd50eac-35e3-4c04-bbde-064b20498096"
+Parent: "20034a71-022e-45bf-93fa-f9ba4f958264"
+Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
+Path: /sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160531T075925Z
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160531T075925Z

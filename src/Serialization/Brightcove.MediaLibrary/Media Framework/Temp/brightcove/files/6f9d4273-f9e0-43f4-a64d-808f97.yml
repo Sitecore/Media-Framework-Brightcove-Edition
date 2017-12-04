@@ -1,0 +1,18 @@
+﻿---
+ID: "bedba1fd-382d-4f99-98f3-9733782edb20"
+Parent: "b93dd86e-287a-49a1-a15f-9dbae2d6300f"
+Template: "fe5dd826-48c6-436d-b87a-7c4210c7413b"
+Path: "/sitecore/media library/Media Framework/Temp/brightcove/files/6f9d4273-f9e0-43f4-a64d-808f973014bb"
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171127T174612Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Anonymous

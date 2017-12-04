@@ -73,3 +73,4 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.WebP
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Net.Http.Formatting.xml
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.WebPages.Deployment.xml
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\layouts\MediaFramework\Upload.aspx
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\App_Config\Include\Unicorn\Unicorn.Brightcove.config

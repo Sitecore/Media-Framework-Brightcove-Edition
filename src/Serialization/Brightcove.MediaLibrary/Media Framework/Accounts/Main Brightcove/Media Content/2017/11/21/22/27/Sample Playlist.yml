@@ -1,0 +1,37 @@
+﻿---
+ID: "3d0663bb-2fcc-322d-8d66-c8ad334f7ee2"
+Parent: "ee281227-d9d6-43ad-b24e-470026033f33"
+Template: "0e24292f-d7a5-4ba2-bca0-cd5f14a89634"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Media Content/2017/11/21/22/27/Sample Playlist
+DB: master
+SharedFields:
+- ID: "00d9ed39-d12c-48e7-a998-b5976e9c4f52"
+  Hint: LastModifiedDate
+  Value: "7/10/2017 6:35:34 PM"
+- ID: "1d354e71-8722-4096-9c02-0c5ae1bec4ab"
+  Hint: Favorite
+  Value: 1
+- ID: "437a7d9f-7a50-4955-b3ae-583eba5ad35a"
+  Hint: Name
+  Value: Sample Playlist
+- ID: "5a33e84e-9453-4ed4-8109-473feaece931"
+  Hint: CreationDate
+  Value: "7/10/2017 6:35:34 PM"
+- ID: "878c3f5b-303e-4f38-b42e-98f107372440"
+  Hint: TagInclusion
+  Value: AND
+- ID: "a5b025c5-2f6b-45af-bee6-92883d9291d6"
+  Hint: ID
+  Value: 5498260379001
+- ID: "c2b3aeb0-5ca9-4e2b-a75c-d9e5261ba0c1"
+  Hint: FilterTags
+  Type: Multilist
+  Value: "{5EF99334-D989-3987-B08C-DE3609C00ABE}"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T222748Z

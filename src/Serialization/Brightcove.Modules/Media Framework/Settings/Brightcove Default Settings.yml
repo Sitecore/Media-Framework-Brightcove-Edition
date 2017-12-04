@@ -1,0 +1,31 @@
+﻿---
+ID: "aae37f9c-3a5d-4640-b718-19f396b1adba"
+Parent: "e4aff7ec-dc99-4087-a69a-fc0fc80eb11c"
+Template: "186614bc-a123-4b7b-b2b6-2fa29c6894b0"
+Path: /sitecore/system/Modules/Media Framework/Settings/Brightcove Default Settings
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130527T160300
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130527T160300
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

@@ -1,0 +1,36 @@
+﻿---
+ID: "5307ac59-2aed-3636-8945-d77e032876e3"
+Parent: "ee281227-d9d6-43ad-b24e-470026033f33"
+Template: "6a5c6835-6e11-4602-a11d-b626e9255397"
+Path: /sitecore/media library/Media Framework/Accounts/Main Brightcove/Media Content/2017/11/21/22/27/20170722VlogParenting
+DB: master
+SharedFields:
+- ID: "00270bac-f30a-4b54-8aa6-614159522f5b"
+  Hint: CreationDate
+  Value: "11/16/2017 9:28:17 PM"
+- ID: "25f40ee3-e453-4899-a728-e9db0ed6e6e3"
+  Hint: Duration
+  Value: 0
+- ID: "2af799d0-c019-4518-b166-0513c37218e8"
+  Hint: ShortDescription
+  Value: short desc
+- ID: "437a7d9f-7a50-4955-b3ae-583eba5ad35a"
+  Hint: Name
+  Value: 20170722VlogParenting
+- ID: "4b223ffd-5972-4a8d-8cf7-08793e99bca2"
+  Hint: PublishedDate
+  Value: "11/16/2017 9:28:17 PM"
+- ID: "87e30397-7707-41d5-a4c9-500b01d80f5e"
+  Hint: LastModifiedDate
+  Value: "11/16/2017 9:28:17 PM"
+- ID: "a5b025c5-2f6b-45af-bee6-92883d9291d6"
+  Hint: ID
+  Value: 5649264660001
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T222748Z

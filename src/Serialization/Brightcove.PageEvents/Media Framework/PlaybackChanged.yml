@@ -1,0 +1,28 @@
+﻿---
+ID: "634c87a9-4e01-4c69-9522-215865012dc5"
+Parent: "a2bd37bd-1f37-45d7-a35c-1f8b6e1ccf13"
+Template: "059cfbdf-49fc-4f14-a4e5-b63e1e1afb1e"
+Path: /sitecore/system/Settings/Analytics/Page Events/Media Framework/PlaybackChanged
+DB: master
+SharedFields:
+- ID: "a4f985d9-98b3-4b52-aaaf-4344f6e747c6"
+  Hint: __Workflow
+  Value: "{689E2994-4656-4C58-9112-7826CB46EE69}"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Playback Changed
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T155350
+    - ID: "3e431de1-525e-47a3-b6b0-1ccbec3a8c98"
+      Hint: __Workflow state
+      Value: "{EDCBB550-BED3-490F-82B8-7B2F14CCD26E}"
+    - ID: "ac6ba888-4213-43bd-b787-d8da2b6b881f"
+      Hint: Name
+      Value: PlaybackChanged

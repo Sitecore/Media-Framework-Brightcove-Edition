@@ -1,0 +1,34 @@
+﻿---
+ID: "56caadad-da24-4d44-b8b9-2638bdf1c80c"
+Parent: "6c722b7f-60b9-4877-8ff3-d8360ac03441"
+Template: "998b965e-6ab8-4568-810f-8101d60d0cc3"
+Path: /sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/Account Migration
+DB: core
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: people/32x32/user1.png
+- ID: "335c6760-6c0e-4c6c-814c-a53d203f553e"
+  Hint: Icon
+  Value: people/32x32/user1.png
+- ID: "afc50abc-3ed5-49f7-aa38-32de0034e17c"
+  Hint: ID
+  Value: DeepMediaFrameworkMigration
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+- ID: "cab694fc-e37c-44eb-9012-488b775cf638"
+  Hint: Message
+  Value: "MediaFramework:Migrate(provider=mfVersion12_account)"
+Languages:
+- Language: en
+  Fields:
+  - ID: "9b72a62b-2775-423d-b17a-ec34a9f31af8"
+    Hint: Display name
+    Value: Account Migration
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130829T112622

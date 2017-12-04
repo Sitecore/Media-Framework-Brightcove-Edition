@@ -1,0 +1,22 @@
+﻿---
+ID: "1dae8133-c064-46ea-a153-5a9cfa29faa3"
+Parent: "edc2d998-f1e1-4a78-958f-34d4e89e2657"
+Template: "854ba861-63ea-4a0c-8c7b-541e9a7ec4c1"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Tags/Default
+DB: master
+SharedFields:
+- ID: "42f77151-098f-496a-94cf-590b7edeeabe"
+  Hint: Tags
+  Type: Multilist
+  Value: "{15886D3D-DCD4-4B99-A58D-397A027753A5}"
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131111T123256

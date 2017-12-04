@@ -203,7 +203,6 @@
     <Content Include="layouts\MediaFramework\Brightcove\VideoTextTracks.cshtml" />
     <Content Include="App_Config\Include\Rainbow.config" />
     <Content Include="App_Config\Include\Sitecore.MediaFramework.config" />
-    <Content Include="App_Config\Include\Sitecore.ContentSearch.MediaFramework.Brightcove.Solr.config" />
     <None Include="App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -212,7 +211,9 @@
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.DataProvider.config" />
-    <Content Include="App_Config\Include\Unicorn\Unicorn.Brightcove.config" />
+    <Content Include="App_Config\Include\Unicorn\Unicorn.Brightcove.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="App_Config\Include\Unicorn\Unicorn.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.AutoPublish.config" />
     <None Include="Properties\PublishProfiles\dev.pubxml" />
