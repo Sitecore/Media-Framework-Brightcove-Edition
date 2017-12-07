@@ -13,6 +13,8 @@ using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
 using Sitecore.MediaFramework.Players;
 using Sitecore.StringExtensions;
 using Sitecore.Xml;
+using Sitecore.Configuration;
+using System.Reflection;
 
 // --------------------------------------------------------------------------------------------------------------------
 // <summary>
@@ -159,6 +161,11 @@ namespace Brightcove.MediaFramework.Brightcove.Players
                     dictionary["data-playlist-id"] = args.MediaItem[FieldIDs.MediaElement.Id];
                 }
             }
+            //add cms version
+            string sitecoreVersion = About.Version;
+            string connectorVersion = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            dictionary["data-usage"] = $"cms:sitecore:{sitecoreVersion}:{connectorVersion}:javascript";
+
             return dictionary;
         }
 
