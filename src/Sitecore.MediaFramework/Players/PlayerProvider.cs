@@ -63,7 +63,7 @@
         imageSrc = string.Format(Constants.DefaultPreview, args.Properties.Height, args.Properties.Width);
       }
 
-      return string.Format("<img src='{0}' width='{2}' height='{3}' style=\"dysplay:block;cursor: pointer;\" alt='{1}'/>",
+      return string.Format("<img src='{0}' width='{2}' height='{3}' style=\"display:block;cursor: pointer;\" alt='{1}'/>",
         imageSrc, args.MediaItem.Name, args.Properties.Width, args.Properties.Height);
     }
   }

@@ -117,9 +117,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Sitecore.ContentSearch.MediaFramework.Brightcove.config.disabled" />
-    <Content Include="App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.config" />
-    <Content Include="App_Config\Include\Sitecore.RestSharp.Brightcove.config" />
+    <None Include="App_Config\Include\MediaFramework\Sitecore.ContentSearch.MediaFramework.Brightcove.config.disabled" />
+    <Content Include="App_Config\Include\MediaFramework\Sitecore.MediaFramework.Services.Brightcove.config" />
+    <Content Include="App_Config\Include\MediaFramework\Sitecore.RestSharp.Brightcove.config" />
     <Content Include="layouts\MediaFramework\Sublayouts\EmbedMediaPlayer.ascx" />
     <Content Include="layouts\MediaFramework\Sublayouts\Player.aspx" />
     <Content Include="layouts\MediaFramework\Upload.aspx">
@@ -202,11 +202,11 @@
     </Content>
     <Content Include="layouts\MediaFramework\Brightcove\VideoTextTracks.cshtml" />
     <Content Include="App_Config\Include\Rainbow.config" />
-    <Content Include="App_Config\Include\Sitecore.MediaFramework.config" />
-    <None Include="App_Config\Include\Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled">
+    <Content Include="App_Config\Include\MediaFramework\Sitecore.MediaFramework.config" />
+    <None Include="App_Config\Include\MediaFramework\Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="App_Config\Include\Sitecore.Mvc.MediaFramework.config" />
+    <Content Include="App_Config\Include\MediaFramework\Sitecore.Mvc.MediaFramework.config" />
     <None Include="packages.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.UI.config" />
     <Content Include="App_Config\Include\Unicorn\Unicorn.PowerShell.config" />
