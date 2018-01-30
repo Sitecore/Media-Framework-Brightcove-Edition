@@ -16,6 +16,8 @@ Prerequisites:
 -  Sitecore 9.0 rev. 171002
 -------------------------------------------------------------
 After installation, update the Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled file with the correct values, then remove the .disabled extension.
+
+Also, run the temp/Sitecore 9.0 Media Framework Reporting Data Update Script.sql script to create the reporting databases.
 -------------------------------------------------------------
 Sitecore® is a registered trademark. All other brand and
 product names are the property of their respective holders. All rights reserved.
@@ -65,6 +67,7 @@ product names are the property of their respective holders. All rights reserved.
         <x-item>/App_Config/Include/MediaFramework/Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled</x-item>
         <x-item>/App_Config/Include/MediaFramework/Sitecore.Mvc.MediaFramework.config</x-item>
         <x-item>/App_Config/Include/MediaFramework/Sitecore.RestSharp.Brightcove.config</x-item>
+        <x-item>/temp/Sitecore 9.0 Media Framework Reporting Data Update Script.sql</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
@@ -140,7 +143,7 @@ product names are the property of their respective holders. All rights reserved.
       <Name>[Brightcove] Insert Options</Name>
     </xitems>
     <files>
-      <Root>/sitecore/shell/Themes/Standard/MediaFramework/Brightcove</Root>
+      <Root>/sitecore/shell/Themes/Standard/MediaFramework</Root>
       <Converter>
         <FileToEntryConverter>
           <Root>/</Root>
@@ -250,6 +253,7 @@ product names are the property of their respective holders. All rights reserved.
         <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.fancybox-1.3.4.css</x-item>
         <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.fancybox-1.3.4.pack.js</x-item>
         <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.mousewheel-3.0.4.pack.js</x-item>
+        <x-item>/layouts/MediaFramework/Upload.aspx</x-item>
       </Entries>
       <Converter>
         <FileToEntryConverter>
@@ -1315,6 +1319,92 @@ product names are the property of their respective holders. All rights reserved.
       <Exclude />
       <Name>[Brightcove] Command Rules</Name>
     </xitems>
+    <items>
+      <Database>master</Database>
+      <Root>{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}</Root>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include>
+        <ItemNameFilter>
+          <Pattern />
+          <FilterSearchType>Simple</FilterSearchType>
+        </ItemNameFilter>
+        <ItemDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <NotOlderThan />
+          <ActionDateTo />
+          <ActionDateFrom />
+        </ItemDateFilter>
+        <ItemPublishFilter>
+          <PublishDate />
+          <CheckWorkflow>True</CheckWorkflow>
+        </ItemPublishFilter>
+        <ItemTemplateFilter>
+          <Templates />
+        </ItemTemplateFilter>
+        <ItemUserFilter>
+          <FilterType>Created</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemUserFilter>
+          <FilterType>Modified</FilterType>
+          <Accounts />
+        </ItemUserFilter>
+        <ItemLanguageFilter>
+          <Languages />
+        </ItemLanguageFilter>
+      </Include>
+      <Exclude />
+      <Name />
+    </items>
+    <files>
+      <Root>/sitecore/shell/Themes/Standard/Images/MediaFramework</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>[Brightcove] Images 2</Name>
+    </files>
   </Sources>
   <Converter>
     <TrivialConverter>

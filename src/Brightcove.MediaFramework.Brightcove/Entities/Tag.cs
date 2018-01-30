@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Brightcove.MediaFramework.Brightcove.Entities
 {
-    public class Tag
+    public class Tag : Asset
     {
-        public string Name { get; set; }
-
         public override string ToString()
         {
             return string.Format("(type:{0},name:{1})", (object)this.GetType().Name, (object)this.Name);

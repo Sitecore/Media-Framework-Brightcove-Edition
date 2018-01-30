@@ -74,3 +74,6 @@ C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\System.Web.WebP
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.dll
 C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\obj\Debug\Web.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\HtmlAgilityPack.dll
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\HtmlAgilityPack.pdb
+C:\Source\Sitecore-8.x-Media-Framework-2.x-Connector\src\Web\bin\HtmlAgilityPack.xml
