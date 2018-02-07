@@ -9,7 +9,7 @@ Brightcove Connector for Sitecore - Developer Setup
 
 4) Modify App_Config/Includes/Unicorn/Unicorn.Brightcove.config to point to the Serialization directory in your source directory. Keep in mind you may need to change app pool identity or give permissions to the Serialization folder.
 
-5) Run the SQL script in the /Data/ folder inside the solution on the reporting DB
+5) Run the SQL script in the src/Data/ folder inside the solution on the reporting DB
 
 6) Perform a smart publish of the entire site
 
