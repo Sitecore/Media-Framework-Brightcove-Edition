@@ -16,7 +16,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{25
 	ProjectSection(SolutionItems) = preProject
 		Data\packages\Brightcove Media Framework 9_0.xml = Data\packages\Brightcove Media Framework 9_0.xml
 		Data\packages\Brightcove Media Framework-9.0.zip = Data\packages\Brightcove Media Framework-9.0.zip
-		Data\packages\Sitecore Media Framework 2_2.xml = Data\packages\Sitecore Media Framework 2_2.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{393F6BF2-2B06-4164-8A94-A814060769EA}"
