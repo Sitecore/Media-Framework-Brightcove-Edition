@@ -38,7 +38,7 @@
     <Brightcove.VideoUploadService type="Brightcove.MediaFramework.Brightcove.Upload.MediaItem.VideoUploadService, Brightcove.MediaFramework.Brightcove">
       <Config type="Brightcove.MediaFramework.Brightcove.Upload.VideoUploadServiceConfigBase, Brightcove.MediaFramework.Brightcove">
         <CaptureImages>true</CaptureImages>
-        <Profile>high-resolution</Profile>
+        <!--<Profile>multi-platform-standard-static</Profile>-->
         <AlwaysCreateVideoItem>true</AlwaysCreateVideoItem>
       </Config>
     </Brightcove.VideoUploadService>
