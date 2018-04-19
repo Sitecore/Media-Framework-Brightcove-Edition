@@ -9,6 +9,13 @@ namespace Brightcove.MediaFramework.Brightcove.Configuration
 {
     public static class Settings
     {
+        public static bool EnableAdvancedLogging
+        {
+            get
+            {
+                return Sitecore.Configuration.Settings.GetBoolSetting("Brightcove.EnableAdvancedLogging", false);
+            }
+        }
         public static string CommandRoutePrefix
         {
             get

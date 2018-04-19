@@ -1,0 +1,42 @@
+﻿
+@using Sitecore.MediaFramework.Mvc
+@using Sitecore.MediaFramework.Mvc.Extentions
+@using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup
+@using Sitecore.MediaFramework.Players
+
+@model MediaGenerateMarkupArgs
+
+@{   
+    using (var context = @Html.CreateResourcesContext(Constants.HeadResourcesKey))
+    {
+        foreach (string url in Model.Result.CssUrls)
+        {
+            context.AddCssUrl(url);
+        }
+        foreach (string url in Model.Result.ScriptUrls)
+        {
+            context.AddScriptUrl(url);
+        }
+    }
+
+    using (var context = @Html.CreateResourcesContext(Constants.BodyResourcesKey))
+    {
+        foreach (var pair in Model.Result.BottomScripts)
+        {
+            context.AddScriptBlock(pair.Value);
+        }
+    }
+    
+    if (!Model.Aborted)
+    {
+        <div class="mf-player-container" data-mf-params="@Model.Properties.ToString()">
+            @Html.Raw(@Model.Result.Html)
+        </div>
+    }
+    else
+    {
+        <div class="mf-player-container">
+            @Html.Raw(@PlayerManager.GetEmptyValue())
+        </div>
+    }
+}

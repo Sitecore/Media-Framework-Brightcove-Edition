@@ -3,14 +3,14 @@
     <metadata>
       <PackageName>Brightcove Media Framework</PackageName>
       <Author>Brightcove</Author>
-      <Version>9.0</Version>
+      <Version>9.0.1</Version>
       <Revision>170828</Revision>
       <License />
       <Comment />
       <Attributes />
-      <Readme>Sitecore Media Framework Brightcove Edition 9.0
+      <Readme>Sitecore Media Framework Brightcove Edition 9.0.1
 -------------------------------------------------------------
-Date: 12-Dec-2017
+Date: 19-Apr-2018
 -------------------------------------------------------------
 Prerequisites:
 -  Sitecore 9.0 rev. 171002

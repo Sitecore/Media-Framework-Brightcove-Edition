@@ -3,6 +3,7 @@
    <!-- Enhancements for version 3 -->
 
     <settings>
+      <setting name="Brightcove.EnableAdvancedLogging" value="true" />
       <!--
            Brightcove - COMMAND ROUTE PREFIX
            The prefix used for controller routes.

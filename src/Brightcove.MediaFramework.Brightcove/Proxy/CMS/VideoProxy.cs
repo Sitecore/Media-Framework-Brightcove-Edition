@@ -6,6 +6,7 @@ using Brightcove.MediaFramework.Brightcove.Entities.Response;
 using RestSharp;
 using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.Shell.Applications.ContentEditor;
+using Sitecore.Diagnostics;
 
 namespace Brightcove.MediaFramework.Brightcove.Proxy.CMS
 {
@@ -18,7 +19,14 @@ namespace Brightcove.MediaFramework.Brightcove.Proxy.CMS
 
         public Entities.Collections.PagedCollection<Video> RetrieveList(int limit, int offset)
         {
-            return this.RetrieveList<Video>("read_videos", limit, offset);
+            var videos = this.RetrieveList<Video>("read_videos", limit, offset);
+
+            if (videos != null)
+            {
+                Log.Info("Video count: " + videos.ToList().Count, this);
+            }
+
+            return videos;
         }
 
         public Video Create(Video entity)
@@ -75,7 +83,7 @@ namespace Brightcove.MediaFramework.Brightcove.Proxy.CMS
             var video = new Video
             {
                 Id = videoId,
-                CustomFields = customFields.ToDictionary(i=>i.Id,i=>i.Value)
+                CustomFields = customFields.ToDictionary(i => i.Id, i => i.Value)
             };
 
             this.Patch(video);
