@@ -152,6 +152,7 @@
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Entities\TagInclusion.cs" />
     <Compile Include="Entities\VideoSharing.cs" />
+    <Compile Include="Import\VideoCollectionImporterForce.cs" />
     <Compile Include="Indexing\Entities\AssetSearchResult.cs" />
     <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
     <Compile Include="Indexing\Entities\TagSearchResult.cs" />

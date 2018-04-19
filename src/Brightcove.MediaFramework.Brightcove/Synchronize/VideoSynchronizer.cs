@@ -58,6 +58,10 @@ namespace Brightcove.MediaFramework.Brightcove.Synchronize
 
         public override bool NeedUpdate(object entity, Item accountItem, MediaServiceSearchResult searchResult)
         {
+            object cachedObjectData = HttpRuntime.Cache.Get("BrightcoveForceSync");
+            if (cachedObjectData != null)
+                return true;
+
             Video video = (Video)entity;
             VideoSearchResult videoSearchResult = (VideoSearchResult)searchResult;
             var thumbnailSrc = video.Images.Thumbnail != null ? video.Images.Thumbnail.Src?.Replace("http://", "https://") : null;
