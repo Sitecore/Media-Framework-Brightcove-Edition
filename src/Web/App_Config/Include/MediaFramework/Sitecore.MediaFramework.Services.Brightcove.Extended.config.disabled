@@ -75,7 +75,13 @@
         <processor patch:instead="processor[@type='Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup.GetPlaybackEvents, Sitecore.MediaFramework']" type="Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup.GetPlaybackEvents,Brightcove.MediaFramework.Brightcove">
         </processor>
       </mediaFramework.mediaGenerateMarkup>
-    </pipelines>
+
+      <mediaFramework.mediaSyncImport>
+        <processor patch:after="processor[@type='Sitecore.MediaFramework.Pipelines.MediaSyncImport.CallItemImport, Sitecore.MediaFramework']" type="Brightcove.MediaFramework.Brightcove.Pipelines.MediaSyncImport.ForceSyncClear,Brightcove.MediaFramework.Brightcove">
+        </processor>
+      </mediaFramework.mediaSyncImport>
+    
+  </pipelines>
     
   </sitecore>
 </configuration>
