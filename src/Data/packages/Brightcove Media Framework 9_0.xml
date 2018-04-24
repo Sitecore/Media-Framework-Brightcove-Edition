@@ -450,6 +450,7 @@ product names are the property of their respective holders. All rights reserved.
         <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/Account Migration/{56CAADAD-DA24-4D44-B8B9-2638BDF1C80C}/invariant/0</x-item>
         <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/MediaFramework/{B4CE7259-46E2-486E-A39F-41BD703F3F4F}/invariant/0</x-item>
         <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Ribbons/Default/Media Framework/{F2B7AF49-7630-4433-9425-0D423FDAE472}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/Force Sync Videos/{C0E5CB1C-FB7C-4A6F-A23B-32C32D4F6EED}/invariant/0</x-item>
       </Entries>
       <SkipVersions>False</SkipVersions>
       <Converter>
@@ -1319,54 +1320,6 @@ product names are the property of their respective holders. All rights reserved.
       <Exclude />
       <Name>[Brightcove] Command Rules</Name>
     </xitems>
-    <items>
-      <Database>master</Database>
-      <Root>{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}</Root>
-      <SkipVersions>False</SkipVersions>
-      <Converter>
-        <ItemToEntryConverter>
-          <Transforms />
-        </ItemToEntryConverter>
-      </Converter>
-      <Include>
-        <ItemNameFilter>
-          <Pattern />
-          <FilterSearchType>Simple</FilterSearchType>
-        </ItemNameFilter>
-        <ItemDateFilter>
-          <FilterType>CreatedFilter</FilterType>
-          <NotOlderThan />
-          <ActionDateTo />
-          <ActionDateFrom />
-        </ItemDateFilter>
-        <ItemDateFilter>
-          <FilterType>ModifiedFilter</FilterType>
-          <NotOlderThan />
-          <ActionDateTo />
-          <ActionDateFrom />
-        </ItemDateFilter>
-        <ItemPublishFilter>
-          <PublishDate />
-          <CheckWorkflow>True</CheckWorkflow>
-        </ItemPublishFilter>
-        <ItemTemplateFilter>
-          <Templates />
-        </ItemTemplateFilter>
-        <ItemUserFilter>
-          <FilterType>Created</FilterType>
-          <Accounts />
-        </ItemUserFilter>
-        <ItemUserFilter>
-          <FilterType>Modified</FilterType>
-          <Accounts />
-        </ItemUserFilter>
-        <ItemLanguageFilter>
-          <Languages />
-        </ItemLanguageFilter>
-      </Include>
-      <Exclude />
-      <Name />
-    </items>
     <files>
       <Root>/sitecore/shell/Themes/Standard/Images/MediaFramework</Root>
       <Converter>
