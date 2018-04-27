@@ -1,5 +1,7 @@
-# Media-Framework-Brightcove-Edition
-Brightcove Connector for Sitecore - Developer Setup
+
+# Brightcove Connector for Sitecore 
+
+Developer Setup
 
 1) Install Sitecore 9.0 via instructions from the official Sitecore dev site
  
