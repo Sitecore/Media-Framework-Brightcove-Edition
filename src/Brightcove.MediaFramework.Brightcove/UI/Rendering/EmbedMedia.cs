@@ -35,10 +35,8 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
 
     protected override void InitProperties()
     {
-        var video = this.GetItem();
         this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
         this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
-        this.SourceLiteral.Text = video.DisplayName;
 
         string player = WebUtil.GetQueryString(Constants.PlayerParameters.PlayerId, string.Empty);
          
