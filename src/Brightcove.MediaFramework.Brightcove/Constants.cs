@@ -26,4 +26,16 @@
         public static readonly string SitecoreRestSharpService = "mediaframework_brightcove";
         public static readonly string IndexName = "mediaframework_brightcove_index";
     }
+
+    public static class BrightcovePlayerParameters
+    {
+        public static readonly string Source = "source";
+        public static readonly string VideoId = "videoId";
+        public static readonly string Autoplay = "autoplay";
+        public static readonly string Muted = "muted";
+        public static readonly string EmbedStyle = "embedStyle";
+        public static readonly string Sizing = "sizing";
+        public static readonly string AspectRatio = "aspectRatio";
+        public static readonly string ShortCode = "shortCode";
+    }
 }

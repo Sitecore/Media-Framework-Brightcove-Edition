@@ -156,6 +156,7 @@
     <Compile Include="Indexing\Entities\AssetSearchResult.cs" />
     <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
     <Compile Include="Indexing\Entities\TagSearchResult.cs" />
+    <Compile Include="Pipelines\MediaGenerateMarkup\GenerateMarkup.cs" />
     <Compile Include="Pipelines\MediaSyncImport\ForceSyncClear.cs" />
     <Compile Include="Synchronize\EntityCreators\TagEntityCreator.cs" />
     <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
@@ -257,6 +258,7 @@
     <Compile Include="Synchronize\References\PlaylistVideoSynchronizer.cs" />
     <Compile Include="Synchronize\References\VideoTagsSynchronizer.cs" />
     <Compile Include="Synchronize\VideoSynchronizer.cs" />
+    <Compile Include="UI\Rendering\EmbedMedia.cs" />
     <Compile Include="Upload\IVideoUploadService%271.cs" />
     <Compile Include="Upload\MediaItem\FileStorageManager.cs" />
     <Compile Include="Upload\MediaItem\StorageExecutor.cs">

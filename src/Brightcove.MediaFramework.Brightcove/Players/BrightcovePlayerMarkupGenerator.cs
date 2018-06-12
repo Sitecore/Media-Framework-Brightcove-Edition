@@ -25,7 +25,7 @@ using System.Reflection;
 namespace Brightcove.MediaFramework.Brightcove.Players
 {
     /// <summary>
-    /// The ooyala player markup provider.
+    /// The Brightcove player markup provider.
     /// </summary>
     public class BrightcovePlayerMarkupGenerator : PlayerMarkupGeneratorBase
     {
