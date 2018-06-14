@@ -147,6 +147,7 @@
     <Compile Include="Analytics\EventTrigger.cs" />
     <Compile Include="Analytics\PlaylistEventTrigger.cs" />
     <Compile Include="Analytics\VideoEventTrigger.cs" />
+    <Compile Include="Entities\AspectRatio.cs" />
     <Compile Include="Entities\Economics.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Entities\Tag.cs" />
@@ -157,7 +158,9 @@
     <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
     <Compile Include="Indexing\Entities\TagSearchResult.cs" />
     <Compile Include="Pipelines\MediaGenerateMarkup\GenerateMarkup.cs" />
+    <Compile Include="Pipelines\MediaGenerateMarkup\MediaGenerateMarkupArgs.cs" />
     <Compile Include="Pipelines\MediaSyncImport\ForceSyncClear.cs" />
+    <Compile Include="Players\BrightcovePlayerProperties.cs" />
     <Compile Include="Synchronize\EntityCreators\TagEntityCreator.cs" />
     <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
     <Compile Include="Synchronize\Fallback\TagFallback.cs" />
@@ -197,8 +200,6 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\FilesController.cs" />
     <Compile Include="Controllers\VideoCustomFieldsController.cs" />
-    <Compile Include="Debug\DebugRestClient.cs" />
-    <Compile Include="Debug\DebugRestContext.cs" />
     <Compile Include="Entities\AccessToken.cs" />
     <Compile Include="Entities\AssetRendition.cs" />
     <Compile Include="Entities\Collections\AssetRenditionCollection.cs" />

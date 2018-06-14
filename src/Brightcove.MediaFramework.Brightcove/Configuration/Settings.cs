@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using Brightcove.MediaFramework.Brightcove.Entities;
 using Sitecore.SecurityModel.License;
 
 namespace Brightcove.MediaFramework.Brightcove.Configuration
@@ -101,5 +103,47 @@ namespace Brightcove.MediaFramework.Brightcove.Configuration
                 return analyticsEnabled;
             }
         }
+
+        public static int DefaultVideoEmbedStyle
+        {
+            get
+            {
+                return Sitecore.Configuration.Settings.GetIntSetting("Brightcove.DefaultVideoEmbedStyle", 0);
+            }
+        }
+    public static int DefaultVideoSizing
+    {
+      get
+      {
+          return Sitecore.Configuration.Settings.GetIntSetting("Brightcove.DefaultVideoSizing", 0);
+      }
     }
+    private static IList<AspectRatio> _aspectRatioList = new List<AspectRatio>();
+    public static IEnumerable<AspectRatio> AspectRatioList
+    {
+      get
+      {
+        XmlNode root = Sitecore.Configuration.Factory.GetConfigNode("Brightcove.AspectRatios");
+        if (root == null) return _aspectRatioList;
+
+        foreach (XmlNode node in root.ChildNodes)
+        {
+          if (node == null || 
+              node.Attributes["displayName"] == null || 
+              node.Attributes["width"] == null ||
+              node.Attributes["height"] == null)
+            continue;
+
+          _aspectRatioList.Add(new AspectRatio
+          {
+            DisplayName = node.Attributes["displayName"].Value ?? string.Empty,
+            Width = int.TryParse(node.Attributes["width"].Value, out int width) ? width : 0,
+            Height = int.TryParse(node.Attributes["height"].Value, out int height) ? height : 0
+          });
+        }
+
+        return _aspectRatioList;
+      }
+    }
+  }
 }

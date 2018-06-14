@@ -1,8 +1,15 @@
-﻿using Sitecore.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.UI.WebControls;
+using Brightcove.MediaFramework.Brightcove.Configuration;
+using Brightcove.MediaFramework.Brightcove.Entities;
+using Sitecore.IO;
 using Sitecore.MediaFramework.Account;
 using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
 using Sitecore.MediaFramework.UI.Rendering;
 using Sitecore.MediaFramework.Utils;
+using Sitecore.Mvc.Extensions;
 using Sitecore.Web.UI.Sheer;
 
 namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
@@ -17,54 +24,56 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
 
   public class EmbedMediaBrightcove : EmbedMedia
   {
+    private const string SearchItem = "SearchItem";
+
     protected Literal SourceLiteral;
 
     protected Literal VideoIdLiteral;
 
-    protected Checkbox AutoplayCheckbox;
+    protected Radiobutton EmbedStyleRadiobutton;
 
-    protected Checkbox MutedCheckbox;
-
-    protected Radiogroup EmbedStyleRadiogroup;
-
-    protected Radiogroup SizingRadiogroup;
+    protected Radiobutton SizingRadiobutton;
 
     protected Combobox AspectRatioList;
 
-    protected Combobox ShortCode;
+    protected Combobox ShortcodeList;
 
     protected override void InitProperties()
     {
-        this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
-        this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
+      this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
+      this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
+      //this.EmbedStyleRadioList.SelectedIndex = Settings.DefaultVideoEmbedStyle;
+      //this.SizingRadioList.SelectedIndex = Settings.DefaultVideoSizing;
+      this.InitAspectRatiosList(Settings.AspectRatioList);
+      this.InitShortcodeList();
 
-        string player = WebUtil.GetQueryString(Constants.PlayerParameters.PlayerId, string.Empty);
+      string player = WebUtil.GetQueryString(Constants.PlayerParameters.PlayerId, string.Empty);
          
-        this.PlayerId = ShortID.IsShortID(player) ? new ShortID(player) : ID.Null.ToShortID();
+      this.PlayerId = ShortID.IsShortID(player) ? new ShortID(player) : ID.Null.ToShortID();
 
-        var mediaItemId = WebUtil.GetQueryString(Constants.PlayerParameters.ItemId);
+      var mediaItemId = WebUtil.GetQueryString(Constants.PlayerParameters.ItemId);
 
-        if (ID.IsID(mediaItemId))
+      if (ID.IsID(mediaItemId))
+      {
+        Item item;
+        Database db = Sitecore.Context.ContentDatabase ?? Sitecore.Context.Database;
+
+        if (db != null && (item = db.GetItem(new ID(mediaItemId))) != null)
         {
-            Item item;
-            Database db = Sitecore.Context.ContentDatabase ?? Sitecore.Context.Database;
+          this.Filename.Value = item.Paths.MediaPath;
+          this.DataContext.SetFolder(item.Uri);
 
-            if (db != null && (item = db.GetItem(new ID(mediaItemId))) != null)
-            {
-                this.Filename.Value = item.Paths.MediaPath;
-                this.DataContext.SetFolder(item.Uri);
+          this.SourceItemID = item.ID;
+          this.InitPlayersList(item);
 
-                this.SourceItemID = item.ID;
-                this.InitPlayersList(item);
-
-                string activePage = WebUtil.GetQueryString(Constants.PlayerParameters.ActivePage);
-                if (!string.IsNullOrEmpty(activePage))
-                {
-                this.Active = activePage;
-                }
-            }
-         }
+          string activePage = WebUtil.GetQueryString(Constants.PlayerParameters.ActivePage);
+          if (!string.IsNullOrEmpty(activePage))
+          {
+            this.Active = activePage;
+          }
+        }
       }
+    }
       
       //TODO: Add additional params to IsValid?
       protected override bool IsValid()
@@ -96,22 +105,76 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
 
           return true;
       }
-      
-      //TODO: create new PlayerProperties to support additional properties?
-      protected override PlayerProperties GetPlayerProperties()
-      {
-            //TODO:var item = this.GetItem();
-            //IPlayerMarkupGenerator generator = MediaFrameworkContext.GetPlayerMarkupGenerator(item);
 
-            return new PlayerProperties
-            {
-                ItemId = this.SourceItemID,
-                //TODO:Template = item.TemplateID,
-                //MediaId = generator.GetMediaId(item),
-                PlayerId = new ID(this.PlayersList.Value),
-                Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width),
-                Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height)
-            };
+      protected override void OnNext(object sender, EventArgs formEventArgs)
+      {
+          if (this.Active == SearchItem)
+          {
+              this.SourceItemID = this.InitMediaItem();
+          }
+
+          var item = this.GetItem();
+          if (item != null && !string.IsNullOrEmpty(item.DisplayName))
+          {
+              this.SourceLiteral.Text = item.Name;
+              this.VideoIdLiteral.Text = item["ID"];
+          }
+
+          base.OnNext(sender, formEventArgs);
+      }
+
+    //TODO: create new PlayerProperties to support additional properties?
+    protected override PlayerProperties GetPlayerProperties()
+    {
+      //TODO:var item = this.GetItem();
+      //IPlayerMarkupGenerator generator = MediaFrameworkContext.GetPlayerMarkupGenerator(item);
+
+      return new PlayerProperties
+      {
+          ItemId = this.SourceItemID,
+          //TODO:Template = item.TemplateID,
+          //MediaId = generator.GetMediaId(item),
+          PlayerId = new ID(this.PlayersList.Value),
+          Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width),
+          Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height)
+      };
+    }
+
+    protected virtual void InitAspectRatiosList(IEnumerable<AspectRatio> aspectRatiosList)
+    {
+      if (aspectRatiosList == null || !aspectRatiosList.Any()) return;
+
+      this.AspectRatioList.Controls.Clear();
+      foreach (var aspectRatio in aspectRatiosList.ToList())
+      {
+        this.AspectRatioList.Controls.Add(new ListItem
+        {
+          ID = Control.GetUniqueID("ListItem"),
+          Selected = aspectRatio.Height == Settings.AspectRatioList.FirstOrDefault().Height,
+          Header = aspectRatio.DisplayName,
+          Value = aspectRatio.DisplayName
+        });
       }
     }
+
+    protected virtual void InitShortcodeList()
+    {
+      this.ShortcodeList.Controls.Clear();
+
+      this.ShortcodeList.Controls.Add(new ListItem
+      {
+        ID = Control.GetUniqueID("ListItem"),
+        Selected = true,
+        Header = "Manual",
+        Value = "manual"
+      });
+      this.ShortcodeList.Controls.Add(new ListItem
+      {
+        ID = Control.GetUniqueID("ListItem"),
+        Selected = true,
+        Header = "Auto generate",
+        Value = "auto"
+      });
+    }
+  }
 }
