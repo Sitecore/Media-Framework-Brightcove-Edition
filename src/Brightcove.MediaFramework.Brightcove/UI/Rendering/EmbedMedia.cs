@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.UI.WebControls;
 using Brightcove.MediaFramework.Brightcove.Configuration;
 using Brightcove.MediaFramework.Brightcove.Entities;
+using Sitecore.Diagnostics;
 using Sitecore.IO;
 using Sitecore.MediaFramework.Account;
 using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
@@ -26,13 +27,19 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
   {
     private const string SearchItem = "SearchItem";
 
-    protected Literal SourceLiteral;
+    protected Edit SourceInput;
 
-    protected Literal VideoIdLiteral;
+    protected Edit VideoIdInput;
 
-    protected Radiobutton EmbedStyleRadiobutton;
+    protected Checkbox AutoplayCheckbox;
 
-    protected Radiobutton SizingRadiobutton;
+    protected Checkbox MutedCheckbox;
+
+    protected Radiobutton EmbedJavascriptRadiobutton;
+    protected Radiobutton EmbedIframeRadiobutton;
+
+    protected Radiobutton SizingResponsiveRadiobutton;
+    protected Radiobutton SizingFixedRadiobutton;
 
     protected Combobox AspectRatioList;
 
@@ -42,8 +49,8 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
     {
       this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
       this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
-      //this.EmbedStyleRadioList.SelectedIndex = Settings.DefaultVideoEmbedStyle;
-      //this.SizingRadioList.SelectedIndex = Settings.DefaultVideoSizing;
+      this.SizingResponsiveRadiobutton.Checked = true;
+      this.EmbedJavascriptRadiobutton.Checked = true;
       this.InitAspectRatiosList(Settings.AspectRatioList);
       this.InitShortcodeList();
 
@@ -74,70 +81,112 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
         }
       }
     }
-      
-      //TODO: Add additional params to IsValid?
-      protected override bool IsValid()
+
+    protected override void OnNext(object sender, EventArgs formEventArgs)
+    {
+      if (this.Active == SearchItem)
       {
-          string message = null;
-
-          if (string.IsNullOrEmpty(this.PlayersList.Value))
-          {
-              message = Translations.PlayerIsNotSelected;
-          }
-
-          int width;
-          int height;
-          if (!int.TryParse(this.WidthInput.Value, out width) || width <= 0)
-          {
-              message = Translations.IncorrectWidthValue;
-          }
-
-          if (!int.TryParse(this.HeightInput.Value, out height) || height <= 0)
-          {
-              message = Translations.IncorrectHeightValue;
-          }
-
-          if (!string.IsNullOrEmpty(message))
-          {
-              SheerResponse.Alert(message);
-              return false;
-          }
-
-          return true;
+        this.SourceItemID = this.InitMediaItem();
       }
 
-      protected override void OnNext(object sender, EventArgs formEventArgs)
+      var item = this.GetItem();
+      if (item != null && !string.IsNullOrEmpty(item.DisplayName))
       {
-          if (this.Active == SearchItem)
-          {
-              this.SourceItemID = this.InitMediaItem();
-          }
-
-          var item = this.GetItem();
-          if (item != null && !string.IsNullOrEmpty(item.DisplayName))
-          {
-              this.SourceLiteral.Text = item.Name;
-              this.VideoIdLiteral.Text = item["ID"];
-          }
-
-          base.OnNext(sender, formEventArgs);
+        this.SourceInput.Value = item.Name;
+        this.SourceInput.Enabled = false;
+        this.VideoIdInput.Value = item["ID"];
+        this.VideoIdInput.Enabled = false;
       }
 
-    //TODO: create new PlayerProperties to support additional properties?
+      base.OnNext(sender, formEventArgs);
+    }
+
+    //TODO: Add additional params to IsValid?
+    protected override bool IsValid()
+    {
+      string message = null;
+
+      if (string.IsNullOrEmpty(this.PlayersList.Value))
+      {
+        message = Translations.PlayerIsNotSelected;
+      }
+
+      int width;
+      int height;
+      if (!int.TryParse(this.WidthInput.Value, out width) || width <= 0)
+      {
+        message = Translations.IncorrectWidthValue;
+      }
+
+      if (!int.TryParse(this.HeightInput.Value, out height) || height <= 0)
+      {
+        message = Translations.IncorrectHeightValue;
+      }
+
+      if (!string.IsNullOrEmpty(message))
+      {
+        SheerResponse.Alert(message);
+        return false;
+      }
+
+      return true;
+    }
+    
     protected override PlayerProperties GetPlayerProperties()
     {
       //TODO:var item = this.GetItem();
       //IPlayerMarkupGenerator generator = MediaFrameworkContext.GetPlayerMarkupGenerator(item);
 
-      return new PlayerProperties
+      var properties = new Dictionary<string, string>();
+      if (this.AutoplayCheckbox != null && this.AutoplayCheckbox.Checked)
+        properties.Add(BrightcovePlayerParameters.Autoplay, this.AutoplayCheckbox.Value);
+      if (this.MutedCheckbox != null && this.MutedCheckbox.Checked)
+        properties.Add(BrightcovePlayerParameters.Muted, this.MutedCheckbox.Value);
+      var embed = this.EmbedJavascriptRadiobutton.Checked
+        ? Brightcove.Constants.EmbedJavascript
+        : Brightcove.Constants.EmbedIframe;
+      properties.Add(BrightcovePlayerParameters.EmbedStyle, embed);
+      properties.Add(BrightcovePlayerParameters.Shortcode, this.ShortcodeList.Selected.FirstOrDefault().Value);
+      if (this.SizingResponsiveRadiobutton != null && this.SizingResponsiveRadiobutton.Checked)
+        properties.Add(BrightcovePlayerParameters.Sizing, this.SizingResponsiveRadiobutton.Value);
+      properties.Add(BrightcovePlayerParameters.AspectRatio, this.AspectRatioList.Selected.FirstOrDefault().Value);
+
+      var playerProps = new PlayerProperties(properties);
+      playerProps.ItemId = this.SourceItemID;
+      //TODO:playerProps.Template = item.TemplateID;
+      //playerProps.MediaId = generator.GetMediaId(item);
+      playerProps.PlayerId = new ID(this.PlayersList.Value);
+      playerProps.Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width);
+      playerProps.Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height);
+      return playerProps;
+    }
+
+    protected override void InsertMedia(PlayerProperties playerProperties)
+    {
+      if (playerProperties == null)
       {
-          ItemId = this.SourceItemID,
-          //TODO:Template = item.TemplateID,
-          //MediaId = generator.GetMediaId(item),
-          PlayerId = new ID(this.PlayersList.Value),
-          Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width),
-          Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height)
+        return;
+      }
+
+      var args = new MediaGenerateMarkupArgs
+      {
+        MarkupType = MarkupType.Frame,
+        Properties = playerProperties
       };
+
+      MediaGenerateMarkupPipeline.Run(args);
+
+      switch (this.Mode)
+      {
+        case "webedit":
+          SheerResponse.SetDialogValue(args.Result.Html);
+          this.EndWizard();
+          break;
+
+        default:
+          SheerResponse.Eval("scClose(" + Sitecore.StringUtil.EscapeJavascriptString(args.Result.Html) + ")");
+          break;
+      }
     }
 
     protected virtual void InitAspectRatiosList(IEnumerable<AspectRatio> aspectRatiosList)

@@ -158,9 +158,7 @@
     <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
     <Compile Include="Indexing\Entities\TagSearchResult.cs" />
     <Compile Include="Pipelines\MediaGenerateMarkup\GenerateMarkup.cs" />
-    <Compile Include="Pipelines\MediaGenerateMarkup\MediaGenerateMarkupArgs.cs" />
     <Compile Include="Pipelines\MediaSyncImport\ForceSyncClear.cs" />
-    <Compile Include="Players\BrightcovePlayerProperties.cs" />
     <Compile Include="Synchronize\EntityCreators\TagEntityCreator.cs" />
     <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
     <Compile Include="Synchronize\Fallback\TagFallback.cs" />

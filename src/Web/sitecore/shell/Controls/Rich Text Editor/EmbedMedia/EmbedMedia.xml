@@ -58,14 +58,14 @@
 		          <Literal Text="Source:" Width="25px"/>
 	          </Border>
 	          <Border Padding="0px 4px 0px 10px">
-							<Literal ID="SourceLiteral" Width="300px" GridPanel.Width="100px"/>
+							<Edit ID="SourceInput" Width="300px" GridPanel.Width="100px"/>
 	          </Border>
 
 	          <Border Padding="0px 4px 0px 10px">
 		          <Literal Text="Video ID:" Width="25px"/>
 	          </Border>
 	          <Border Padding="0px 4px 0px 10px">
-							<Literal ID="VideoIdLiteral" Width="300px" GridPanel.Width="100px"/>
+							<Edit ID="VideoIdInput" Width="300px" GridPanel.Width="100px"/>
 	          </Border>
 
 	          <Border Padding="10px 4px 10px 10px">
@@ -73,18 +73,18 @@
 	          </Border>
 	          <Border Padding="10px 4px 10px 10px">
 		          <Literal Text="Autoplay: " Width="100px"/>
-		          <Checkbox ID="AutoplayCb" Width="25px"/>
+		          <Checkbox ID="AutoplayCheckbox" Width="25px"/>
 		          <Literal Text="Muted: " Width="100px"/>
-							<Checkbox ID="MutedCb" Width="25px"/>
+							<Checkbox ID="MutedCheckbox" Width="25px"/>
 	          </Border>
 
 	          <Border Padding="0px 4px 0px 10px">
 		          <Literal Text="Embed Style:"  Width="25px"/>
 	          </Border>
 	          <Border Padding="10px 4px 10px 10px">
-							<Radiobutton ID="JavascriptRb" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup" Selected="true"/>
+							<Radiobutton ID="EmbedJavascriptRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup" Selected="true"/>
 		          <Literal Text="Javascript " Width="50px"/>
-							<Radiobutton ID="IframeRb" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup"/>
+							<Radiobutton ID="EmbedIframeRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup"/>
 		          <Literal Text="iFrame " Width="50px"/>
 	          </Border>
 
@@ -92,9 +92,9 @@
 		          <Literal Text="Sizing:"  Width="25px"/>
 	          </Border>
 	          <Border Padding="10px 4px 10px 10px">
-		          <Radiobutton ID="ResponsiveRb" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup" Selected="true"/>
+		          <Radiobutton ID="SizingResponsiveRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup" Selected="true"/>
 		          <Literal Text="Responsive " Width="50px"/>
-							<Radiobutton ID="FixedRb" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup"/>
+							<Radiobutton ID="SizingFixedRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup"/>
 		          <Literal Text="Fixed " Width="50px"/>
 	          </Border>
 
