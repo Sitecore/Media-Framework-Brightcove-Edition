@@ -30,7 +30,8 @@ function scClose(media) {
 	};
 	
 	getRadWindow().close(returnValue);
-}
+
+}
 
 function scCancel() {
   getRadWindow().close();
@@ -74,4 +75,47 @@ var AspectPreserver = function () {
   }
 }
 
+function UpdateShortcode(key, value) {
+	var shortcodeInput = document.getElementById('ShortcodeInput');
+
+	if (shortcodeInput.value.includes(key)) {
+		shortcodeInput.value = shortcodeInput.value.replace(key + '=\'' + /[^(?!.*(\'|\"))]/  + '\'', key + '=\'' + value + '\'');
+	}
+}
+function UpdateHeight(widthInput, widthAspect, heightInput, heightAspect) {
+	heightInput.value = (widthInput.value / widthAspect) * heightAspect;
+}
+function UpdateAspectRatio(aspectRatioList, widthInput, heightInput) {
+	var widthHeight = aspectRatioList.value.split(':');
+	var width = '';
+	var height = '';
+	if (widthHeight.length >= 2) {
+		width = widthHeight[0];
+		height = widthHeight[1];
+	}
+	heightInput.disabled = aspectRatioList.value !== 'custom';
+	if (width !== '' && height !== '') {
+		UpdateHeight(widthInput, width, heightInput, height);
+	}
+}
+function GenerateIframeEmbed() {
+	var shortcodeInput = document.getElementById('ShortcodeInput');
+
+	shortcodeInput.value = '';
+}
+function GenerateJavascriptEmbed() {
+	var shortcodeInput = document.getElementById('ShortcodeInput');
+
+}
+
+var EditorOptions = function () {
+	var aspectRatioSelect = document.getElementById('AspectRatioList');
+	var widthInput = document.getElementById('WidthInput');
+	var heightInput = document.getElementById('HeightInput');
+
+	aspectRatioSelect.addEventListener("change", UpdateAspectRatio(aspectRatioSelect, widthInput, heightInput));
+	widthInput.addEventListener("change", UpdateAspectRatio(aspectRatioSelect, widthInput, heightInput));
+}
+
 var scAspectPreserver = new AspectPreserver();
+var editorOptionsContainer = new EditorOptions();

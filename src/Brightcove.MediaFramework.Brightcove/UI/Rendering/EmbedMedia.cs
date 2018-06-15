@@ -11,6 +11,7 @@ using Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup;
 using Sitecore.MediaFramework.UI.Rendering;
 using Sitecore.MediaFramework.Utils;
 using Sitecore.Mvc.Extensions;
+using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
 
 namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
@@ -34,26 +35,20 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
     protected Checkbox AutoplayCheckbox;
 
     protected Checkbox MutedCheckbox;
-
-    protected Radiobutton EmbedJavascriptRadiobutton;
-    protected Radiobutton EmbedIframeRadiobutton;
-
-    protected Radiobutton SizingResponsiveRadiobutton;
-    protected Radiobutton SizingFixedRadiobutton;
+    
+    protected Radiobutton JavascriptRadiobutton;
+    
+    protected Radiobutton ResponsiveRadiobutton;
 
     protected Combobox AspectRatioList;
-
-    protected Combobox ShortcodeList;
 
     protected override void InitProperties()
     {
       this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
       this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
-      this.SizingResponsiveRadiobutton.Checked = true;
-      this.EmbedJavascriptRadiobutton.Checked = true;
       this.InitAspectRatiosList(Settings.AspectRatioList);
-      this.InitShortcodeList();
-
+      this.JavascriptRadiobutton.Checked = true;
+      this.ResponsiveRadiobutton.Checked = true;
       string player = WebUtil.GetQueryString(Constants.PlayerParameters.PlayerId, string.Empty);
          
       this.PlayerId = ShortID.IsShortID(player) ? new ShortID(player) : ID.Null.ToShortID();
@@ -93,9 +88,9 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       if (item != null && !string.IsNullOrEmpty(item.DisplayName))
       {
         this.SourceInput.Value = item.Name;
-        this.SourceInput.Enabled = false;
+        this.SourceInput.Disabled = true;
         this.VideoIdInput.Value = item["ID"];
-        this.VideoIdInput.Enabled = false;
+        this.VideoIdInput.Disabled = true;
       }
 
       base.OnNext(sender, formEventArgs);
@@ -142,56 +137,27 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
         properties.Add(BrightcovePlayerParameters.Autoplay, this.AutoplayCheckbox.Value);
       if (this.MutedCheckbox != null && this.MutedCheckbox.Checked)
         properties.Add(BrightcovePlayerParameters.Muted, this.MutedCheckbox.Value);
-      var embed = this.EmbedJavascriptRadiobutton.Checked
+      var embed = this.JavascriptRadiobutton.Checked
         ? Brightcove.Constants.EmbedJavascript
         : Brightcove.Constants.EmbedIframe;
       properties.Add(BrightcovePlayerParameters.EmbedStyle, embed);
-      properties.Add(BrightcovePlayerParameters.Shortcode, this.ShortcodeList.Selected.FirstOrDefault().Value);
-      if (this.SizingResponsiveRadiobutton != null && this.SizingResponsiveRadiobutton.Checked)
-        properties.Add(BrightcovePlayerParameters.Sizing, this.SizingResponsiveRadiobutton.Value);
+      if (this.ResponsiveRadiobutton != null && this.ResponsiveRadiobutton.Checked)
+        properties.Add(BrightcovePlayerParameters.Sizing, this.ResponsiveRadiobutton.Value);
       properties.Add(BrightcovePlayerParameters.AspectRatio, this.AspectRatioList.Selected.FirstOrDefault().Value);
 
       var playerProps = new PlayerProperties(properties);
       playerProps.ItemId = this.SourceItemID;
       //TODO:playerProps.Template = item.TemplateID;
       //playerProps.MediaId = generator.GetMediaId(item);
-      playerProps.PlayerId = new ID(this.PlayersList.Value);
+      playerProps.PlayerId = !string.IsNullOrWhiteSpace(this.PlayersList?.Value) ? new ID(this.PlayersList.Value) : new ID();
       playerProps.Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width);
       playerProps.Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height);
       return playerProps;
     }
 
-    protected override void InsertMedia(PlayerProperties playerProperties)
-    {
-      if (playerProperties == null)
-      {
-        return;
-      }
-
-      var args = new MediaGenerateMarkupArgs
-      {
-        MarkupType = MarkupType.Frame,
-        Properties = playerProperties
-      };
-
-      MediaGenerateMarkupPipeline.Run(args);
-
-      switch (this.Mode)
-      {
-        case "webedit":
-          SheerResponse.SetDialogValue(args.Result.Html);
-          this.EndWizard();
-          break;
-
-        default:
-          SheerResponse.Eval("scClose(" + Sitecore.StringUtil.EscapeJavascriptString(args.Result.Html) + ")");
-          break;
-      }
-    }
-
     protected virtual void InitAspectRatiosList(IEnumerable<AspectRatio> aspectRatiosList)
     {
-      if (aspectRatiosList == null || !aspectRatiosList.Any()) return;
+      if (!aspectRatiosList?.Any() == true) return;
 
       this.AspectRatioList.Controls.Clear();
       foreach (var aspectRatio in aspectRatiosList.ToList())
@@ -204,26 +170,6 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
           Value = aspectRatio.DisplayName
         });
       }
-    }
-
-    protected virtual void InitShortcodeList()
-    {
-      this.ShortcodeList.Controls.Clear();
-
-      this.ShortcodeList.Controls.Add(new ListItem
-      {
-        ID = Control.GetUniqueID("ListItem"),
-        Selected = true,
-        Header = "Manual",
-        Value = "manual"
-      });
-      this.ShortcodeList.Controls.Add(new ListItem
-      {
-        ID = Control.GetUniqueID("ListItem"),
-        Selected = true,
-        Header = "Auto generate",
-        Value = "auto"
-      });
     }
   }
 }

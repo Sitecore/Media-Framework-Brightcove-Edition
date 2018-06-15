@@ -5,6 +5,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using RestSharp.Extensions;
+using Sitecore.Text;
 
 namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
 {
@@ -64,6 +65,15 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       }
     }
 
+    public virtual string GenerateFrameUrl(MediaGenerateMarkupArgs args)
+    {
+      var itemId = args.MediaItem.ID.ToGuid().ToString("N");
+      var playerId = args.PlayerItem.ID.ToGuid().ToString("N");
+      var url = new UrlString($"{Sitecore.MediaFramework.Constants.PlayerIframeUrl}?itemId={itemId}&playerId={playerId}");
+
+      return url.ToString();
+    }
+
     protected virtual string GenerateJavascriptEmbed(MediaGenerateMarkupArgs args)
     {
       string width = $"width='{args.Properties.Width}'";
@@ -78,7 +88,7 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       if (args.Properties.Collection[BrightcovePlayerParameters.EmbedStyle] != null)
       {
         var calcPadding = ((float)args.Properties.Height / args.Properties.Width) * 100;
-        responsive = $"<div style='position: relative; display: block; max-width: {args.Properties.Width}px;'><div style='padding-top: {calcPadding}%; '>";
+        responsive = $"<div style='position: relative; display: block; max-width: {args.Properties.Width}px;'><div style='padding-top: {calcPadding}%;'>";
         responsiveStyle = "style='position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;'";
         responsiveClosingTags = "</div></div>";
         width = height = String.Empty;
@@ -95,19 +105,16 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       }
       
 	    return $@"{responsive}
-                <video data-account='5498268458001' 
-	                data-player='r16VbIaxX' 
+                <video data-video-id='{args.MediaItem[BrightcovePlayerParameters.MediaId]}'
+                  data-account='{args.AccountItem[BrightcovePlayerParameters.PublisherId]}' 
+	                data-player='{args.PlayerItem[BrightcovePlayerParameters.PlayerId]}' 
 	                data-embed='default' 
 	                data-application-id 
 	                class='video-js' 
 	                controls {autoplay} {muted}
 	                {responsiveStyle}></video>
-                  <script src='//players.brightcove.net/5498268458001/r16VbIaxX_default/index.min.js'></script>
+                  <script src='{this.GenerateFrameUrl(args)}'></script>
                 {responsiveClosingTags}";
-      //return $@"{responsive}
-      //          <iframe scrolling='no' class='player-frame' {width} {height} frameborder='0' 
-      //            src='{args.Generator.GenerateFrameUrl(args)}' {responsiveStyle} {muted} {autoplay}></iframe>
-      //        {responsiveClosingTags}";
     }
 
     protected virtual string GenerateIframeEmbed(MediaGenerateMarkupArgs args)
@@ -117,38 +124,41 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       string responsive = String.Empty;
       string responsiveStyle = String.Empty;
       string responsiveClosingTags = String.Empty;
-      string autoplay = String.Empty;
-      string muted = String.Empty;
+      string queryStr = String.Empty;
 
       // Add autoplay
       if (args.Properties.Collection[BrightcovePlayerParameters.EmbedStyle] != null)
       {
         var calcPadding = ((float)args.Properties.Height / args.Properties.Width) * 100;
-        responsive = $"<div style='position: relative; display: block; max-width: {args.Properties.Width}px;'><div style='padding-top: {calcPadding}%; '>";
+        responsive = $"<div style='position: relative; display: block; max-width: {args.Properties.Width}px;'><div style='padding-top: {calcPadding}%;'>";
         responsiveStyle = "style='position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%;'";
         responsiveClosingTags = "</div></div>";
         width = height = String.Empty;
       }
-      // Add autoplay
-      if (args.Properties.Collection[BrightcovePlayerParameters.Autoplay] != null)
+
+      // Add autoplay and/ or muted query string
+      if (args.Properties.Collection[BrightcovePlayerParameters.Autoplay] != null ||
+          args.Properties.Collection[BrightcovePlayerParameters.Muted] != null)
       {
-        autoplay = "autoplay='autoplay'";
-      }
-      // Add muted
-      if (args.Properties.Collection[BrightcovePlayerParameters.Muted] != null)
-      {
-        muted = "muted='muted'";
+        queryStr = "?";
+        if (args.Properties.Collection[BrightcovePlayerParameters.Autoplay] != null &&
+            args.Properties.Collection[BrightcovePlayerParameters.Muted] != null)
+        {
+          queryStr += "autoplay='1'&muted='1'";
+        }
+        else
+        {
+          if (args.Properties.Collection[BrightcovePlayerParameters.Autoplay] != null)
+            queryStr += "autoplay='1'";
+          if (args.Properties.Collection[BrightcovePlayerParameters.Muted] != null)
+            queryStr += "muted='1'";
+        }
       }
 
       return $@"{responsive}
                 <iframe scrolling='no' class='player-frame' {width} {height} frameborder='0' 
-                  src='{args.Generator.GenerateFrameUrl(args)}' {responsiveStyle} {muted} {autoplay}></iframe>
+                  src='{this.GenerateFrameUrl(args)}{queryStr}' {responsiveStyle}></iframe>
               {responsiveClosingTags}";
-    }
-
-    protected virtual void AddResponsive(out string embed)
-    {
-
     }
   }
 }

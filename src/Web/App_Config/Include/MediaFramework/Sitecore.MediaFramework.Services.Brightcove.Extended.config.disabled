@@ -20,6 +20,10 @@
         <patch:attribute name="value">640,360</patch:attribute>
       </setting>
 
+			<setting name="HtmlEditor.RemoveScripts">
+				<patch:attribute name="value">false</patch:attribute>
+			</setting>
+
       <setting name="Sitecore.MediaFramework.PreviewSize">
         <patch:attribute name="value">640,360</patch:attribute>
       </setting>

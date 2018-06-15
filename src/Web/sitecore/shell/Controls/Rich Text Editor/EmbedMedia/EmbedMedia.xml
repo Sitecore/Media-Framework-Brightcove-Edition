@@ -45,86 +45,83 @@
       </WizardFormPage>
 
       <WizardFormPage ID="ParameterSetter" Header="Properties" Text="Set properties of the Media Element." Icon="Applications/32x32/find.png">
-        <Border Padding="4px 8px 0px 0px"  Width="100%">
-          <GridPanel Width="100%" Columns="2">
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Player:"  Width="25px"/>
+        <Border Padding="12px 0px 0px 8px">
+          <GridPanel Columns="2">
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Player:"  Width="50px"/>
 	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
+	          <Border Padding="5px 2px 5px 5px">
 		          <Combobox ID="PlayersList" Width="300px" GridPanel.Width="100px"/>
 	          </Border>
 
-			      <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Source:" Width="25px"/>
+			      <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Source:" Width="50px"/>
 	          </Border>
-	          <Border Padding="0px 4px 0px 10px">
-							<Edit ID="SourceInput" Width="300px" GridPanel.Width="100px"/>
-	          </Border>
-
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Video ID:" Width="25px"/>
-	          </Border>
-	          <Border Padding="0px 4px 0px 10px">
-							<Edit ID="VideoIdInput" Width="300px" GridPanel.Width="100px"/>
+	          <Border Padding="5px 2px 5px 5px">
+							<Edit ID="SourceInput" Width="225px" GridPanel.Width="75px"/>
 	          </Border>
 
-	          <Border Padding="10px 4px 10px 10px">
-		          <Literal Text="" Width="25px"/>
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Video ID:" Width="50px"/>
 	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
+	          <Border Padding="5px 4px 5px 5px">
+							<Edit ID="VideoIdInput" Width="225px" GridPanel.Width="75px"/>
+	          </Border>
+
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="" Width="50px"/>
+	          </Border>
+	          <Border Padding="5px 2px 5px 5px">
 		          <Literal Text="Autoplay: " Width="100px"/>
 		          <Checkbox ID="AutoplayCheckbox" Width="25px"/>
 		          <Literal Text="Muted: " Width="100px"/>
 							<Checkbox ID="MutedCheckbox" Width="25px"/>
 	          </Border>
 
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Embed Style:"  Width="25px"/>
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Embed Style:"  Width="50px"/>
 	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
-							<Radiobutton ID="EmbedJavascriptRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup" Selected="true"/>
-		          <Literal Text="Javascript " Width="50px"/>
-							<Radiobutton ID="EmbedIframeRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="EmbedStyleRadiogroup"/>
-		          <Literal Text="iFrame " Width="50px"/>
-	          </Border>
-
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Sizing:"  Width="25px"/>
-	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
-		          <Radiobutton ID="SizingResponsiveRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup" Selected="true"/>
-		          <Literal Text="Responsive " Width="50px"/>
-							<Radiobutton ID="SizingFixedRadiobutton" Width="30px" GridPanel.Width="10px" GroupName="SizingRadiogroup"/>
-		          <Literal Text="Fixed " Width="50px"/>
+	          <Border Padding="5px 2px 5px 5px">
+							<Radiogroup ID="EmbedRadiogroup">
+								<Radiobutton ID="JavascriptRadiobutton" Name="EmbedRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="EmbedRadiogroup"/>
+								<Literal Text="Javascript " Width="50px"/>
+								<Radiobutton ID="IframeRadiobutton" Name="EmbedRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="EmbedRadiogroup"/>
+								<Literal Text="iFrame " Width="50px"/>
+							</Radiogroup>
 	          </Border>
 
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Aspect Ratio:"  Width="25px"/>
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Sizing:"  Width="50px"/>
 	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
+	          <Border Padding="5px 2px 5px 5px">
+							<Radiogroup ID="SizingRadiogroup">
+								<Radiobutton ID="ResponsiveRadiobutton" Name="SizingRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="SizingRadiogroup"/>
+			          <Literal Text="Responsive " Width="50px"/>
+								<Radiobutton ID="FixedRadiobutton" Name="SizingRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="SizingRadiogroup"/>
+			          <Literal Text="Fixed " Width="50px"/>
+							</Radiogroup>
+	          </Border>
+
+	          <Border Padding="0px 2px 0px 5px">
+		          <Literal Text="Aspect Ratio:"  Width="50px"/>
+	          </Border>
+	          <Border Padding="5px 2px 5px 5px">
 		          <Combobox ID="AspectRatioList" Width="100px" GridPanel.Width="30px"/>
 	          </Border>
 
-						<Border Padding="0px 4px 0px 10px">
-							<Literal Text="Width:" Width="25px"/>
+						<Border Padding="0px 2px 0px 5px">
+							<Literal Text="Width:" Width="50px"/>
 						</Border>
-						<Border Padding="0px 4px 0px 10px">
-							<Edit ID="WidthInput" Width="100px" GridPanel.Width="30px" Value="400" Type="number"/>
+						<Border Padding="5px 2px 5px 5px">
+							<Edit ID="WidthInput" Width="75px" GridPanel.Width="30px" Value="400" Type="number"/>
 						</Border>
             
-            <Border Padding="0px 4px 0px 10px">
-							<Literal Text="Height:"  Width="25px"/>
+            <Border Padding="0px 2px 0px 5px">
+							<Literal Text="Height:"  Width="50px"/>
             </Border>
-            <Border Padding="10px 4px 10px 10px">
-							<Edit ID="HeightInput" Width="100px" GridPanel.Width="30px" Value="300" Type="number"/>
+            <Border Padding="5px 2px 5px 5px">
+							<Edit ID="HeightInput" Width="75px" GridPanel.Width="30px" Value="300" Type="number"/>
             </Border>
-
-	          <Border Padding="0px 4px 0px 10px">
-		          <Literal Text="Shortcode:"  Width="25px"/>
-	          </Border>
-	          <Border Padding="10px 4px 10px 10px">
-		          <Combobox ID="ShortcodeList" Width="150px" GridPanel.Width="50px"/>
-	          </Border>
           </GridPanel>
         </Border>
       </WizardFormPage>

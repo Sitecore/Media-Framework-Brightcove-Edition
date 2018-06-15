@@ -34,9 +34,9 @@
   {
     public static readonly string ItemId = "itemId";
     public static readonly string Template = "template";
-    public static readonly string PlayerId = "playerId";
+    public static readonly string PlayerId = "ID";
     public static readonly string Source = "source";
-    public static readonly string MediaId = "mediaId";
+    public static readonly string MediaId = "ID";
     public static readonly string Width = "width";
     public static readonly string Height = "height";
     public static readonly string Autoplay = "autoplay";
@@ -44,7 +44,7 @@
     public static readonly string EmbedStyle = "embed";
     public static readonly string Sizing = "sizing";
     public static readonly string AspectRatio = "aspectRatio";
-    public static readonly string Shortcode = "shortcode";
+    public static readonly string PublisherId = "PublisherID";
     public static readonly string ForceRender = "forceRender";
   }
 }
