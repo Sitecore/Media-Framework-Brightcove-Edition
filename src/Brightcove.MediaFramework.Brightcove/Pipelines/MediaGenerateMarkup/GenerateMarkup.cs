@@ -74,6 +74,12 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       return url.ToString();
     }
 
+    public virtual string GenerateBrightcoveUrl(MediaGenerateMarkupArgs args)
+    {
+      var url = new UrlString($"//players.brightcove.net/{args.AccountItem[BrightcovePlayerParameters.PublisherId]}/{args.PlayerItem[BrightcovePlayerParameters.PlayerId]}_default/index.min.js");
+      return url.ToString();
+    }
+
     protected virtual string GenerateJavascriptEmbed(MediaGenerateMarkupArgs args)
     {
       string width = $"width='{args.Properties.Width}'";
@@ -113,7 +119,7 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
 	                class='video-js' 
 	                controls {autoplay} {muted} 
 	                {responsiveStyle}></video>
-                  <script src='{this.GenerateFrameUrl(args)}'></script>
+                  <script src='{this.GenerateBrightcoveUrl(args)}'></script>
                 {responsiveClosingTags}";
     }
 

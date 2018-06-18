@@ -13,6 +13,7 @@ using Sitecore.MediaFramework.Utils;
 using Sitecore.Mvc.Extensions;
 using Sitecore.Text;
 using Sitecore.Web.UI.Sheer;
+using Sitecore.Web.UI.WebControls;
 
 namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
 {
@@ -27,10 +28,16 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
   public class EmbedMediaBrightcove : EmbedMedia
   {
     private const string SearchItem = "SearchItem";
+    
+    protected Literal SourceLiteral;
+    protected Literal VideoIdLiteral;
 
-    protected Edit SourceInput;
-
-    protected Edit VideoIdInput;
+    protected Edit ShowPlaylistHead;
+    protected Literal PlaylistIdLiteral;
+    protected Literal CreatedLiteral;
+    protected Literal UpdatedLiteral;
+    protected Literal PlaylistTypeLiteral;
+    protected Literal AccountNameLiteral;
 
     protected Checkbox AutoplayCheckbox;
     protected Checkbox MutedCheckbox;
@@ -82,12 +89,6 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       }
     }
 
-    private void button1_Click(object sender, EventArgs e)
-    {
-      this.JavascriptRadiobutton.Checked = !this.JavascriptRadiobutton.Checked;
-      this.IframeRadiobutton.Checked = !this.IframeRadiobutton.Checked;
-    }
-
     protected override void OnNext(object sender, EventArgs formEventArgs)
     {
       if (this.Active == SearchItem)
@@ -96,12 +97,19 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       }
 
       var item = this.GetItem();
-      if (item != null && !string.IsNullOrEmpty(item.DisplayName))
+      if (item != null)
       {
-        this.SourceInput.Value = item.DisplayName;
-        this.SourceInput.Disabled = true;
-        this.VideoIdInput.Value = item["ID"];
-        this.VideoIdInput.Disabled = true;
+        this.PlaylistIdLiteral.Text = item[BrightcovePlayerParameters.PlaylistId] ?? String.Empty;
+        var account = AccountManager.GetAccountItemForDescendant(item);
+        this.AccountNameLiteral.Text = account?.Name ?? String.Empty;
+        this.CreatedLiteral.Text = item[BrightcovePlayerParameters.PlaylistCreated] ?? String.Empty;
+        this.UpdatedLiteral.Text = item[BrightcovePlayerParameters.PlaylistUpdated] ?? String.Empty;
+        this.PlaylistTypeLiteral.Text = item[BrightcovePlayerParameters.PlaylistType] ?? String.Empty;
+
+        this.SourceLiteral.Text = item.DisplayName ?? String.Empty;
+        this.VideoIdLiteral.Text = item[BrightcovePlayerParameters.MediaId] ?? String.Empty;
+
+        this.ShowPlaylistHead.Value = this.IsPlaylist(item) ? "true" : String.Empty;
         SheerResponse.Eval("scNext()");
       }
 
@@ -149,11 +157,7 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
         properties.Add(BrightcovePlayerParameters.Autoplay, this.AutoplayCheckbox.Value);
       if (this.MutedCheckbox != null && this.MutedCheckbox.Checked)
         properties.Add(BrightcovePlayerParameters.Muted, this.MutedCheckbox.Value);
-      //var embed = this.IframeRadiobutton.Checked
-      //  ? Brightcove.Constants.EmbedJavascript
-      //  : Brightcove.Constants.EmbedIframe;
       properties.Add(BrightcovePlayerParameters.EmbedStyle, this.EmbedInput.Value);
-      //if (this.FixedRadiobutton != null && !this.FixedRadiobutton.Checked)
       properties.Add(BrightcovePlayerParameters.Sizing, this.SizingInput.Value);
       properties.Add(BrightcovePlayerParameters.AspectRatio, this.AspectRatioList.Selected.FirstOrDefault().Value);
 
@@ -165,6 +169,11 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       playerProps.Width = Sitecore.MainUtil.GetInt(this.WidthInput.Value, MediaFrameworkContext.DefaultPlayerSize.Width);
       playerProps.Height = Sitecore.MainUtil.GetInt(this.HeightInput.Value, MediaFrameworkContext.DefaultPlayerSize.Height);
       return playerProps;
+    }
+
+    protected virtual bool IsPlaylist(Item item)
+    {
+      return item.TemplateID.ToString() == Brightcove.Constants.BrightcovePlaylistTemplateId;
     }
 
     protected virtual void InitAspectRatiosList()

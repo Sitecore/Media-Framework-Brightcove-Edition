@@ -22,6 +22,7 @@
     public static readonly string BrightcoveIngestionCallbackRouteTemplate = "/ingestioncallback/{operationId}";
 
     public static readonly string DefaultRouteTemplate = "/{controller}/{action}";
+    public static readonly string BrightcovePlaylistTemplateId = "{0E24292F-D7A5-4BA2-BCA0-CD5F14A89634}";
 
     public static readonly string SitecoreRestSharpService = "mediaframework_brightcove";
     public static readonly string IndexName = "mediaframework_brightcove_index";
@@ -50,6 +51,11 @@
     public static readonly string Ratio4X3 = "4:3";
     public static readonly string RatioCustom = "Custom";
     public static readonly string PublisherId = "PublisherID";
+    public static readonly string PlaylistId = "ID";
+    public static readonly string PlaylistCreated = "CreationDate";
+    public static readonly string PlaylistUpdated = "LastModifiedDate";
+    public static readonly string PlaylistType = "PlaylistType";
+    public static readonly string AccountName = "AccountName";
     public static readonly string ForceRender = "forceRender";
   }
 }

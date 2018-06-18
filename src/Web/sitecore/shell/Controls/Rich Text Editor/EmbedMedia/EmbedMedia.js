@@ -39,6 +39,13 @@ function scCancel() {
 
 function scNext() {
 	var editorOptionsContainer = new EditorOptions();
+	if (document.getElementById('ShowPlaylistHead').value != '') {
+		document.getElementById('VideoHeadContainer').style.display = 'none';
+		document.getElementById('PlaylistHeadContainer').style.display = 'block';
+	} else {
+		document.getElementById('VideoHeadContainer').style.display = 'block';
+		document.getElementById('PlaylistHeadContainer').style.display = 'none';
+	}
 }
 
 var AspectPreserver = function () {
