@@ -102,12 +102,12 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
       // Add autoplay
       if (args.Properties.Collection[BrightcovePlayerParameters.Autoplay] == Brightcove.Constants.SizingResponsive)
       {
-        autoplay = "autoplay";
+        autoplay = "autoplay='true'";
       }
       // Add muted
       if (args.Properties.Collection[BrightcovePlayerParameters.Muted] != null)
       {
-        muted = "muted";
+        muted = "muted='true'";
       }
       
 	    return $@"{responsive}
@@ -117,7 +117,7 @@ namespace Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup
 	                data-embed='default' 
 	                data-application-id 
 	                class='video-js' 
-	                controls {autoplay} {muted} 
+	                controls='true' {autoplay} {muted} 
 	                {responsiveStyle}></video>
                   <script src='{this.GenerateBrightcoveUrl(args)}'></script>
                 {responsiveClosingTags}";
