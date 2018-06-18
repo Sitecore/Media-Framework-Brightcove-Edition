@@ -51,76 +51,67 @@
 		          <Literal Text="Player:"  Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 2px 5px 5px">
-		          <Combobox ID="PlayersList" Width="300px" GridPanel.Width="100px"/>
+		          <Combobox ID="PlayersList" Width="300px" GridPanel.Width="150px"/>
 	          </Border>
 
 			      <Border Padding="0px 2px 0px 5px">
 		          <Literal Text="Source:" Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 2px 5px 5px">
-							<Edit ID="SourceInput" Width="225px" GridPanel.Width="75px"/>
+							<Edit ID="SourceInput" Width="225px" GridPanel.Width="150px"/>
 	          </Border>
 
 	          <Border Padding="0px 2px 0px 5px">
 		          <Literal Text="Video ID:" Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 4px 5px 5px">
-							<Edit ID="VideoIdInput" Width="225px" GridPanel.Width="75px"/>
+							<Edit ID="VideoIdInput" Width="225px" GridPanel.Width="150px"/>
 	          </Border>
 
 	          <Border Padding="0px 2px 0px 5px">
-		          <Literal Text="" Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 2px 5px 5px">
-		          <Literal Text="Autoplay: " Width="100px"/>
-		          <Checkbox ID="AutoplayCheckbox" Width="25px"/>
-		          <Literal Text="Muted: " Width="100px"/>
-							<Checkbox ID="MutedCheckbox" Width="25px"/>
+		          <Checkbox ID="AutoplayCheckbox" Width="100px" Header="Autoplay:"/>
+							<Checkbox ID="MutedCheckbox" Width="100px" Header="Muted:"/>
 	          </Border>
 
 	          <Border Padding="0px 2px 0px 5px">
-		          <Literal Text="Embed Style:"  Width="50px"/>
+		          <Literal Text="Embed Style:" Width="50px"/>
 	          </Border>
-	          <Border Padding="5px 2px 5px 5px">
-							<Radiogroup ID="EmbedRadiogroup">
-								<Radiobutton ID="JavascriptRadiobutton" Name="EmbedRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="EmbedRadiogroup"/>
-								<Literal Text="Javascript " Width="50px"/>
-								<Radiobutton ID="IframeRadiobutton" Name="EmbedRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="EmbedRadiogroup"/>
-								<Literal Text="iFrame " Width="50px"/>
-							</Radiogroup>
+	          <Border Padding="5px 2px 5px 5px" Width="200px">
+		          <Radiobutton ID="JavascriptRadiobutton" Name="EmbedRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="EmbedRadiogroup" Header="Javascript" value="Javascript"/>
+							<Radiobutton ID="IframeRadiobutton" Name="EmbedRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="EmbedRadiogroup" Header="iFrame" value="iFrame"/>
+							<Edit ID="EmbedInput" Type="Hidden" Value="" />
 	          </Border>
 
 	          <Border Padding="0px 2px 0px 5px">
-		          <Literal Text="Sizing:"  Width="50px"/>
+		          <Literal Text="Sizing:" Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 2px 5px 5px">
-							<Radiogroup ID="SizingRadiogroup">
-								<Radiobutton ID="ResponsiveRadiobutton" Name="SizingRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="SizingRadiogroup"/>
-			          <Literal Text="Responsive " Width="50px"/>
-								<Radiobutton ID="FixedRadiobutton" Name="SizingRadiogroup" Width="30px" GridPanel.Width="50px" GroupName="SizingRadiogroup"/>
-			          <Literal Text="Fixed " Width="50px"/>
-							</Radiogroup>
+		          <Radiobutton ID="ResponsiveRadiobutton" Name="SizingRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="SizingRadiogroup" Header="Responsive" Value="Responsive"/>
+							<Radiobutton ID="FixedRadiobutton" Name="SizingRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="SizingRadiogroup" Header="Fixed" Value="Fixed"/>
+		          <Edit ID="SizingInput" Type="Hidden" Value="" />
 	          </Border>
 
 	          <Border Padding="0px 2px 0px 5px">
 		          <Literal Text="Aspect Ratio:"  Width="50px"/>
 	          </Border>
 	          <Border Padding="5px 2px 5px 5px">
-		          <Combobox ID="AspectRatioList" Width="100px" GridPanel.Width="30px"/>
+		          <Combobox ID="AspectRatioList" Width="100px" GridPanel.Width="150px"/>
 	          </Border>
 
 						<Border Padding="0px 2px 0px 5px">
 							<Literal Text="Width:" Width="50px"/>
 						</Border>
 						<Border Padding="5px 2px 5px 5px">
-							<Edit ID="WidthInput" Width="75px" GridPanel.Width="30px" Value="400" Type="number"/>
+							<Edit ID="WidthInput" Width="75px" GridPanel.Width="150px" Value="400" Type="number"/>
 						</Border>
             
             <Border Padding="0px 2px 0px 5px">
 							<Literal Text="Height:"  Width="50px"/>
             </Border>
             <Border Padding="5px 2px 5px 5px">
-							<Edit ID="HeightInput" Width="75px" GridPanel.Width="30px" Value="300" Type="number"/>
+							<Edit ID="HeightInput" Width="75px" GridPanel.Width="150px" Value="300" Type="number"/>
             </Border>
           </GridPanel>
         </Border>

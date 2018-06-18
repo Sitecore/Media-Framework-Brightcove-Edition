@@ -28,16 +28,7 @@
         <patch:attribute name="value">640,360</patch:attribute>
       </setting>
       <setting name="Brightcove.IndexName" value="sitecore_master_index" />
-
-			<setting name="Brightcove.DefaultVideoEmbedStyle" value="0" /> <!-- Index of the default selected option for Video Embed -->
-			<setting name="Brightcove.DefaultVideoSizing" value="0" /> <!-- Index of the default selected option for Video Sizing -->
     </settings>
-
-		<Brightcove.AspectRatios>
-			<AspectRatio type="Brightcove.MediaFramework.Brightcove.Entities, AspectRatio" width="16" height="9" displayName="16:9"/>
-			<AspectRatio type="Brightcove.MediaFramework.Brightcove.Entities, AspectRatio" width="4" height="3" displayName="4:3"/>
-			<AspectRatio type="Brightcove.MediaFramework.Brightcove.Entities, AspectRatio" width="" height="" displayName="Custom"/>
-		</Brightcove.AspectRatios>
 
     <commands>
       <command name="mediaFramework:CustomFields:Brightcove" type="Brightcove.MediaFramework.Brightcove.Commands.CustomFields,Brightcove.MediaFramework.Brightcove"/>

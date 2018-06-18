@@ -33,12 +33,15 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
     protected Edit VideoIdInput;
 
     protected Checkbox AutoplayCheckbox;
-
     protected Checkbox MutedCheckbox;
     
     protected Radiobutton JavascriptRadiobutton;
+    protected Radiobutton IframeRadiobutton;
+    protected Edit EmbedInput;
     
     protected Radiobutton ResponsiveRadiobutton;
+    protected Radiobutton FixedRadiobutton;
+    protected Edit SizingInput;
 
     protected Combobox AspectRatioList;
 
@@ -46,9 +49,11 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
     {
       this.WidthInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Width, MediaFrameworkContext.DefaultPlayerSize.Width.ToString(CultureInfo.InvariantCulture));
       this.HeightInput.Value = WebUtil.GetQueryString(Constants.PlayerParameters.Height, MediaFrameworkContext.DefaultPlayerSize.Height.ToString(CultureInfo.InvariantCulture));
-      this.InitAspectRatiosList(Settings.AspectRatioList);
+      this.InitAspectRatiosList();
       this.JavascriptRadiobutton.Checked = true;
+      this.EmbedInput.Value = Brightcove.Constants.EmbedJavascript;
       this.ResponsiveRadiobutton.Checked = true;
+      this.SizingInput.Value = Brightcove.Constants.SizingResponsive;
       string player = WebUtil.GetQueryString(Constants.PlayerParameters.PlayerId, string.Empty);
          
       this.PlayerId = ShortID.IsShortID(player) ? new ShortID(player) : ID.Null.ToShortID();
@@ -77,6 +82,12 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       }
     }
 
+    private void button1_Click(object sender, EventArgs e)
+    {
+      this.JavascriptRadiobutton.Checked = !this.JavascriptRadiobutton.Checked;
+      this.IframeRadiobutton.Checked = !this.IframeRadiobutton.Checked;
+    }
+
     protected override void OnNext(object sender, EventArgs formEventArgs)
     {
       if (this.Active == SearchItem)
@@ -87,10 +98,11 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       var item = this.GetItem();
       if (item != null && !string.IsNullOrEmpty(item.DisplayName))
       {
-        this.SourceInput.Value = item.Name;
+        this.SourceInput.Value = item.DisplayName;
         this.SourceInput.Disabled = true;
         this.VideoIdInput.Value = item["ID"];
         this.VideoIdInput.Disabled = true;
+        SheerResponse.Eval("scNext()");
       }
 
       base.OnNext(sender, formEventArgs);
@@ -137,12 +149,12 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
         properties.Add(BrightcovePlayerParameters.Autoplay, this.AutoplayCheckbox.Value);
       if (this.MutedCheckbox != null && this.MutedCheckbox.Checked)
         properties.Add(BrightcovePlayerParameters.Muted, this.MutedCheckbox.Value);
-      var embed = this.JavascriptRadiobutton.Checked
-        ? Brightcove.Constants.EmbedJavascript
-        : Brightcove.Constants.EmbedIframe;
-      properties.Add(BrightcovePlayerParameters.EmbedStyle, embed);
-      if (this.ResponsiveRadiobutton != null && this.ResponsiveRadiobutton.Checked)
-        properties.Add(BrightcovePlayerParameters.Sizing, this.ResponsiveRadiobutton.Value);
+      //var embed = this.IframeRadiobutton.Checked
+      //  ? Brightcove.Constants.EmbedJavascript
+      //  : Brightcove.Constants.EmbedIframe;
+      properties.Add(BrightcovePlayerParameters.EmbedStyle, this.EmbedInput.Value);
+      //if (this.FixedRadiobutton != null && !this.FixedRadiobutton.Checked)
+      properties.Add(BrightcovePlayerParameters.Sizing, this.SizingInput.Value);
       properties.Add(BrightcovePlayerParameters.AspectRatio, this.AspectRatioList.Selected.FirstOrDefault().Value);
 
       var playerProps = new PlayerProperties(properties);
@@ -155,21 +167,31 @@ namespace Brightcove.MediaFramework.Brightcove.UI.Rendering
       return playerProps;
     }
 
-    protected virtual void InitAspectRatiosList(IEnumerable<AspectRatio> aspectRatiosList)
+    protected virtual void InitAspectRatiosList()
     {
-      if (!aspectRatiosList?.Any() == true) return;
-
       this.AspectRatioList.Controls.Clear();
-      foreach (var aspectRatio in aspectRatiosList.ToList())
+      this.HeightInput.Disabled = true;
+      this.AspectRatioList.Controls.Add(new ListItem
       {
-        this.AspectRatioList.Controls.Add(new ListItem
-        {
-          ID = Control.GetUniqueID("ListItem"),
-          Selected = aspectRatio.Height == Settings.AspectRatioList.FirstOrDefault().Height,
-          Header = aspectRatio.DisplayName,
-          Value = aspectRatio.DisplayName
-        });
-      }
+        ID = Control.GetUniqueID("ListItem"),
+        Selected = true,
+        Header = BrightcovePlayerParameters.Ratio16X9,
+        Value = BrightcovePlayerParameters.Ratio16X9
+      });
+      this.AspectRatioList.Controls.Add(new ListItem
+      {
+        ID = Control.GetUniqueID("ListItem"),
+        Selected = false,
+        Header = BrightcovePlayerParameters.Ratio4X3,
+        Value = BrightcovePlayerParameters.Ratio4X3
+      });
+      this.AspectRatioList.Controls.Add(new ListItem
+      {
+        ID = Control.GetUniqueID("ListItem"),
+        Selected = false,
+        Header = BrightcovePlayerParameters.RatioCustom,
+        Value = BrightcovePlayerParameters.RatioCustom
+      });
     }
   }
 }

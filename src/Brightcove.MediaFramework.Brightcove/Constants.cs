@@ -28,6 +28,8 @@
 
     public static readonly string EmbedJavascript = "Javascript";
     public static readonly string EmbedIframe = "iFrame";
+    public static readonly string SizingResponsive = "Responsive";
+    public static readonly string SizingFixed = "Fixed";
   }
 
   public static class BrightcovePlayerParameters
@@ -44,6 +46,9 @@
     public static readonly string EmbedStyle = "embed";
     public static readonly string Sizing = "sizing";
     public static readonly string AspectRatio = "aspectRatio";
+    public static readonly string Ratio16X9 = "16:9";
+    public static readonly string Ratio4X3 = "4:3";
+    public static readonly string RatioCustom = "Custom";
     public static readonly string PublisherId = "PublisherID";
     public static readonly string ForceRender = "forceRender";
   }
