@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Brightcove.MediaFramework.Brightcove</RootNamespace>
+    <AssemblyName>Brightcove.MediaFramework.Brightcove</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DEV-AOBrightcove|AnyCPU'">
+    <OutputPath>bin\DEV-AOBrightcove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'QA-AOBrightcove|AnyCPU'">
+    <OutputPath>bin\QA-AOBrightcove\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Configy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Configy.1.0.0\lib\net45\Configy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kamsar.WebConsole, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kamsar.WebConsole.2.0.0\lib\net40\Kamsar.WebConsole.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MicroCHAP, Version=1.2.2.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicroCHAP.1.2.2.2\lib\net45\MicroCHAP.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Sitecore\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=104.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.104.2.0\lib\net4\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Analytics, Version=11.18.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Core, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.Core.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Analytics.Model, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Analytics.Model.NoReferences.9.0.171002\lib\NET462\Sitecore.Analytics.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.NoReferences.9.0.171002\lib\NET462\Sitecore.ContentSearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.ContentSearch.Linq.NoReferences.9.0.171002\lib\NET462\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Integration.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Integration.Common.NoReferences.2.2.160927\lib\NET452\Sitecore.Integration.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.171002\lib\NET462\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Mvc, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Mvc.NoReferences.9.0.171002\lib\NET462\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.RestSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Sitecore\Sitecore.RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Services.Infrastructure, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Services.Infrastructure.NoReferences.9.0.171002\lib\NET462\Sitecore.Services.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\System\System.Web.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\System\System.Web.Http.WebHost.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\System\System.Web.Mvc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analytics\EventTrigger.cs" />
+    <Compile Include="Analytics\PlaylistEventTrigger.cs" />
+    <Compile Include="Analytics\VideoEventTrigger.cs" />
+    <Compile Include="Entities\AspectRatio.cs" />
+    <Compile Include="Entities\Economics.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\TagInclusion.cs" />
+    <Compile Include="Entities\VideoSharing.cs" />
+    <Compile Include="Import\VideoCollectionImporterForce.cs" />
+    <Compile Include="Indexing\Entities\AssetSearchResult.cs" />
+    <Compile Include="Indexing\Entities\PlaylistSearchResult.cs" />
+    <Compile Include="Indexing\Entities\TagSearchResult.cs" />
+    <Compile Include="Pipelines\MediaGenerateMarkup\GenerateMarkup.cs" />
+    <Compile Include="Pipelines\MediaSyncImport\ForceSyncClear.cs" />
+    <Compile Include="Synchronize\EntityCreators\TagEntityCreator.cs" />
+    <Compile Include="Synchronize\Fallback\AssetFallback.cs" />
+    <Compile Include="Synchronize\Fallback\TagFallback.cs" />
+    <Compile Include="Synchronize\TagSynchronizer.cs" />
+    <Compile Include="Synchronize\FakePlayerSynchonizer.cs" />
+    <Compile Include="TemplateIDs.cs" />
+    <Compile Include="Pipelines\MediaGenerateMarkup\GetPlaybackEvents.cs" />
+    <Compile Include="TextResult.cs" />
+    <Compile Include="Commands\TextTracks.cs" />
+    <Compile Include="Commands\CustomFields.cs" />
+    <Compile Include="Controllers\VideoTextTracksController.cs" />
+    <Compile Include="Entities\IngestTextTrack.cs" />
+    <Compile Include="Entities\VideoTextTrack.cs" />
+    <Compile Include="Entities\TextTrack.cs" />
+    <Compile Include="Entities\ViewModels\TextTrackInfo.cs" />
+    <Compile Include="Entities\ViewModels\VideoTextTracks.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\IDExtensions.cs" />
+    <Compile Include="Extensions\NotificationExtensions.cs" />
+    <Compile Include="Helpers\VideoHelper.cs" />
+    <Compile Include="Pipelines\HandleCallback\CheckVideoUpload.cs" />
+    <Compile Include="Pipelines\HandleCallback\SetIngestStatus.cs" />
+    <Compile Include="Pipelines\HandleCallback\HandleCallbackArgs.cs" />
+    <Compile Include="Pipelines\HandleCallback\HandleCallbackProcessor.cs" />
+    <Compile Include="Pipelines\VideoUpload\IngestVideo.cs" />
+    <Compile Include="Pipelines\VideoUpload\CreateIngestVideoEntity.cs" />
+    <Compile Include="Pipelines\VideoUpload\SaveVideoContent.cs" />
+    <Compile Include="Pipelines\VideoUpload\PostVideo.cs" />
+    <Compile Include="Pipelines\VideoUpload\CreateVideoEntity.cs" />
+    <Compile Include="Pipelines\VideoUpload\VideoUploadArgs.cs" />
+    <Compile Include="Pipelines\VideoUpload\VideoUploadProcessor.cs" />
+    <Compile Include="Proxy\CMS\FileProxy.cs" />
+    <Compile Include="BinaryResult.cs" />
+    <Compile Include="Cleanup\PlaylistCleanupExecuter.cs" />
+    <Compile Include="Cleanup\VideoCleanupExecuter.cs" />
+    <Compile Include="Configuration\Settings.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controllers\FilesController.cs" />
+    <Compile Include="Controllers\VideoCustomFieldsController.cs" />
+    <Compile Include="Entities\AccessToken.cs" />
+    <Compile Include="Entities\AssetRendition.cs" />
+    <Compile Include="Entities\Collections\AssetRenditionCollection.cs" />
+    <Compile Include="Entities\Notification.cs" />
+    <Compile Include="Entities\Collections\FieldCollection.cs" />
+    <Compile Include="Entities\PlayListSearch.cs" />
+    <Compile Include="Entities\Response\CustomFields.cs" />
+    <Compile Include="Entities\FieldInfo.cs" />
+    <Compile Include="Entities\Asset.cs" />
+    <Compile Include="Entities\ImageAssets.cs" />
+    <Compile Include="Entities\UploadFileInfo.cs" />
+    <Compile Include="Entities\VideoSource.cs" />
+    <Compile Include="Entities\AssetSource.cs" />
+    <Compile Include="Entities\ImageAsset.cs" />
+    <Compile Include="Entities\Collections\PagedCollection`1.cs" />
+    <Compile Include="Entities\IngestVideo.cs" />
+    <Compile Include="Entities\ItemState.cs" />
+    <Compile Include="Entities\PlayList.cs" />
+    <Compile Include="Entities\PlaylistType.cs" />
+    <Compile Include="Entities\ResultData`1.cs" />
+    <Compile Include="Entities\Video.cs" />
+    <Compile Include="Entities\IngestMaster.cs" />
+    <Compile Include="Entities\VideoLink.cs" />
+    <Compile Include="Entities\ViewModels\VideoCustomFields.cs" />
+    <Compile Include="Export\PlaylistExporter.cs" />
+    <Compile Include="Export\VideoExporter.cs" />
+    <Compile Include="Export\VideoExporterWithDelete.cs" />
+    <Compile Include="Export\VideoExporterWithInactivate.cs" />
+    <Compile Include="Extensions\RestRequestExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="FieldIDs.cs" />
+    <Compile Include="Import\EntityCollectionImporter`1.cs" />
+    <Compile Include="Import\PlayListCollectionImporter.cs" />
+    <Compile Include="Import\TagCollectionImporter.cs" />
+    <Compile Include="Import\VideoCollectionImporter.cs" />
+    <Compile Include="Indexing\Entities\VideoSearchResult.cs" />
+    <Compile Include="Json\Converters\BrightcovePlayListSearchFieldConverter.cs" />
+    <Compile Include="Controllers\IngestionCallbackController.cs" />
+    <Compile Include="Pipelines\Initialize\RegisterRoutes.cs" />
+    <Compile Include="Players\BrightcovePlayerMarkupGenerator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\BaseProxy.cs" />
+    <Compile Include="Proxy\CMS\PlaylistProxy.cs" />
+    <Compile Include="Proxy\CMS\DynamicIngestProxy.cs" />
+    <Compile Include="Proxy\CMS\VideoProxy.cs" />
+    <Compile Include="Proxy\Security\TokenProxy.cs" />
+    <Compile Include="Security\BrightcoveAuthenticator.cs" />
+    <Compile Include="Serialization\JsonNetSerializer.cs" />
+    <Compile Include="Synchronize\AssetSynchronizer.cs" />
+    <Compile Include="Synchronize\EntityCreators\PlayListEntityCreator.cs" />
+    <Compile Include="Synchronize\EntityCreators\VideoEntityCreator.cs" />
+    <Compile Include="Synchronize\Fallback\PlayListFallback.cs" />
+    <Compile Include="Synchronize\Fallback\VideoFallback.cs" />
+    <Compile Include="Synchronize\PlayListSynchronizer.cs" />
+    <Compile Include="Synchronize\References\PlaylistFilterTagsSynchronizer.cs" />
+    <Compile Include="Synchronize\References\PlaylistVideoSynchronizer.cs" />
+    <Compile Include="Synchronize\References\VideoTagsSynchronizer.cs" />
+    <Compile Include="Synchronize\VideoSynchronizer.cs" />
+    <Compile Include="UI\Rendering\EmbedMedia.cs" />
+    <Compile Include="Upload\IVideoUploadService%271.cs" />
+    <Compile Include="Upload\MediaItem\FileStorageManager.cs" />
+    <Compile Include="Upload\MediaItem\StorageExecutor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Upload\MediaItem\VideoUploadExecutor.cs" />
+    <Compile Include="Upload\MediaItem\StorageService.cs" />
+    <Compile Include="Upload\MediaItem\VideoUploadService.cs" />
+    <Compile Include="Upload\MediaItem\StorageServiceConfig.cs" />
+    <Compile Include="Upload\MediaItem\VideoUploadServiceConfig.cs" />
+    <Compile Include="Upload\IVideoUploadService.cs" />
+    <Compile Include="Upload\VideoUploadExecutorBase%271.cs" />
+    <Compile Include="Upload\StorageServiceManager.cs" />
+    <Compile Include="Upload\StorageServiceConfigBase.cs" />
+    <Compile Include="Upload\VideoUploadServiceConfigBase.cs" />
+    <Compile Include="Upload\VideoUploadManager.cs" />
+    <Compile Include="Upload\VideoUploadExecutorBase.cs" />
+    <Compile Include="Upload\VideoUploader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.MediaFramework.Mvc\Sitecore.MediaFramework.Mvc.csproj">
+      <Project>{d641d8fe-7a26-400c-98ab-62da576bbc32}</Project>
+      <Name>Sitecore.MediaFramework.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sitecore.MediaFramework\Sitecore.MediaFramework.csproj">
+      <Project>{288e6e2f-9027-4746-b6c9-1d0a04e484aa}</Project>
+      <Name>Sitecore.MediaFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

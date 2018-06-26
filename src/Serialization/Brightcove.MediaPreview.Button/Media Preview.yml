@@ -1,0 +1,22 @@
+﻿---
+ID: "3a6c91f6-fc45-4abd-8b8c-ebca2993e1f7"
+Parent: "26a4e690-1553-41c1-895a-d7119ff1bb0e"
+Template: "7f7a3339-d823-4556-9814-42c3dbd68c7a"
+Path: /sitecore/system/Settings/Buckets/Settings/Quick Actions/Media Preview
+DB: master
+SharedFields:
+- ID: "cd521d55-cfd4-447a-b386-8fc9f122b01e"
+  Hint: Command
+  Value: "MediaFramework:MediaPreview"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130912T125120
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

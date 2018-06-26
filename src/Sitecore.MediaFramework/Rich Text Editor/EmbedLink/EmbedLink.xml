@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <MediaFramework.EmbedLink>
+    <DataContext ID="DataContext" Root="{3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}"/>
+    <script Type="text/javascript" Language="javascript" Src="/sitecore/shell/Controls/Rich Text Editor/EmbedLink/EmbedLink.js">.</script>
+    <WizardForm CodeBeside="Sitecore.MediaFramework.UI.Rendering.EmbedLink,Sitecore.MediaFramework">
+
+      <WizardFormFirstPage ID="FirstPage" Icon="Applications/32x32/find.png">
+        <Border Class="scWizardWelcomeTitle">
+          <Literal Text="Welcome to the 'Embed Media Link' wizard."/>
+        </Border>
+        <Literal Text="This wizard helps you:"/>
+        <ul>
+          <li class="scWizardBullet">
+            <Literal Text="Find media item"/>
+          </li>
+          <li class="scWizardBullet">
+            <Literal Text="Set media parameters"/>
+          </li>
+          <li class="scWizardBullet">
+            <Literal Text="Embed media element within the Reach Text Editor"/>
+          </li>
+        </ul>
+      </WizardFormFirstPage>
+
+      <WizardFormPage ID="SearchItem" Header="Select Media Item" Text="Select the specific Media Item. Click Next to set media properties." Icon="Applications/32x32/find.png">
+        <Tabstrip ID="Tabs" Width="100%" Height="100%">
+          <Tab ID="BucketsTab" Header="Search Media Item" Height="100%">
+            <Frame SourceUri="/sitecore/shell/Applications/Buckets/MediaBrowser.aspx" Width="100%" Height="100%"></Frame>
+          </Tab>
+
+          <Tab ID="UploadTab" Header="Upload Media Item" Height="100%">
+            <Frame SourceUri="/layouts/MediaFramework/Upload.aspx" ID="UploadFrame" Width="100%" Height="100%"></Frame>
+          </Tab>
+        </Tabstrip>
+
+        <Border Padding="4px 8px 0px 0px" Height="50px">
+          <GridPanel Width="100%" Columns="2">
+            <Border Padding="10px 4px 10px 10px" Width="30px">
+              <Literal Text="Name:"/>
+            </Border>
+            <Edit ID="Filename" Width="100%" GridPanel.Width="100%" />
+          </GridPanel>
+        </Border>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ParameterSetter" Header="Properties" Text="Set Width and Height of the Media Element." Icon="Applications/32x32/find.png">
+
+        <Border Padding="4px 8px 0px 0px"  Width="100%">
+          <GridPanel Width="100%" Columns="2">
+            
+            <Border Padding="0px 4px 0px 10px">
+              <Literal Text="Link Title:" Width="40px"/>
+            </Border>
+
+            <Border Padding="0px 4px 0px 10px">
+              <Edit ID="LinkInput" Width="300px" GridPanel.Width="100px" Value=""/>
+            </Border>
+
+            <Border Padding="0px 4px 0px 10px">
+              <Literal Text="Width:" Width="40px"/>
+            </Border>
+
+            <Border Padding="0px 4px 0px 10px">
+              <Edit ID="WidthInput" Width="300px" GridPanel.Width="100px" Value="400"/>
+            </Border>
+
+            <Border Padding="0px 4px 0px 10px">
+              <Literal Text="Height:"  Width="40px"/>
+            </Border>
+            <Border Padding="10px 4px 10px 10px">
+              <Edit ID="HeightInput" Width="300px" GridPanel.Width="100px" Value="300"/>
+            </Border>
+
+            <Border Padding="0px 4px 0px 10px">
+              <Literal Text="Player:"  Width="40px"/>
+            </Border>
+            <Border Padding="10px 4px 10px 10px">
+              <Combobox ID="PlayersList" Width="300px" GridPanel.Width="100px"/>
+            </Border>
+          </GridPanel>
+        </Border>
+      </WizardFormPage>
+    </WizardForm>
+  </MediaFramework.EmbedLink>
+</control>

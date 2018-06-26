@@ -1,0 +1,31 @@
+﻿---
+ID: "a27167c1-8511-4e11-8651-06bc190b0b72"
+Parent: "0222c45b-f1bf-47b1-a57a-8b8f224f9bea"
+Template: "5210d3fa-7bd8-449b-9c89-8a7e20f6ae18"
+Path: /sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/AD_SUPPORTED
+DB: master
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Display advertisements
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20090812T181000
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20090812T181000
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

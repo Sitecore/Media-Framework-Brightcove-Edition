@@ -1,0 +1,40 @@
+﻿---
+ID: "e393d906-954f-4442-a302-8029ed7a8eb0"
+Parent: "6a43b36c-b9a1-4be2-9dcd-edcf3cb782cc"
+Template: "0a98e368-cdb9-4e1e-927c-8e0c24a003fb"
+Path: /sitecore/layout/Sublayouts/Media Framework/Embed Media
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: people/32x32/pda2_add.png
+- ID: "1a7c85e5-dc0b-490d-9187-bb1dbcb4c72f"
+  Hint: Datasource Template
+  Value: 
+- ID: "32cee5fb-efce-4ca6-b697-3b97900c40d3"
+  Hint: Placeholder
+  Value: embedMedia
+- ID: "5d1ddbd2-ca51-4708-8f58-b1e5dcdce14c"
+  Hint: Data source
+  Value: 
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: |
+    {E3E407DE-D365-4D8C-97EC-E9FFE51F0932}
+    {0A1CF4BA-7383-4452-80A5-4017EDA78750}
+- ID: "e42081b6-8a95-4a11-89ce-df70ed502f57"
+  Hint: Path
+  Value: /layouts/MediaFramework/Sublayouts/EmbedMediaPlayer.ascx
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130702T152500
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

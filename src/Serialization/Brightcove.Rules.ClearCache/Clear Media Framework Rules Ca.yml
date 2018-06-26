@@ -1,0 +1,39 @@
+﻿---
+ID: "346485bd-b911-4f2d-af5f-c5d27afb513c"
+Parent: "86e2276a-437f-492f-b1b9-cedbb3b9da88"
+Template: "d9bdf22f-6e17-47f3-ab64-49c717ba92da"
+Path: /sitecore/system/Settings/Rules/Item Saved/Rules/Clear Media Framework Rules Cache
+DB: master
+SharedFields:
+- ID: "908ef45d-4940-4b6a-857d-3739ba4acf8f"
+  Hint: Rule
+  Type: Rules
+  Value: |
+    <ruleset>
+      <rule
+        uid="{416A887B-C0F2-4951-B5E6-8A0905E879E1}">
+        <conditions>
+          <condition
+            id="{5DE6D53E-EA62-4D17-8BDD-FEBCD80AC07B}"
+            uid="94B14F5A702A453FA897AEECDE6B41F8"
+            templateid="{B508C806-C0A9-4D19-8F68-DB04D66FF2D3}" />
+        </conditions>
+        <actions>
+          <action
+            id="{94C5C335-0902-4B45-B528-11B220005DD7}"
+            uid="32117F7B232D48EDA57668E2031B2C65"
+            scriptid="{5862787E-DD1B-4555-9C1C-4EFAD12AFD51}" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T131532
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Clear Media Framework Rules Cache

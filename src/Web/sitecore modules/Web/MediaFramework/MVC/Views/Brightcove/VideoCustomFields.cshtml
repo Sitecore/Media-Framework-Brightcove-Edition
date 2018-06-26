@@ -1,0 +1,76 @@
+﻿@using System
+@using Brightcove.MediaFramework.Brightcove.Entities.ViewModels
+@using Sitecore.Globalization
+@model VideoCustomFields
+
+@{
+    var index = -1;
+    var ajaxType = ViewData["AjaxType"];
+}
+
+<h1 class="video-name">@Model.Video.Name</h1>
+<h2 class="video-id">@Model.Video.Id</h2>
+@if (@Model.Fields != null && @Model.Fields.Count > 0 && ajaxType.Equals("get"))
+{
+    foreach (var item in @Model.Fields)
+    {
+        index++;
+        if (item != null)
+        {
+            if (item.Type.Equals("string", StringComparison.OrdinalIgnoreCase)) 
+            {
+
+                <div class="field-section">
+                    @Html.HiddenFor(m => m.Fields[index].Id)
+                    <span class="field-label">
+                        @Html.LabelFor(m => m.Fields[index].Id, string.Format("{0}{1}", item.DisplayName, item.Required ? "*" : ""))
+                        @Html.Label("descriptionid", string.Format("{0}", !string.IsNullOrEmpty(item.Description) ? "(" + item.Description + ")" : ""), new { @class = "description-id" })
+                    </span>
+                    <span class="field-value type-string">
+                        @(item.Required ? Html.TextBoxFor(m => m.Fields[index].Value, new { required = "required", @class = "enbl-dsbl" }) : Html.TextBoxFor(m => m.Fields[index].Value, new { @class = "enbl-dsbl" }))
+                    </span>
+                </div>
+            }
+            else if (item.Type.Equals("enum", StringComparison.OrdinalIgnoreCase) && item.EnumValues != null && item.EnumValues.Count > 0)
+            {
+                <div class="field-section">
+                    @Html.HiddenFor(m => m.Fields[index].Id)
+                    <span class="field-label">
+                        @Html.LabelFor(m => m.Fields[index].Id, string.Format("{0}{1}", item.DisplayName, item.Required ? "*" : ""))
+                        @Html.Label("descriptionid", string.Format("{0}", !string.IsNullOrEmpty(item.Description) ? "(" + item.Description + ")" : ""), new { @class = "description-id" })
+                    </span>
+                    <span class="field-value type-enums">
+                        @(item.Required ? Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value), new { required = "required", @class = "enbl-dsbl" }) : Html.DropDownListFor(m => m.Fields[index].Value, new SelectList(item.EnumValues, item.Value), new { @class = "enbl-dsbl" }))
+                    </span>
+                </div>
+            }
+        }
+    }
+
+    <input type="submit" value="@Translate.Text("Save")" id="submitButton" class="btn btn-primary start" />
+    <div class="submitbtnloading loading">
+        <div id="loadingcontent">
+            <p id="loadingspinner">
+                <img src="~/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif" />
+                <div class="message-board"></div>
+            </p>
+        </div>
+    </div>
+}
+else if (@Model.Fields != null && @Model.Fields.Count > 0 && ajaxType.Equals("post"))
+{
+    <label class="success-message">@Translate.Text("Custom Fields information has been saved successfully.")</label>
+    <div class="customFields">
+        @foreach (var customField in @Model.Fields)
+        {
+            <div>
+                <span class="field-key">@customField.DisplayName</span>
+                <span class="field-value">@string.Format("{0}", !string.IsNullOrEmpty(customField.Value) ? customField.Value : "---")</span>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div class="no-fields">@Translate.Text("There are no custom fields.")</div>
+}

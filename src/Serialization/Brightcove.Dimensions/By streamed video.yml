@@ -1,0 +1,21 @@
+﻿---
+ID: "1e738baf-e7f5-401c-b025-0e4e87c6634f"
+Parent: "59b831db-114c-47a7-ae5e-787d092c660f"
+Template: "82969ff1-15fa-4cdc-8ca4-5204a6add761"
+Path: /sitecore/system/Marketing Control Panel/Experience Analytics/Dimensions/Visits/By streamed video
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160126T095514Z
+    - ID: "a6302f86-e82b-4bda-ab63-639395e1b614"
+      Hint: Name
+      Value: By streamed video

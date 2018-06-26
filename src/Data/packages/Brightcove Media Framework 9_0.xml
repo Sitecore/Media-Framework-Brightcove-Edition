@@ -1,0 +1,1370 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Brightcove Media Framework</PackageName>
+      <Author>Brightcove</Author>
+      <Version>9.0.1</Version>
+      <Revision>170828</Revision>
+      <License />
+      <Comment />
+      <Attributes />
+      <Readme>Sitecore Media Framework Brightcove Edition 9.0.1
+-------------------------------------------------------------
+Date: 19-Apr-2018
+-------------------------------------------------------------
+Prerequisites:
+-  Sitecore 9.0 rev. 171002
+-------------------------------------------------------------
+After installation, update the Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled file with the correct values, then remove the .disabled extension.
+
+Also, run the temp/Sitecore 9.0 Media Framework Reporting Data Update Script.sql script to create the reporting databases.
+-------------------------------------------------------------
+Sitecore® is a registered trademark. All other brand and
+product names are the property of their respective holders. All rights reserved.
+</Readme>
+      <Publisher>Brightcove</Publisher>
+      <PostStep>Sitecore.MediaFramework.PostStep,Sitecore.MediaFramework</PostStep>
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xfiles>
+      <Entries>
+        <x-item>/bin/RestSharp.dll</x-item>
+        <x-item>/bin/Sitecore.MediaFramework.Brightcove.dll</x-item>
+        <x-item>/bin/Sitecore.RestSharp.dll</x-item>
+        <x-item>/bin/Brightcove.MediaFramework.Brightcove.dll</x-item>
+        <x-item>/bin/Sitecore.Integration.Common.dll</x-item>
+        <x-item>/bin/Sitecore.MediaFramework.dll</x-item>
+        <x-item>/bin/Sitecore.MediaFramework.Mvc.dll</x-item>
+        <x-item>/bin/Sitecore.MediaFramework.Migration.dll</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] DLL</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.ExperienceAnalytics.WebAPI.MediaFramework.config</x-item>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.MediaFramework.config</x-item>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.MediaFramework.Services.Brightcove.config</x-item>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.MediaFramework.Services.Brightcove.Extended.config.disabled</x-item>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.Mvc.MediaFramework.config</x-item>
+        <x-item>/App_Config/Include/MediaFramework/Sitecore.RestSharp.Brightcove.config</x-item>
+        <x-item>/temp/Sitecore 9.0 Media Framework Reporting Data Update Script.sql</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Configs</Name>
+    </xfiles>
+    <xfiles>
+      <Entries>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Analytics/brightcove.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedLink/</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedLink/EmbedLink.js</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedLink/EmbedLink.xml</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedMedia/</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedMedia/EmbedMedia.js</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/EmbedMedia/EmbedMedia.xml</x-item>
+        <x-item>/sitecore/shell/Controls/Rich Text Editor/MF RichText Commands.js</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Sources</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Settings/Rules/Insert Options/Rules/MediaFramework Brightcove/{EB0A68E7-EB7A-42EE-9349-72C8A188EBEE}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Insert Options</Name>
+    </xitems>
+    <files>
+      <Root>/sitecore/shell/Themes/Standard/MediaFramework</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>[Brightcove] Images</Name>
+    </files>
+    <xfiles>
+      <Entries>
+        <x-item>/layouts/MediaFramework/Brightcove/VideoCustomFields.cshtml</x-item>
+        <x-item>/layouts/MediaFramework/Brightcove/VideoTextTracks.cshtml</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/MVC/Views/Brightcove/VideoTextTracks.cshtml</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/MVC/Views/Brightcove/VideoCustomFields.cshtml</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/MVC/Views/Web.config</x-item>
+        <x-item>/sitecore/shell/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl.cshtml</x-item>
+        <x-item>/sitecore/shell/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl.js</x-item>
+        <x-item>/layouts/MediaFramework/Sublayouts/</x-item>
+        <x-item>/layouts/MediaFramework/Sublayouts/EmbedMediaPlayer.ascx</x-item>
+        <x-item>/layouts/MediaFramework/Sublayouts/Player.aspx</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/Analytics/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/Analytics/PlayerEventsRecorder.asmx</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/MF.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-ie6.min.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap-responsive.min.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/bootstrap.min.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/jquery.fileupload-ui.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/CSS/Uploader/mfUploader.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/Upload/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/Upload/MediaUpload.ashx</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Analytics/PlayerEventsListener.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/jquery-ui-1.10.3.custom.draggable.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/mediaframework.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/bootstrap.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/canvas-to-blob.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.blueimp-gallery.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-angular.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-audio.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-image.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-jquery-ui.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-process.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-ui.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-validate.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload-video.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.fileupload.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.iframe-transport.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/jquery.ui.widget.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/load-image.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/main.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/MFUpload.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/tmpl.min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/Uploader/underscore-min.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/ajax-loader.gif</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/blank.gif</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancybox-x.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancybox-y.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancybox.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_close.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_loading.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_nav_left.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_nav_right.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_e.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_n.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_ne.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_nw.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_s.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_se.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_sw.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_shadow_w.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_title_left.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_title_main.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_title_over.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/fancy_title_right.png</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.fancybox-1.3.4.css</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.fancybox-1.3.4.pack.js</x-item>
+        <x-item>/sitecore modules/Web/MediaFramework/js/fancybox/jquery.mousewheel-3.0.4.pack.js</x-item>
+        <x-item>/layouts/MediaFramework/Upload.aspx</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Application Layout and Views</Name>
+    </xfiles>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/{04704D09-7690-4103-A000-CB6063F0339F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Custom Fields/{F2375A5D-B094-4A9C-8F7C-C7699178D603}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Text Tracks/{C4D485C4-ED0C-40EF-B576-A839AE62D00D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/{F0B51554-2561-4919-90C0-5722236A37CF}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/{04704D09-7690-4103-A000-CB6063F0339F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Custom Fields/{F2375A5D-B094-4A9C-8F7C-C7699178D603}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Brightcove/Brightcove Text Tracks/{C4D485C4-ED0C-40EF-B576-A839AE62D00D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Media/MediaFramework/Uploader/{E7C6251E-C323-4562-94CB-85FCF2BCB933}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Media Application</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/MediaFramework/{823BF4DD-9EED-451B-A7B1-4FA36F59A43F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/{3C93D4EF-1C20-4C64-B0AD-F7D4F1201833}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccount/{C657F8EF-4916-447F-9255-483ED2EEC562}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccount/Credentials/{1D950B27-D991-4D16-9E7D-4A3B1AA81E91}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccount/Credentials/ClientId/{E7FCF624-4A36-4BE8-B2F5-D5C30BE677C4}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccount/Credentials/ClientSecret/{F537C3A0-152C-4AE1-A21B-EBF69B8EE51B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccount/Credentials/PublisherID/{3B2A0B52-EEB1-42A9-989D-DD0F57986E67}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/__Standard Values/{F04A50B4-202D-4443-A0E5-4D194D04F23D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/{186614BC-A123-4B7B-B2B6-2FA29C6894B0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/Data/{4D82E4C2-0A9D-494E-A328-D79A9F22C59D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/Data/DefaultPlaylistPlayer/{F0C25F85-7F6D-44E1-9DF8-86E6A7EE7039}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/Data/DefaultVideoPlayer/{F122FBAE-16CF-4D7F-A351-55A0E80A35CA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/{C4EA24F3-C8BB-44CA-A224-DEF748ADF582}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/{2FD07545-1BDA-4E88-B47F-AC65F236CD76}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/ID/{A5B025C5-2F6B-45AF-BEE6-92883D9291D6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/Name/{437A7D9F-7A50-4955-B3AE-583EBA5AD35A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/ReferenceId/{A6D7AA5F-97DF-44C7-9AA4-4C7430E2DE2A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/ShortDescription/{2AF799D0-C019-4518-B166-0513C37218E8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveMediaElement/Brightcove Media Data/ThumbnailURL/{2ECDE5D3-BFDE-4A5F-8D20-7C6DBA2BBFA0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/__Standard Values/{5AB8E0EA-42DA-4174-BAED-8BE3EA270894}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/{0E24292F-D7A5-4BA2-BCA0-CD5F14A89634}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/{C93212FF-8252-43C9-A20F-F5A2F760A233}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/CreationDate/{5A33E84E-9453-4ED4-8109-473FEAECE931}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/Favorite/{1D354E71-8722-4096-9C02-0C5AE1BEC4AB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/FilterTags/{C2B3AEB0-5CA9-4E2B-A75C-D9E5261BA0C1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/LastModifiedDate/{00D9ED39-D12C-48E7-A998-B5976E9C4F52}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/PlaylistType/{70059B46-11D1-45F3-B92E-45DF21AF8310}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/TagInclusion/{878C3F5B-303E-4F38-B42E-98F107372440}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcovePlaylist/Brightcove Playlist Data/VideoIds/{1526509E-D99A-48FB-8CCA-246B388B83FB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveTag/__Standard Values/{D67F372C-04D9-47D6-9378-0DC3C645D31A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveTag/{1F5CF62D-DEDC-4712-A8B6-CCC36E27A3F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveTag/Data/{50B132DE-169C-4D51-87E8-046F2FC67057}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveTag/Data/Name/{24FD815E-EBCE-4D16-90C1-62C66CEC95F2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/__Standard Values/{A0B6FAAA-3C37-4CA4-8792-7FC9EAF9E7D8}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/{6A5C6835-6E11-4602-A11D-B626E9255397}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/{8DE66AE7-B6A5-41A3-BB94-0FC5EA4408B1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/CreationDate/{00270BAC-F30A-4B54-8AA6-614159522F5B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/CustomFields/{1CE3B5F5-FCEF-49C4-88D4-F5FB335E1C74}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/Duration/{25F40EE3-E453-4899-A728-E9DB0ED6E6E3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/Economics/{22579C0B-2BB7-47EB-AE54-39CC8D9899C5}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/LastModifiedDate/{87E30397-7707-41D5-A4C9-500B01D80F5E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/LinkText/{FBB25ADD-22F8-4D4A-88A5-F648528FD299}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/LinkURL/{385F26A8-80DD-4408-A090-5D8A3A759775}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/LongDescription/{42136A7A-FCA2-4F5F-836A-9EC2A0DA2534}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/PublishedDate/{4B223FFD-5972-4A8D-8CF7-08793E99BCA2}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/Tags/{23250E7A-1548-4D0E-8870-957535235EE4}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Brightcove Video Data/VideoStillURL/{161A7C32-673B-43DA-9D1F-9D2A2226FCD6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Ingestion/{B90D27CF-8522-4D2D-AFFB-33D98F5C5A4B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Ingestion/Ingest Job Id/{82A9CD93-9937-4765-8854-9F03F26B2094}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Ingestion/Ingest Status/{8FEAFD50-9082-4F77-A9E7-97963220D50F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/{634E2E65-8D1F-48B7-A43B-C8282F38A784}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/by external acct/{34E7A4EA-3AB4-46A8-8EFD-FE269820382B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/by id/{643248F5-49FE-4CF4-935B-212B66B24400}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/by reference/{DB5AE464-3523-444E-94F4-398C01BEAE6B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/source id/{A74DB86B-296A-4562-B2F2-22DB9CDD68B1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/Sharing/to external acct/{DD2B605D-5493-477E-AC11-34D39DB96015}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/__Standard Values/{D6A337F0-E5CF-45E9-B8B6-7E0185C5AE78}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/{DE0F5BB5-1D51-41B2-BA4D-2C176C904BF3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Brightcove Data/{4F29CF13-C4B5-4805-8D6A-1B7FBC76C752}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Brightcove Data/ID/{6A3B39AF-C59A-4E3F-86C8-EB0E846CF6E6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Player/{B912502B-E29A-4451-B5FA-14D43B4D4511}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Player/AutoStart/{31E644DE-B18A-4972-96A9-158747B8D79C}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Player/CssClass/{BEACD02A-B365-468E-83C7-3ADA3C58DB4F}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/BrightcoveVideoPlayer/Player/ShowPlaylist/{E09287AB-76D7-4F11-A759-58BE886F85A1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/Enum/__Standard Values/{218CF90E-AAB3-4516-A8DF-BD009A0D6FA1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/Enum/{4BEFDB86-5637-4983-AA5D-4CCA70E23BF6}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Brightcove/EnumValue/{5210D3FA-7BD8-449B-9C89-8A7E20F6AE18}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/{99DFCDF8-8814-445F-805B-FC5E8F527400}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/AccountSettings/{B508C806-C0A9-4D19-8F68-DB04D66FF2D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/AccountSettings/Analytics/{E869D249-3EF4-4260-991D-F4DB40D387C0}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/AccountSettings/Analytics/PlaybackEventsRules/{12112D15-A3DE-4B42-A700-DE1B9666391B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/MediaElement/{7C758A18-26A4-48F0-A2AA-068246A27322}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/MediaElement/Analytics/{A36313BE-D838-40BD-9895-10E184F808BD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/MediaElement/Analytics/Events/{C923961C-5664-43D2-85D2-D194143197DF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/PlaybackEvent/{3A2C7FC4-BCD6-4B8B-BED7-A45E023B31DB}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/PlaybackEvent/Data/{AED31AE2-9B10-4060-BB2E-94B14C64FCE5}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/PlaybackEvent/Data/PageEvent/{7CCB928C-7EB0-465A-A755-D4BD7256BD58}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/MediaFramework/Common/PlaybackEvent/Data/Parameter/{E1E68B6B-5C30-41D3-B6C9-7089B5CE1B34}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Templates</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/{3CEF9AA4-837B-4B00-BE66-B3F1A316A6F1}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/{375C2D14-4251-4855-B930-5455B8BF075D}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/$name/{A3C7EDED-AEEE-45EC-A0E9-302C562F7332}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/$name/Media Content/{5E3FB41E-52CE-431F-8B72-73184A387EAF}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/$name/Players/{94F2FB87-2E4B-48A7-95FE-B6CACC8D5759}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/$name/Tags/{E2437395-4E29-459E-8DD4-25CD8A292588}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/{24A40CEF-BCD5-4407-A9D9-FA203141ECAC}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Account/{D0497E69-98E5-421E-ADD4-EEAB4E5B7208}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Video Player/{6506FE28-3F57-48B2-B66A-EF50C97714A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/Branches/Media Framework/Brightcove/Brightcove Video/{1356E0A8-C8DD-4F38-8D17-B5A463027317}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Branches</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/{4AC2D04F-4062-40B4-A99C-B4E77C1E6093}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/{05B138FB-71AE-4DC8-9E6B-EDF121BF289F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/{54D0AF61-09C9-49D8-BA0B-54330303B2FD}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/Import Playlists/{70098134-1303-4584-AF14-B7EAFA6AE866}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/Import Tags/{11507E56-D639-49DB-913F-78C0B83F03A0}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/Import Videos/{01777FE6-D77A-4494-BEC0-D160D7A61DC6}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/{481C600D-469A-43C5-A830-21ACF3F3C488}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/{80DDE414-FEAC-4243-8D71-79FE64506D41}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/{2FBBB850-EF2C-4A6D-AD90-B9DF77368C5B}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/Account Migration/{56CAADAD-DA24-4D44-B8B9-2638BDF1C80C}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Migration/Common/Version 12/MediaFramework/{B4CE7259-46E2-486E-A39F-41BD703F3F4F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Ribbons/Default/Media Framework/{F2B7AF49-7630-4433-9425-0D423FDAE472}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import/Brightcove/Force Sync Videos/{C0E5CB1C-FB7C-4A6F-A23B-32C32D4F6EED}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Ribbon Menues</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Modules/Media Framework/{2078E76A-25BC-4028-8287-ADC6489A1AFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/{A1F4BE6A-7541-4955-A8C9-AAE4839C1E54}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/{EEBAD694-1609-43B8-B953-3B56D25EE207}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/{0222C45B-F1BF-47B1-A57A-8B8F224F9BEA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/AD_SUPPORTED/{A27167C1-8511-4E11-8651-06BC190B0B72}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/FREE/{E7A4844D-90F8-4DFA-A785-807C5EC62495}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/{9C8C1DAF-FEFC-47E3-9C50-100236292F9D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/BACKGROUND/{75FAC683-7ED4-493E-9577-501B9A6EBFA8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/LOGO/{0DEEBEE9-5D39-47E0-B4AA-3FEE3552B78A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/LOGO_OVERLAY/{E5D362B8-4BD5-4B32-BB66-5A98C0E46DCC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/SYNDICATION_STILL/{54D9018B-6491-427C-A034-8CA8760CD04B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/THUMBNAIL/{28DE24BE-912C-485C-BDB6-1359932DD92C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/VIDEO_STILL/{B2B5282D-7ADD-4F77-83E5-DF5D044781A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/{80EB7A5B-998B-4C9F-9BB6-EFAAB8180439}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/ACTIVE/{232D3954-0EB6-4417-956E-091C57713058}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/DELETED/{E00B75A2-4616-4A5F-A040-2168FD441BC9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/INACTIVE/{FD8794BA-CF12-4723-AB73-65E7CA86230C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/PENDING/{A16D0192-CFEA-4382-B42B-1BC6F56C21F3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/{309127C4-9ACF-4C40-BE42-B7CA04C21897}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/ComboBox/{8D903FA4-E3CC-443F-BE14-0B04B231C178}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/None/{B39BA173-82C1-4E29-857F-0A4418BFC37C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/Tabbed/{F145B828-C19E-4DA5-B5F1-51959BE548AA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/VideoList/{EF3D3C3A-3DA1-46E7-A999-27D4CA62FF0E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/{E7259B34-1676-4851-81C6-9C110260C374}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ACTIVATED_NEWEST_TO_OLDEST/{5DCEEEC0-667D-4858-9847-8F9635A146D1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ACTIVATED_OLDEST_TO_NEWEST/{7B5E28D3-B0C0-4F78-9341-4B7424ED79FE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ALPHABETICAL/{2F831AE6-1B37-494B-A976-AE57DB62DB53}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/EXPLICIT/{C86A3417-F473-404E-8A76-DAF2667AC6AD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/PLAYS_TOTAL/{017DF9CA-0504-458A-A10D-A2F80FFDB3E7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/PLAYS_TRAILING_WEEK/{FA5D0F6E-6DDD-4B40-8825-E3C3BBF4D9BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/START_DATE_NEWEST_TO_OLDEST/{551B9F51-35C3-4C1A-9A12-4C99B8B08BFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/START_DATE_OLDEST_TO_NEWEST/{AC0547B5-718D-4F97-BDF8-D9EBAB06F5FB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/{3984A295-72AC-4D78-B2C7-7023093E52E0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/AND/{0E7E3A83-15F1-496B-A238-AEF30DB826A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/OR/{2E5AABF4-4863-402F-9990-181203210671}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/{3E33877D-52E3-48C1-8351-CF19D0872418}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/direct/{D52FC64E-353A-4B51-A7F7-96EBDA1F5DD0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/opaque/{4EB1AD4E-1AE4-44FE-9521-25FC310CCF8B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/transparent/{8CB6C483-8154-43A0-899E-8866292560A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/window/{122CC039-A57A-40AC-B629-D4832171637C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/{20034A71-022E-45BF-93FA-F9BA4F958264}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/{FBD50EAC-35E3-4C04-BBDE-064B20498096}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/captions/{0067E61D-EEBC-4397-A527-8310E9B041A5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/chapters/{4CE87B19-760F-4077-833F-3A41EB493C3F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/descriptions/{AEFD314D-ED04-493F-9907-2E4EED36E9B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/metadata/{19DEAF2F-4AAD-4FED-A085-3DD4C0E9DAA1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/subtitles/{F7D0B1ED-AEB5-4C57-A0DE-B9738A60F868}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/{6748E523-9AA7-4B88-A8D4-B57926808E3D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar/{B172D8BE-6471-4199-A0D6-6B8004ADF6E5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-AE/{DE26E1A8-0CDF-40A1-AE92-F2DDAC8E8DD7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-BH/{7F353056-655C-421E-8637-C4A3B5A84836}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-DZ/{2DE78B0F-2780-4309-9DAA-69F8C822D2B2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-EG/{BEBECD02-6F62-4A79-B3DF-9A902101DA8A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-IQ/{6029921A-09D9-44DD-A385-639E3530A94D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-JO/{DDD0104A-7959-4D95-8C09-81BA7CAD39F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-KW/{CD0D81F9-F995-46CB-A761-44E356D0D865}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-LB/{CCA0C828-2D50-4182-9C30-FDD19BC8BCB2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-LY/{93BAEE3C-2DFD-441A-AB38-9CC6FA5DC432}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-MA/{B4ED8286-B086-4A1C-88D6-F125097952A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-OM/{B3871FAD-6884-49EB-A446-85C5D0366AC3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-QA/{C480111B-6D95-4AC1-9D42-3D5137FD804B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SA/{6D8A4188-87AA-4D51-B5C1-21C4403A22B1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SD/{DA5DA536-E576-4CE9-801A-955DF553A57C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SY/{8BC2181E-0C0C-4087-89E2-B72D5C67805D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-TN/{CF1CE875-B89D-4346-91CA-9AEF21FB0AFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-YE/{10F0A25E-98A6-41F5-9954-17CD5E0CA051}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/be/{04A5230F-D13D-4A38-A2CB-D140FD21DA0C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/be-BY/{5994D263-1D56-432F-AF8A-1507CEC94B4D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/bg/{4D5D431A-1DCA-4623-879A-771EE0A0FA48}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/bg-BG/{76DA40D9-D510-4750-8299-1FE97C721898}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ca/{C304F301-EF70-41CD-BBA6-02AEFE02B5AD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ca-ES/{89E82D05-6DEE-40C4-A794-4A1E47B12203}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/cs/{864E566B-9A61-4D15-B722-6C16AE0607E6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/cs-CZ/{722D25F5-FD77-4791-B09C-0285122F2731}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/da/{8A6C0BFB-BDBF-4E59-9E24-75F930E3BA9C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/da-DK/{3E120395-82D3-4704-B26C-2271C5F3544A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de/{BC2E5FFB-C7A0-4473-AEA8-971250542D88}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-AT/{2FD2EFB3-4566-49CA-AC7D-ABE15688C29A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-CH/{4FB8A017-4337-4950-97C1-56C463A428FD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-DE/{F1012D76-0E2E-4E28-A28A-F56A38F13038}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-LU/{E16DF13A-F96A-465D-AC7F-293E0B4B4FC4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el/{A114722D-33B8-4942-A675-9AF650BFF2B3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el-CY/{96D3BE5F-B791-4A75-9C04-215BB527CC90}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el-GR/{53BCB781-BCAE-4AEC-9A1D-FD209C538F5A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en/{70DA64D0-3C45-4EE9-9E22-FD0380A5FB47}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-AU/{03D29C0F-66D3-4AE4-8B29-7B81AEC5DBD0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-CA/{5B416B8D-C72D-4D94-81D9-B092D4BF7C9B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-GB/{58DAF059-5C26-4BBF-92ED-499B787B89F0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-IE/{0CB758B5-6956-45B4-9DA5-D8165DD87411}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-IN/{9F8A921F-022A-490D-85F4-F79411CE5E41}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-MT/{D5E5DA72-8380-4878-A105-AE3BCC2B141E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-NZ/{CA634E23-9833-459F-A6B4-94D76CEB025E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-PH/{E3AD713F-8717-4A11-BAC4-49EEEF7E1890}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-SG/{3017E26B-8A40-4819-A8E9-4B80E5EB931D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-US/{690656AF-87DB-4CA1-9D84-71AE68C8468F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-ZA/{BD5EE1F2-7A1A-4EDC-812C-B27205D0037B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es/{8546BBF0-CE3C-4A17-B814-3E5DD43EC06B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-AR/{07015026-C289-41CB-8D4F-309AFF8FEF53}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-BO/{059B6DC7-1B55-49D5-8136-F72520A96C10}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CL/{2F938F05-6988-4C9D-8D60-2AFF41C8D2A2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CO/{11FC8ECA-D4DB-4CE8-B02F-A71C7E617A7D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CR/{0070FCCC-57A2-43C8-905F-18A2A3214557}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-DO/{482E7E4A-6C0F-429E-81DA-A57405B90EF7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-EC/{3E61A3F6-A956-4AE7-9F0C-BEF3456C3501}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-ES/{A80CF2AB-0B12-41C0-9204-E94A23673EED}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-GT/{6FE6A84D-07DA-4443-AE07-90CC1A0C0FC7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-HN/{2B291563-91BB-4CC4-B875-2BFF9CFBFFB5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-MX/{83C74BA6-28EF-41C3-BEE2-7FEDE8901031}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-NI/{069B38DD-94DD-4071-9826-A01A2BB22EF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PA/{9C8ECCA5-FF47-4B2F-98E2-A266CDAA9395}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PE/{3EC49580-4151-4A06-B704-7FE0FF110888}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PR/{95858098-7809-4A51-9799-D6E8A2D2BF35}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PY/{034CFF6C-DE70-4DC7-A508-C5290555286F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-SV/{CED56859-EE75-4D53-9C84-781EBA4D0A6C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-US/{10F93D33-8B58-424B-BEFF-DDCCF381BE6E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-UY/{8F47FDB3-B833-4674-98D6-510DCA76FDB5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-VE/{62821C27-A552-4BF5-BC7A-822756F9F55F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/et/{03367FA5-6E5D-4BA9-BF7A-B6420C0EE982}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/et-EE/{EB6E0628-EE24-4BC8-ADB5-D4BF5B4901E1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fi/{579710DE-352D-46AB-BA4B-5E3A65253F07}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fi-FI/{80FB2218-EE0F-4F66-88C6-8F08C10CDD66}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr/{BDFE7ED0-DDC8-42C0-B713-9103E9B52A5C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-BE/{75C3F1D7-30E9-44AF-A329-05BC4FDC656A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-CA/{34AC03FF-A216-4F3B-9CCB-5221C157DEE9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-CH/{CADB716C-0E69-4B39-808A-A61337DD38F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-FR/{251DF4D1-AEED-4B29-A2C3-4B030EAA4AB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-LU/{497A1C40-A080-4ED4-B1F7-912090018FD1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ga/{C0C52EA1-0774-4B34-A872-1AD1233A263E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ga-IE/{A0F5312D-C02C-49DD-BFCF-958D2F16F7BC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/he/{14A47BD3-D7C2-4038-A154-874573371A55}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/he-IL/{557BBD21-D00E-4D3E-9A67-FC3925016D98}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hi-IN/{9883F756-6ADE-415B-BCBE-C343F3ED3B77}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hr/{981E260A-A575-4594-A39C-AE3A746F6EC5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hr-HR/{23F3D514-7F55-4CE3-82C5-89DE472E97E1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hu/{99A55CFD-2219-4575-B596-B984809F0003}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hu-HU/{771CDA61-6DC7-4B15-B26D-D50889A1D7D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/id/{FACE0248-17FC-41D6-82A4-3A469C03A948}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/id-ID/{DC3C7E4D-2E9C-4F7C-9BDC-D73F328B6E3A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/is/{F5CAC0BF-F73D-41E9-8E44-F7C19731332B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/is-IS/{635ECFCE-074B-4902-A14B-2EB8E515DDFF}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it/{3E53FF64-FCF8-4CA1-BA43-922DF5F2EEAC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it-CH/{E17098A0-6A96-4186-8160-934F12A803A1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it-IT/{DCBB22A1-9872-472C-A0BF-2313BFF97BAA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja/{B71FCB55-CB06-4FB8-B461-13A5F9597843}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja-JP/{37F4DA64-01E2-438F-8D34-4D4F20127515}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja-JP-u-ca-japanese-x-lvariant-JP/{48CC0A14-4A4F-4266-B7E7-CB02EB72A08D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ko/{F915A8B5-3FA6-4252-8658-E88CF293D50A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ko-KR/{340EFE0A-866F-4A40-9EC6-5775AD233189}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lt/{27CC87B2-BAC1-4D47-A223-CE5CB709D947}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lt-LT/{0668D876-AA6D-4C75-8498-22210702C32D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lv/{0890E527-ABE4-4847-BBD0-C22F898EB0F0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lv-LV/{89CAC8A7-7532-4780-BF75-67A0332E515E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mk/{EFFB4F5E-6811-4134-9DE4-C1A5E7FD87D1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mk-MK/{DC2A43EB-C30F-4BD8-8BAA-C96FAD6F5A30}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ms/{60AD91FA-F7B3-462B-B422-AEB1453A5702}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ms-MY/{DF8173F3-5158-49AC-9953-C495E39867E8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mt/{DBF6019D-9244-4CDF-B92F-241528EDDF80}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mt-MT/{9921308D-F14C-4705-9647-456918EA1587}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl/{D4869BA2-707D-48FF-8E48-86E83DA12D55}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl-BE/{7A8AB505-96A6-42E8-8DF8-10ADFF94E792}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl-NL/{708C076E-9C27-4FB0-A727-D68CDB3C539D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nn-NO/{CCA1254D-80F1-4F71-803E-87A637D00B8E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/no/{DA5225C5-835D-452F-8B07-3A767CF83D28}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/no-NO/{4A33CBE4-1745-426C-BBD8-D5BB8AD2A638}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pl/{F15C7B02-7A0D-44C9-9DEF-582A01A7B02F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pl-PL/{D33B39A0-F618-412C-AF57-1759F8BB6AE8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt/{DB262916-7152-407F-B618-7319868095BA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt-BR/{39E3ADB5-060D-4DCF-A986-7318BECEF614}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt-PT/{CD518B6C-6B95-40F1-9166-31F4296A1E20}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ro/{84D805E6-6C13-407E-B8D4-8009ED86731F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ro-RO/{30BAB3AA-0294-45AC-AEAD-B08F1F66ACB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ru/{7410ACD2-B5C9-47D0-971B-CB232E4338CB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ru-RU/{AADD3ED6-C4C0-4153-83A0-D896FA25C9EA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sk/{B4562958-C347-40E3-8F2D-F6937B15EAE1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sk-SK/{224D642F-586E-42C4-975F-98EE67FD7393}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sl/{91D8B7D3-FC08-4ACF-8D39-F74444F1466A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sl-SI/{13694D3B-1952-440E-99BE-0103B6FAA7B9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sq/{C6D96D49-7245-4288-8983-C5AD526FCC06}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sq-AL/{C598B269-1DB5-4C54-822A-9FB7B2D90650}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr/{979750BC-C675-4E82-AAA2-66487F1551D5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-BA/{AB95D73C-14C9-4887-8967-EE0FE920A729}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-CS/{683D275A-DAE8-4581-BA8A-890C7B803362}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn/{F4558C52-1D41-4DE3-9E04-9011A1BD5841}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-BA/{AF9D7700-983F-4030-8A0C-418DE74DA8B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-ME/{A6F93477-DAEE-437E-9A80-D2E3D7F9F6D0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-RS/{7BB8C505-EC11-4EE9-B218-F9F11574D82B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-ME/{87FC6BBB-5742-4E4B-AD4B-FA813491BC8A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-RS/{472FFFE6-AD5E-4E66-AF85-9B1603160888}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sv/{836D441E-23AE-45EE-A6DD-8AD5D55B0E10}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sv-SE/{E0839184-DA1E-4092-8D7C-C87FE3D568DC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th/{74980F4B-466F-417D-B7C9-FEF801730287}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th-TH/{42AB961B-3BA7-4673-B746-9FD612EF3E63}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th-TH-u-nu-thai-x-lvariant-TH/{EC1A58A0-3872-480A-9984-79E1A90B9249}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/tr/{011119DD-F633-4A26-ABC3-6D600692D78C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/tr-TR/{3BA4E4D5-4761-4ECF-B8C9-209C8B2A2EF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/uk/{77AA64ED-328D-4C78-BCDD-955EEFF59786}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/uk-UA/{578B64E2-440B-4545-A6BA-6A983E68C8B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/vi/{5DC608E2-F2F5-4588-9BE6-5C91F02E53EC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/vi-VN/{5E3496A3-11B5-4E06-85D7-FDE43D1D49CA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh/{C825B1A3-CD1C-45D4-9391-586F8AB05EBD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-CN/{0340992D-2759-4667-81BC-C652C79826BD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-HK/{0EE93245-D390-4835-BDE5-136E29BA93B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-SG/{CD609785-9501-4EBD-9C58-66774C460C97}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-TW/{F84FE525-9874-4200-83F1-66B00E212C19}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/{EF5C30F0-26E3-46D9-83B2-FE8634B9DFDC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Changed 1 Minute/{1594A42C-8CF6-43CE-81CE-0BF22A49E910}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Changed 50 Percent/{5C25590F-22B8-4A86-8EA2-B29060E86F36}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Completed/{2301F41F-58EA-4AD8-A26D-DE8BDA637261}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Error/{0C671A52-9C1D-4D89-B585-E67D250B7746}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Started/{5FA3479A-E78B-4858-84F3-5430880FE4B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Settings/{E4AFF7EC-DC99-4087-A69A-FC0FC80EB11C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Settings/Brightcove Default Settings/{AAE37F9C-3A5D-4640-B718-19F396B1ADBA}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] System Modules</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Modules/Media Framework/{2078E76A-25BC-4028-8287-ADC6489A1AFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/{A1F4BE6A-7541-4955-A8C9-AAE4839C1E54}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/{EEBAD694-1609-43B8-B953-3B56D25EE207}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/{0222C45B-F1BF-47B1-A57A-8B8F224F9BEA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/AD_SUPPORTED/{A27167C1-8511-4E11-8651-06BC190B0B72}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Economics/FREE/{E7A4844D-90F8-4DFA-A785-807C5EC62495}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/{9C8C1DAF-FEFC-47E3-9C50-100236292F9D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/BACKGROUND/{75FAC683-7ED4-493E-9577-501B9A6EBFA8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/LOGO/{0DEEBEE9-5D39-47E0-B4AA-3FEE3552B78A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/LOGO_OVERLAY/{E5D362B8-4BD5-4B32-BB66-5A98C0E46DCC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/SYNDICATION_STILL/{54D9018B-6491-427C-A034-8CA8760CD04B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/THUMBNAIL/{28DE24BE-912C-485C-BDB6-1359932DD92C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Image Type/VIDEO_STILL/{B2B5282D-7ADD-4F77-83E5-DF5D044781A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/{80EB7A5B-998B-4C9F-9BB6-EFAAB8180439}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/ACTIVE/{232D3954-0EB6-4417-956E-091C57713058}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/DELETED/{E00B75A2-4616-4A5F-A040-2168FD441BC9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/INACTIVE/{FD8794BA-CF12-4723-AB73-65E7CA86230C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Item State/PENDING/{A16D0192-CFEA-4382-B42B-1BC6F56C21F3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/{309127C4-9ACF-4C40-BE42-B7CA04C21897}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/ComboBox/{8D903FA4-E3CC-443F-BE14-0B04B231C178}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/None/{B39BA173-82C1-4E29-857F-0A4418BFC37C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/Tabbed/{F145B828-C19E-4DA5-B5F1-51959BE548AA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Player Playlist Type/VideoList/{EF3D3C3A-3DA1-46E7-A999-27D4CA62FF0E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/{E7259B34-1676-4851-81C6-9C110260C374}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ACTIVATED_NEWEST_TO_OLDEST/{5DCEEEC0-667D-4858-9847-8F9635A146D1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ACTIVATED_OLDEST_TO_NEWEST/{7B5E28D3-B0C0-4F78-9341-4B7424ED79FE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/ALPHABETICAL/{2F831AE6-1B37-494B-A976-AE57DB62DB53}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/EXPLICIT/{C86A3417-F473-404E-8A76-DAF2667AC6AD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/PLAYS_TOTAL/{017DF9CA-0504-458A-A10D-A2F80FFDB3E7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/PLAYS_TRAILING_WEEK/{FA5D0F6E-6DDD-4B40-8825-E3C3BBF4D9BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/START_DATE_NEWEST_TO_OLDEST/{551B9F51-35C3-4C1A-9A12-4C99B8B08BFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Playlist Type/START_DATE_OLDEST_TO_NEWEST/{AC0547B5-718D-4F97-BDF8-D9EBAB06F5FB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/{3984A295-72AC-4D78-B2C7-7023093E52E0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/AND/{0E7E3A83-15F1-496B-A238-AEF30DB826A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/Tag Inclusion/OR/{2E5AABF4-4863-402F-9990-181203210671}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/{3E33877D-52E3-48C1-8351-CF19D0872418}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/direct/{D52FC64E-353A-4B51-A7F7-96EBDA1F5DD0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/opaque/{4EB1AD4E-1AE4-44FE-9521-25FC310CCF8B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/transparent/{8CB6C483-8154-43A0-899E-8866292560A6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/window/{122CC039-A57A-40AC-B629-D4832171637C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/{20034A71-022E-45BF-93FA-F9BA4F958264}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/{FBD50EAC-35E3-4C04-BBDE-064B20498096}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/captions/{0067E61D-EEBC-4397-A527-8310E9B041A5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/chapters/{4CE87B19-760F-4077-833F-3A41EB493C3F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/descriptions/{AEFD314D-ED04-493F-9907-2E4EED36E9B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/metadata/{19DEAF2F-4AAD-4FED-A085-3DD4C0E9DAA1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Kinds/subtitles/{F7D0B1ED-AEB5-4C57-A0DE-B9738A60F868}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/{6748E523-9AA7-4B88-A8D4-B57926808E3D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar/{B172D8BE-6471-4199-A0D6-6B8004ADF6E5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-AE/{DE26E1A8-0CDF-40A1-AE92-F2DDAC8E8DD7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-BH/{7F353056-655C-421E-8637-C4A3B5A84836}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-DZ/{2DE78B0F-2780-4309-9DAA-69F8C822D2B2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-EG/{BEBECD02-6F62-4A79-B3DF-9A902101DA8A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-IQ/{6029921A-09D9-44DD-A385-639E3530A94D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-JO/{DDD0104A-7959-4D95-8C09-81BA7CAD39F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-KW/{CD0D81F9-F995-46CB-A761-44E356D0D865}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-LB/{CCA0C828-2D50-4182-9C30-FDD19BC8BCB2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-LY/{93BAEE3C-2DFD-441A-AB38-9CC6FA5DC432}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-MA/{B4ED8286-B086-4A1C-88D6-F125097952A9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-OM/{B3871FAD-6884-49EB-A446-85C5D0366AC3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-QA/{C480111B-6D95-4AC1-9D42-3D5137FD804B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SA/{6D8A4188-87AA-4D51-B5C1-21C4403A22B1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SD/{DA5DA536-E576-4CE9-801A-955DF553A57C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-SY/{8BC2181E-0C0C-4087-89E2-B72D5C67805D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-TN/{CF1CE875-B89D-4346-91CA-9AEF21FB0AFE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ar-YE/{10F0A25E-98A6-41F5-9954-17CD5E0CA051}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/be/{04A5230F-D13D-4A38-A2CB-D140FD21DA0C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/be-BY/{5994D263-1D56-432F-AF8A-1507CEC94B4D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/bg/{4D5D431A-1DCA-4623-879A-771EE0A0FA48}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/bg-BG/{76DA40D9-D510-4750-8299-1FE97C721898}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ca/{C304F301-EF70-41CD-BBA6-02AEFE02B5AD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ca-ES/{89E82D05-6DEE-40C4-A794-4A1E47B12203}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/cs/{864E566B-9A61-4D15-B722-6C16AE0607E6}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/cs-CZ/{722D25F5-FD77-4791-B09C-0285122F2731}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/da/{8A6C0BFB-BDBF-4E59-9E24-75F930E3BA9C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/da-DK/{3E120395-82D3-4704-B26C-2271C5F3544A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de/{BC2E5FFB-C7A0-4473-AEA8-971250542D88}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-AT/{2FD2EFB3-4566-49CA-AC7D-ABE15688C29A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-CH/{4FB8A017-4337-4950-97C1-56C463A428FD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-DE/{F1012D76-0E2E-4E28-A28A-F56A38F13038}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/de-LU/{E16DF13A-F96A-465D-AC7F-293E0B4B4FC4}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el/{A114722D-33B8-4942-A675-9AF650BFF2B3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el-CY/{96D3BE5F-B791-4A75-9C04-215BB527CC90}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/el-GR/{53BCB781-BCAE-4AEC-9A1D-FD209C538F5A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en/{70DA64D0-3C45-4EE9-9E22-FD0380A5FB47}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-AU/{03D29C0F-66D3-4AE4-8B29-7B81AEC5DBD0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-CA/{5B416B8D-C72D-4D94-81D9-B092D4BF7C9B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-GB/{58DAF059-5C26-4BBF-92ED-499B787B89F0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-IE/{0CB758B5-6956-45B4-9DA5-D8165DD87411}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-IN/{9F8A921F-022A-490D-85F4-F79411CE5E41}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-MT/{D5E5DA72-8380-4878-A105-AE3BCC2B141E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-NZ/{CA634E23-9833-459F-A6B4-94D76CEB025E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-PH/{E3AD713F-8717-4A11-BAC4-49EEEF7E1890}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-SG/{3017E26B-8A40-4819-A8E9-4B80E5EB931D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-US/{690656AF-87DB-4CA1-9D84-71AE68C8468F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/en-ZA/{BD5EE1F2-7A1A-4EDC-812C-B27205D0037B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es/{8546BBF0-CE3C-4A17-B814-3E5DD43EC06B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-AR/{07015026-C289-41CB-8D4F-309AFF8FEF53}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-BO/{059B6DC7-1B55-49D5-8136-F72520A96C10}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CL/{2F938F05-6988-4C9D-8D60-2AFF41C8D2A2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CO/{11FC8ECA-D4DB-4CE8-B02F-A71C7E617A7D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-CR/{0070FCCC-57A2-43C8-905F-18A2A3214557}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-DO/{482E7E4A-6C0F-429E-81DA-A57405B90EF7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-EC/{3E61A3F6-A956-4AE7-9F0C-BEF3456C3501}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-ES/{A80CF2AB-0B12-41C0-9204-E94A23673EED}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-GT/{6FE6A84D-07DA-4443-AE07-90CC1A0C0FC7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-HN/{2B291563-91BB-4CC4-B875-2BFF9CFBFFB5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-MX/{83C74BA6-28EF-41C3-BEE2-7FEDE8901031}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-NI/{069B38DD-94DD-4071-9826-A01A2BB22EF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PA/{9C8ECCA5-FF47-4B2F-98E2-A266CDAA9395}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PE/{3EC49580-4151-4A06-B704-7FE0FF110888}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PR/{95858098-7809-4A51-9799-D6E8A2D2BF35}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-PY/{034CFF6C-DE70-4DC7-A508-C5290555286F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-SV/{CED56859-EE75-4D53-9C84-781EBA4D0A6C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-US/{10F93D33-8B58-424B-BEFF-DDCCF381BE6E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-UY/{8F47FDB3-B833-4674-98D6-510DCA76FDB5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/es-VE/{62821C27-A552-4BF5-BC7A-822756F9F55F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/et/{03367FA5-6E5D-4BA9-BF7A-B6420C0EE982}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/et-EE/{EB6E0628-EE24-4BC8-ADB5-D4BF5B4901E1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fi/{579710DE-352D-46AB-BA4B-5E3A65253F07}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fi-FI/{80FB2218-EE0F-4F66-88C6-8F08C10CDD66}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr/{BDFE7ED0-DDC8-42C0-B713-9103E9B52A5C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-BE/{75C3F1D7-30E9-44AF-A329-05BC4FDC656A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-CA/{34AC03FF-A216-4F3B-9CCB-5221C157DEE9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-CH/{CADB716C-0E69-4B39-808A-A61337DD38F8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-FR/{251DF4D1-AEED-4B29-A2C3-4B030EAA4AB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/fr-LU/{497A1C40-A080-4ED4-B1F7-912090018FD1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ga/{C0C52EA1-0774-4B34-A872-1AD1233A263E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ga-IE/{A0F5312D-C02C-49DD-BFCF-958D2F16F7BC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/he/{14A47BD3-D7C2-4038-A154-874573371A55}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/he-IL/{557BBD21-D00E-4D3E-9A67-FC3925016D98}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hi-IN/{9883F756-6ADE-415B-BCBE-C343F3ED3B77}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hr/{981E260A-A575-4594-A39C-AE3A746F6EC5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hr-HR/{23F3D514-7F55-4CE3-82C5-89DE472E97E1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hu/{99A55CFD-2219-4575-B596-B984809F0003}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/hu-HU/{771CDA61-6DC7-4B15-B26D-D50889A1D7D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/id/{FACE0248-17FC-41D6-82A4-3A469C03A948}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/id-ID/{DC3C7E4D-2E9C-4F7C-9BDC-D73F328B6E3A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/is/{F5CAC0BF-F73D-41E9-8E44-F7C19731332B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/is-IS/{635ECFCE-074B-4902-A14B-2EB8E515DDFF}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it/{3E53FF64-FCF8-4CA1-BA43-922DF5F2EEAC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it-CH/{E17098A0-6A96-4186-8160-934F12A803A1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/it-IT/{DCBB22A1-9872-472C-A0BF-2313BFF97BAA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja/{B71FCB55-CB06-4FB8-B461-13A5F9597843}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja-JP/{37F4DA64-01E2-438F-8D34-4D4F20127515}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ja-JP-u-ca-japanese-x-lvariant-JP/{48CC0A14-4A4F-4266-B7E7-CB02EB72A08D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ko/{F915A8B5-3FA6-4252-8658-E88CF293D50A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ko-KR/{340EFE0A-866F-4A40-9EC6-5775AD233189}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lt/{27CC87B2-BAC1-4D47-A223-CE5CB709D947}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lt-LT/{0668D876-AA6D-4C75-8498-22210702C32D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lv/{0890E527-ABE4-4847-BBD0-C22F898EB0F0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/lv-LV/{89CAC8A7-7532-4780-BF75-67A0332E515E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mk/{EFFB4F5E-6811-4134-9DE4-C1A5E7FD87D1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mk-MK/{DC2A43EB-C30F-4BD8-8BAA-C96FAD6F5A30}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ms/{60AD91FA-F7B3-462B-B422-AEB1453A5702}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ms-MY/{DF8173F3-5158-49AC-9953-C495E39867E8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mt/{DBF6019D-9244-4CDF-B92F-241528EDDF80}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/mt-MT/{9921308D-F14C-4705-9647-456918EA1587}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl/{D4869BA2-707D-48FF-8E48-86E83DA12D55}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl-BE/{7A8AB505-96A6-42E8-8DF8-10ADFF94E792}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nl-NL/{708C076E-9C27-4FB0-A727-D68CDB3C539D}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/nn-NO/{CCA1254D-80F1-4F71-803E-87A637D00B8E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/no/{DA5225C5-835D-452F-8B07-3A767CF83D28}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/no-NO/{4A33CBE4-1745-426C-BBD8-D5BB8AD2A638}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pl/{F15C7B02-7A0D-44C9-9DEF-582A01A7B02F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pl-PL/{D33B39A0-F618-412C-AF57-1759F8BB6AE8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt/{DB262916-7152-407F-B618-7319868095BA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt-BR/{39E3ADB5-060D-4DCF-A986-7318BECEF614}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/pt-PT/{CD518B6C-6B95-40F1-9166-31F4296A1E20}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ro/{84D805E6-6C13-407E-B8D4-8009ED86731F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ro-RO/{30BAB3AA-0294-45AC-AEAD-B08F1F66ACB8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ru/{7410ACD2-B5C9-47D0-971B-CB232E4338CB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/ru-RU/{AADD3ED6-C4C0-4153-83A0-D896FA25C9EA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sk/{B4562958-C347-40E3-8F2D-F6937B15EAE1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sk-SK/{224D642F-586E-42C4-975F-98EE67FD7393}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sl/{91D8B7D3-FC08-4ACF-8D39-F74444F1466A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sl-SI/{13694D3B-1952-440E-99BE-0103B6FAA7B9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sq/{C6D96D49-7245-4288-8983-C5AD526FCC06}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sq-AL/{C598B269-1DB5-4C54-822A-9FB7B2D90650}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr/{979750BC-C675-4E82-AAA2-66487F1551D5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-BA/{AB95D73C-14C9-4887-8967-EE0FE920A729}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-CS/{683D275A-DAE8-4581-BA8A-890C7B803362}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn/{F4558C52-1D41-4DE3-9E04-9011A1BD5841}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-BA/{AF9D7700-983F-4030-8A0C-418DE74DA8B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-ME/{A6F93477-DAEE-437E-9A80-D2E3D7F9F6D0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-Latn-RS/{7BB8C505-EC11-4EE9-B218-F9F11574D82B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-ME/{87FC6BBB-5742-4E4B-AD4B-FA813491BC8A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sr-RS/{472FFFE6-AD5E-4E66-AF85-9B1603160888}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sv/{836D441E-23AE-45EE-A6DD-8AD5D55B0E10}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/sv-SE/{E0839184-DA1E-4092-8D7C-C87FE3D568DC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th/{74980F4B-466F-417D-B7C9-FEF801730287}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th-TH/{42AB961B-3BA7-4673-B746-9FD612EF3E63}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/th-TH-u-nu-thai-x-lvariant-TH/{EC1A58A0-3872-480A-9984-79E1A90B9249}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/tr/{011119DD-F633-4A26-ABC3-6D600692D78C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/tr-TR/{3BA4E4D5-4761-4ECF-B8C9-209C8B2A2EF2}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/uk/{77AA64ED-328D-4C78-BCDD-955EEFF59786}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/uk-UA/{578B64E2-440B-4545-A6BA-6A983E68C8B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/vi/{5DC608E2-F2F5-4588-9BE6-5C91F02E53EC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/vi-VN/{5E3496A3-11B5-4E06-85D7-FDE43D1D49CA}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh/{C825B1A3-CD1C-45D4-9391-586F8AB05EBD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-CN/{0340992D-2759-4667-81BC-C652C79826BD}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-HK/{0EE93245-D390-4835-BDE5-136E29BA93B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-SG/{CD609785-9501-4EBD-9C58-66774C460C97}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Brightcove/Text Tracks/Language Codes/zh-TW/{F84FE525-9874-4200-83F1-66B00E212C19}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/{EF5C30F0-26E3-46D9-83B2-FE8634B9DFDC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Changed 1 Minute/{1594A42C-8CF6-43CE-81CE-0BF22A49E910}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Changed 50 Percent/{5C25590F-22B8-4A86-8EA2-B29060E86F36}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Completed/{2301F41F-58EA-4AD8-A26D-DE8BDA637261}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Error/{0C671A52-9C1D-4D89-B585-E67D250B7746}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Playback Events/Playback Started/{5FA3479A-E78B-4858-84F3-5430880FE4B5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Settings/{E4AFF7EC-DC99-4087-A69A-FC0FC80EB11C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Modules/Media Framework/Settings/Brightcove Default Settings/{AAE37F9C-3A5D-4640-B718-19F396B1ADBA}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Account Settings</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/layout/Layouts/Media/Brightcove Custom Fields/{7E506E92-894B-4974-B482-243F966CBEAF}/invariant/0</x-item>
+        <x-item>/core/sitecore/layout/Layouts/Media/Brightcove Text Tracks/{6B21DC30-385E-4ED2-BEDC-AA66CC44806D}/invariant/0</x-item>
+        <x-item>/core/sitecore/layout/Layouts/Media/Uploader/{F2E64362-F635-45F5-8B8F-621E549E543A}/invariant/0</x-item>
+        <x-item>/core/sitecore/layout/Layouts/Media/EmbedMedia/{D74E5D33-429A-4391-BFF5-E5B6064DE10A}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Layouts</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/{D233E948-A4D0-46B0-8609-931210FAF124}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Brightcove Manage Data/{59DB4976-37DC-41FD-9304-5AD9CC4B9309}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Brightcove Manage Data/Brightcove Custom Fields/{5D1CCDB9-0375-4AD6-B663-8E6610541449}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Brightcove Manage Data/Brightcove Text Tracks/{59BF2E21-5159-4C3A-972E-1D571646A529}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Cleanup Content/{8901954D-E5DF-4051-B10E-44F3ADCBD849}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Cleanup Content/Brightcove Cleanup All/{484AE2E9-45D4-40FA-B53C-355EFD453CA3}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Export Content/{9A584F2D-6C7A-4520-871B-270DF3CABF1F}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Export Content/Export All/{4503B610-15FA-463E-9D40-4F1A605ECD9D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Import Content/{F2951B80-4390-477E-A835-53CA9AC5FC4A}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Import Content/Brightcove Import All/{73F34CCD-C300-4675-B00A-F8EA811210FA}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Media Preview/{D89E6577-6C85-4C73-BE48-0200E5B4699D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Media Preview/Media Preview/{9BA05CB4-C50A-4CB1-902A-084DB17E1EC5}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Migration/{81174F25-448E-46CF-8B87-E7203B507B28}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Migration/Migrate MediaFramework Version 12/{13B259CB-8D51-4B78-91BE-AB075CDB62C7}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Upload/{CAD141B2-CBBF-41A8-8FF4-028E9385E077}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Upload/Upload/{7B2F9679-D70C-4071-AF3E-D567B63F220F}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Ribbon Chunks</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/{DF0D45D2-4AF1-4CCC-8A07-D1D8717BF9A8}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl/{ED0158BA-A226-45C0-A699-A1704F67A2DF}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl/ExperienceAnalyticsListControl Parameters/__Standard Values/{D70B7A84-7087-40A2-BE97-CEFDF93C4841}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl/ExperienceAnalyticsListControl Parameters/{567479BD-7D79-44CB-9C3E-6460A0A6DF76}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl/ExperienceAnalyticsListControl Parameters/Data/{DC0793E9-0AD2-44F0-859F-47A3D0A58637}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Layouts/Renderings/MediaFramework/ExperienceAnalyticsListControl/ExperienceAnalyticsListControl Parameters/Data/TargetPage/{4BCAEEB4-8622-4C8A-BF00-5DA61AB73472}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/{92651D32-896A-4429-B643-B1037D12DE20}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/{CB405498-F405-49A6-9FC8-854E0D5D764D}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostCompletedVideos/{2B479A98-88CB-4BEB-9482-CC9882B845AF}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostCompletedVideos/The number of video completed/{16DC2255-B6FA-42FC-A289-561D6B31106C}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostCompletedVideos/Video Duration/{7D0A9474-836A-4985-B3DF-26044F731BA9}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostCompletedVideos/Video/{533EB86E-58E9-414C-A8DA-D7069368A5DF}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/{6EE6874F-FC4C-4EAD-B794-5E11750835F1}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/Completed Count/{B23D5470-1132-487A-A54A-AF5A46104B75}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/Not Completed Percent/{E07B0FF4-EA47-4A0A-9932-E1C4529A3FC0}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/Started Count/{5CDBC906-FE20-4A4A-B51B-7A97C817AE1C}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/Video Duration/{524C4CAD-A4E6-4F29-B740-FBBEAE7028A5}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostPopularVideosStartedButNotCompleted/Video/{F5A67E53-577F-4FEB-BDAA-BE7B81990BF5}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostStartedVideos/{23343828-8ECF-4780-BA17-56B5CDB8B455}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostStartedVideos/The number of video started/{D550DB5D-B3F9-4928-9525-285089F73B4F}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostStartedVideos/Video Duration/{FB74C8EC-C313-4E33-9C94-05ED98B6034A}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/System/MediaFramework/ColumnsCollections/MostStartedVideos/Video/{D8779B3E-70FA-4A1C-9EC2-C785247631D8}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Templates/MediaFramework/{14243AF6-49F3-47A6-9D53-D74CE445CED0}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Templates/MediaFramework/ReportDataScheme/{D4270F36-0E0A-4C5D-A9CC-F2DCA503DF5A}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Templates/MediaFramework/ReportDataScheme/Data/{543550F9-B684-4249-BC55-EE86AC0BE939}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Templates/MediaFramework/ReportDataScheme/Data/Columns/{6B155797-3EBE-4E58-BBF1-6180FB0CDC4B}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Common/Templates/MediaFramework/ReportDataScheme/Data/SQL Report DB/{0AA8B742-BBDF-4405-AB8D-6FAC7E79433B}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/{B84CB26F-436A-4800-9FFE-13FCBB38F246}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/{35206AE2-2D57-4E0E-A5DE-038F2CE29386}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/PageSettings/{B2424528-33F8-42CC-A1FC-093369442679}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/PageSettings/All visits/{92DFC067-118A-4717-B612-B697D872B29F}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/PageSettings/ExperienceAnalytics Stylesheet/{B0B677D8-D2D7-46CA-8CB3-648A790CC727}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/PageSettings/Most Finished Videos/{0C2441E0-A037-4FE1-A1F5-F3FE8A632852}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostCompletedVideos/PageSettings/Table/{52C9C501-183E-42E9-8B35-B20A04D7F250}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostPopularVideosStartedButNotCompleted/{1FFF9A81-BE3A-45F7-AF34-B5A5C2EBCD80}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostPopularVideosStartedButNotCompleted/PageSettings/{4AD8DA26-E4FA-4FFC-9C06-CFF44D91B4EC}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostPopularVideosStartedButNotCompleted/PageSettings/ExperienceAnalytics Stylesheet/{E14071B1-9F2F-4109-93FA-B5179B910F00}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostPopularVideosStartedButNotCompleted/PageSettings/Table/{1FC1ED90-9D4C-4774-8C38-A0A33CB5BF39}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/{F4DE916D-C90B-4568-8165-A8559F38582C}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/PageSettings/{2D083A08-FE63-4A67-A07C-B8A6F5336D45}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/PageSettings/All visits/{0E338250-89C4-41E7-B1E4-A02A2F592C43}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/PageSettings/ExperienceAnalytics Stylesheet/{DC79D26B-E5C1-4183-B8E0-9C807A0F6C0A}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/PageSettings/Most Started Videos/{03B419A6-DE8A-4668-AC65-125DABAA0839}/invariant/0</x-item>
+        <x-item>/core/sitecore/client/Applications/ExperienceAnalytics/Dashboard/Media Framework/MostStartedVideos/PageSettings/Table/{55F7377A-3FE6-426F-ADEE-B31EE99A48BC}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Marketing Control Panel/Experience Analytics/Dimensions/Visits/By streamed video/{1E738BAF-E7F5-401C-B025-0E4E87C6634F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Marketing Control Panel/Experience Analytics/Dimensions/Visits/By streamed video/All visits by streamed video/{CD1B2E11-7371-44C0-906D-D43E8F3EA889}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Experience Analytics</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/client/Business Component Library/version 1/System/Charts/Legacy/NumberScales/Percentage 100/{5DB15137-BD9A-4810-BD31-60FEE690110F}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Percentage 100</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/{9546DDBA-4772-4CC2-B6B0-0E893108E457}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Brightcove Manage Data/{D144FDBA-D108-433E-A98B-8828EEC1809C}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Cleanup Content/{F06A9B64-FAA3-405B-80A5-31945F23C127}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Export Content/{CA6DF632-D370-410C-BC06-A5C264CE1E6D}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Import Content/{4218103D-12DC-4A8E-8410-5F3A748E78B7}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Media Preview/{1BCB8517-F3FE-424F-8279-07CA09EEB8A8}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Migration/{FA835E7B-7276-4740-B4EE-21D4202EA68C}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/Content Editor/Ribbons/Strips/Media Framework/Upload/{CEBA0E3C-6105-4BD5-B430-17C30EE92C22}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Ribbon Strips</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Embed Media Parameters/{0A1CF4BA-7383-4452-80A5-4017EDA78750}/invariant/0</x-item>
+        <x-item>/core/sitecore/content/Applications/WebEdit/Custom Experience Buttons/Embed Media/{E3E407DE-D365-4D8C-97EC-E9FFE51F0932}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Settings/Html Editor Profiles/Rich Text Default/Toolbar 1/Embed Link/{3F3D6C21-C341-43E8-BFB4-4ED806690121}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Settings/Html Editor Profiles/Rich Text Default/Toolbar 1/Embed Media/{ECD6112B-05D9-4DF9-84CC-9B7AF2356A1A}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Settings/Html Editor Profiles/Rich Text Full/Toolbar 1/Embed Link/{A614663C-D04E-4C43-B44A-6E80E71C4DE9}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Settings/Html Editor Profiles/Rich Text Full/Toolbar 1/Embed Media/{2BC40494-10CE-4B43-88C4-D2A2BA7DDCDE}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Placeholder Settings/embedMedia/{0FE07E93-E6F1-4C33-96C9-31410B51CFE2}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Experience Buttons</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/system/Field types/MediaFramework/{4AE1A863-FFAA-4410-9FB2-6F9C7CA08489}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/MediaFramework/ImagePreview/{AFDADB5F-B7A2-4139-B0A8-F83F4C817AD0}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/MediaFramework/ReadOnlyCheckBox/{1830CF16-ACD9-4EDF-8EBD-C87BF9FD2797}/invariant/0</x-item>
+        <x-item>/core/sitecore/system/Field types/MediaFramework/ReadOnlyText/{2BC7F47F-1CB0-4126-AE70-DD28D34444F4}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Field Types</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/layout/Renderings/Media Framework/{882FC35A-5C3B-4CEA-8BF8-38D784E5DDB2}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Renderings/Media Framework/Embed Media/{0471DE79-67E8-41F6-A5D2-8525B222C759}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Sublayouts/Media Framework/{6A43B36C-B9A1-4BE2-9DCD-EDCF3CB782CC}/invariant/0</x-item>
+        <x-item>/master/sitecore/layout/Sublayouts/Media Framework/Embed Media/{E393D906-954F-4442-A302-8029ED7A8EB0}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Renderings</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/media library/Media Framework/{7150B2B1-EB68-40EE-991F-2AFEDB532C46}/invariant/0</x-item>
+        <x-item>/master/sitecore/media library/Media Framework/Accounts/{E7291614-A88D-4512-92B7-1DAE99309D26}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms />
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Media Library</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Media Framework/{A2BD37BD-1F37-45D7-A35C-1F8B6E1CCF13}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Media Framework/PlaybackChanged/{634C87A9-4E01-4C69-9522-215865012DC5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Media Framework/PlaybackCompleted/{035B4467-A848-4D57-A465-401B035FDE98}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Media Framework/PlaybackError/{5F51C65D-796C-43BE-B9C4-5855159AF18B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Analytics/Page Events/Media Framework/PlaybackStarted/{76B6B0EA-F4BC-41AC-8BBA-CD4BBBF8E438}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Buckets/Settings/Quick Actions/Media Preview/{3A6C91F6-FC45-4ABD-8B8C-EBCA2993E1F7}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/{89F24D51-587A-4345-8006-1FF3685E6A06}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Add Media Item Events/{9850DB80-D70F-410B-9A5C-E825B4DE8F94}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Tags/{EDC2D998-F1E1-4A78-958F-34D4E89E2657}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Tags/Default/{1DAE8133-C064-46EA-A153-5A9CFA29FAA3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Trigger Playback Completed/{0FD811D2-CEC2-4121-A78C-936E579E2377}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Trigger Playback Error/{DCE8B7D5-1822-44E0-A1C9-96679A9810D3}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Trigger Playback Percentage Complete Reached/{1400C7C3-2CE0-4BCF-A126-DBBC39B7A0C8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Trigger Playback Started/{209A6D7F-D645-4606-8B63-678149DCDB5F}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Trigger Playback Time Reached/{E1F038A0-EC3A-41D5-A91D-1033DBC839E8}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Analytics/Visibility/{FDC82E2D-9683-4B87-90A2-8DAE00833128}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/{D560404B-55ED-4596-BDF3-343095D01355}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Command State Statuses/{AEF77D80-EE48-4441-8903-E3D93154697E}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Command State Statuses/Disabled/{3082C385-0F59-44F7-86EE-D1423EEA15F1}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Command State Statuses/Down/{6CB74323-D108-4B4C-9A3A-67120FAA5812}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Command State Statuses/Enabled/{3F2F8F53-B8BA-476E-B93E-EE38C9E3432C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Command State Statuses/Hidden/{2036B65A-1CCC-4981-8967-758CBEC1ACEB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Set Command State/{11478F1A-62F2-4DE5-A927-295FFACD934B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Tags/{F4AF24AE-EE18-4657-9B91-F72259FDA0AB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Tags/Default/{555FB535-8B48-4F67-8909-05FE1B22B45C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Visibility/{0219C422-75A0-433E-BBAE-50B0144DCE69}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/{A0ACE81D-761F-4524-8306-BAED6F070763}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Account Template/{83D94CB1-5123-4F67-9DEE-22586E8F2DE9}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Export is Allowed/{47E9EE27-3642-4EB3-A1A8-A49AE6263E87}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Tags/{1D0284C4-CAB1-4EB3-8035-BF4AA7C1B1DE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Tags/Default/{B03A8167-9FF8-469C-A718-FD1F0FE6C239}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Visibility/{7CC1AED6-572D-4B01-9A3B-FD7DC8D98A43}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Analytics/{15886D3D-DCD4-4B99-A58D-397A027753A5}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Analytics/Visibility/{1F65BC5A-8BA4-44BB-9988-AB25B2CEEA66}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Command Rules/{17F11DBD-81EA-47BF-9CE4-20FB8DA5C1BE}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Command Rules/Visibility/{4C1E303C-913A-4A1D-A9C5-ADBE56800994}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Common/{F2C0467A-7181-44BC-9D32-FC767902E943}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Definitions/Tags/Media Framework Common/Visibility/{76556663-EE59-4FDE-B2D8-7CC9DCA9E733}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Item Saved/Rules/Clear Media Framework Rules Cache/{346485BD-B911-4F2D-AF5F-C5D27AFB513C}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/MediaFramework/{E821C2C4-5827-4757-AA6D-2FABD15F9626}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/MediaFramework/Rules/{FB70EC4A-20C4-40C0-91CF-F5C00BEE6AE0}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/MediaFramework/Tags/{37EC263A-80BE-466F-BC1C-9DA44CE8BD10}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/MediaFramework/Tags/Default/{94E2FDFD-EE1B-4094-BD64-CB75D6B0A361}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Validation Rules/Field Rules/Media Framework/{10F4AE6B-4AB8-4237-8F19-E5C2796EDF0A}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Validation Rules/Field Rules/Media Framework/Fatal Required/{D329B542-28FE-4616-B958-5B1AB9EB8DD3}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] MF Settings</Name>
+    </xitems>
+    <xitems>
+      <Entries>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/{5358D4F1-9346-4269-9BD9-BA320DA4B81B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/Rules/{C3E2C5EC-75FD-46D8-88C3-28D98E3F0EAB}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/Rules/Cleanup Brightcove Command State/{D7F29C1C-F3C9-4DAB-A9D0-4201C36D2D2B}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/Rules/Import Brightcove Command State/{0C86916F-8AA3-4F40-B08F-400098BC6878}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/Tags/{E7EDCBA9-6D49-4E59-B561-007D72E33FEF}/invariant/0</x-item>
+        <x-item>/master/sitecore/system/Settings/Rules/Command Rules/Tags/Default/{B77FB8BE-E237-4770-A5ED-837345E0A17B}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Rules/CommandStateRule/{7253B883-CB72-4E80-887F-1B350D634DAD}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Rules/CommandStateRule/Data/{913F30D5-5DB0-4732-88EE-22550C9E7DFA}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Rules/CommandStateRule/Data/Command/{2282BA71-ACCC-436A-A716-2E4DCAF71F6E}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Rules/CommandStateRule/Data/Name/{D6092F70-DBA9-4F0B-96FC-BF69D7EDB31A}/invariant/0</x-item>
+        <x-item>/master/sitecore/templates/System/Rules/CommandStateRule/Data/Rules/{AFF1F4C7-5425-49DD-8456-4D3061C77100}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>[Brightcove] Command Rules</Name>
+    </xitems>
+    <files>
+      <Root>/sitecore/shell/Themes/Standard/Images/MediaFramework</Root>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include>
+        <FileNameFilter>
+          <Pattern />
+          <AcceptDirectories>False</AcceptDirectories>
+        </FileNameFilter>
+        <FileDateFilter>
+          <FilterType>CreatedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+        <FileDateFilter>
+          <FilterType>ModifiedFilter</FilterType>
+          <ActionDateTo />
+          <ActionDateFrom />
+          <NotOlderThan />
+        </FileDateFilter>
+      </Include>
+      <Exclude />
+      <Name>[Brightcove] Images 2</Name>
+    </files>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

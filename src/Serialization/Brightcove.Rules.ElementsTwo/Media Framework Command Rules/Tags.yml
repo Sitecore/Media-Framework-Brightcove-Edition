@@ -1,0 +1,18 @@
+﻿---
+ID: "f4af24ae-ee18-4657-9b91-f72259fda0ab"
+Parent: "d560404b-55ed-4596-bdf3-343095d01355"
+Template: "96c8e5dd-63c3-496b-a97c-a3e37e1dacba"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Tags
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131111T125329

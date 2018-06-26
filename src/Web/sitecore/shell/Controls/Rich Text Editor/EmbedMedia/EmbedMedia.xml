@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <MediaFramework.EmbedMedia>
+    <DataContext ID="DataContext" Root="{3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}"/>
+    <script Type="text/javascript" Language="javascript" Src="/sitecore/shell/Controls/Rich Text Editor/EmbedMedia/EmbedMedia.js">.</script>
+    <WizardForm CodeBeside="Brightcove.MediaFramework.Brightcove.UI.Rendering.EmbedMediaBrightcove, Brightcove.MediaFramework.Brightcove">
+
+      <WizardFormFirstPage ID="FirstPage" Icon="Applications/32x32/find.png">
+        <Border Class="scWizardWelcomeTitle">
+          <Literal Text="Welcome to the 'Embed Media' wizard."/>
+        </Border>
+        <Literal Text="This wizard helps you:"/>
+        <ul>
+          <li class="scWizardBullet">
+            <Literal Text="Find media item"/>  
+          </li>
+          <li class="scWizardBullet">
+            <Literal Text="Set media parameters"/>
+          </li>
+          <li class="scWizardBullet">
+            <Literal Text="Embed media element within the Reach Text Editor"/>
+          </li>
+        </ul>
+      </WizardFormFirstPage>
+      
+      <WizardFormPage ID="SearchItem" Header="Select Media Item" Text="Select the specific Media Item. Click Next to set media properties." Icon="Applications/32x32/find.png">
+        <Tabstrip ID="Tabs" Width="100%" Height="100%">
+          <Tab ID="BucketsTab" Header="Search Media Item" Height="100%">
+            <Frame SourceUri="/sitecore/shell/Applications/Buckets/MediaBrowser.aspx" Width="100%" Height="100%"></Frame>
+          </Tab>
+ 
+          <Tab ID="UploadTab" Header="Upload Media Item" Height="100%">
+            <Frame SourceUri="/layouts/MediaFramework/Upload.aspx" ID="UploadFrame" Width="100%" Height="100%"></Frame>
+          </Tab>
+        </Tabstrip>
+        
+        <Border Padding="4px 8px 0px 0px" Height="50px">
+          <GridPanel Width="100%" Columns="2">
+            <Border Padding="10px 4px 10px 10px" Width="30px">
+              <Literal Text="Name:"/>
+            </Border>
+              <Edit ID="Filename" Width="100%" GridPanel.Width="100%" />
+          </GridPanel>
+        </Border>
+      </WizardFormPage>
+
+      <WizardFormPage ID="ParameterSetter" Header="Properties" Text="Set properties of the Media Element." Icon="Applications/32x32/find.png">
+        <Border Padding="12px 0px 0px 8px">
+					<Edit ID="ShowPlaylistHead" Type="Hidden" Value="" />
+					<GridPanel ID="VideoHeadContainer" Columns="2">
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Source:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="SourceLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Video ID:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="VideoIdLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+					</GridPanel>
+
+					<GridPanel ID="PlaylistHeadContainer" Columns="2">
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Playlist ID:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="PlaylistIdLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Account Name:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="AccountNameLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Created At:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="CreatedLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Updated At:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="UpdatedLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Playlist Type:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Literal ID="PlaylistTypeLiteral" Width="225px" GridPanel.Width="150px"/>
+						</Border>
+					</GridPanel>
+
+					<GridPanel Columns="2">
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Player:"  Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Combobox ID="PlayersList" Width="300px" GridPanel.Width="150px"/>
+						</Border>
+					</GridPanel>
+
+          <GridPanel Columns="3">
+	          <Border Padding="0px 4px 0px 5px" Width="150px">
+	          </Border>
+	          <Border Padding="5px 4px 5px 5px" Width="150px">
+		          <Checkbox ID="AutoplayCheckbox" Width="100px" Header="Autoplay"/>
+	          </Border>
+	          <Border Padding="5px 4px 5px 5px" Width="150px">
+							<Checkbox ID="MutedCheckbox" Width="100px" Header="Muted"/>
+	          </Border>
+
+	          <Border Padding="0px 4px 0px 5px" Width="150px">
+		          <Literal Text="Embed Style:" Width="100px"/>
+	          </Border>
+	          <Border Padding="5px 4px 5px 5px" Width="150px">
+		          <Radiobutton ID="JavascriptRadiobutton" Name="EmbedRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="EmbedRadiogroup" Header="Javascript" value="Javascript"/>
+	          </Border>
+	          <Border Padding="5px 4px 5px 5px" Width="150px">
+							<Radiobutton ID="IframeRadiobutton" Name="EmbedRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="EmbedRadiogroup" Header="iFrame" value="iFrame"/>
+	          </Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Sizing:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Radiobutton ID="ResponsiveRadiobutton" Name="SizingRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="SizingRadiogroup" Header="Responsive" Value="Responsive"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Radiobutton ID="FixedRadiobutton" Name="SizingRadiogroup" Width="100px" GridPanel.Width="150px" GroupName="SizingRadiogroup" Header="Fixed" Value="Fixed"/>
+						</Border>
+					</GridPanel>
+
+	        <GridPanel Columns="2">
+	          <Border Padding="0px 4px 0px 5px" Width="150px">
+		          <Literal Text="Aspect Ratio:"  Width="150px"/>
+	          </Border>
+	          <Border Padding="5px 4px 5px 5px" Width="150px">
+		          <Combobox ID="AspectRatioList" Width="150px"/>
+	          </Border>
+
+						<Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Width:" Width="100px"/>
+						</Border>
+						<Border Padding="5px 4px 5px 5px" Width="150px">
+							<Edit ID="WidthInput" Width="75px" Value="400" Type="number"/>
+						</Border>
+            
+            <Border Padding="0px 4px 0px 5px" Width="150px">
+							<Literal Text="Height:"  Width="100px"/>
+            </Border>
+            <Border Padding="5px 4px 5px 5px" Width="150px">
+							<Edit ID="HeightInput" Width="75px" Value="300" Type="number"/>
+            </Border>
+          </GridPanel>
+	        <Edit ID="EmbedInput" Type="Hidden" Value="" />
+	        <Edit ID="SizingInput" Type="Hidden" Value="" />
+        </Border>
+      </WizardFormPage>
+    </WizardForm>
+  </MediaFramework.EmbedMedia>
+</control>

@@ -1,0 +1,30 @@
+﻿---
+ID: "0471de79-67e8-41f6-a5d2-8525b222c759"
+Parent: "882fc35a-5c3b-4cea-8bf8-38d784e5ddb2"
+Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
+Path: /sitecore/layout/Renderings/Media Framework/Embed Media
+DB: master
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: People/16x16/pda2_add.png
+- ID: "a2f5d9df-8cba-4a1d-99eb-51acb94cb057"
+  Hint: Page Editor Buttons
+  Type: Treelist
+  Value: |
+    {E3E407DE-D365-4D8C-97EC-E9FFE51F0932}
+    {0A1CF4BA-7383-4452-80A5-4017EDA78750}
+- ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"
+  Hint: Controller Action
+  Value: RenderVideo
+- ID: "e64ad073-dfcc-4d20-8c0b-fe5aa6226cd7"
+  Hint: Controller
+  Value: Sitecore.MediaFramework.Mvc.Controllers.EmbedMediaController, Sitecore.MediaFramework.Mvc
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20140707T134852

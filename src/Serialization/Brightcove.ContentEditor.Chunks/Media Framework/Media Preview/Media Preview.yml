@@ -1,0 +1,35 @@
+﻿---
+ID: "9ba05cb4-c50a-4cb1-902a-084db17e1ec5"
+Parent: "d89e6577-6c85-4c73-be48-0200e5b4699d"
+Template: "97b61451-9a75-4f59-93a5-dbd8d4f44421"
+Path: /sitecore/content/Applications/Content Editor/Ribbons/Chunks/Media Framework/Media Preview/Media Preview
+DB: core
+SharedFields:
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: Multimedia/32x32/film_clip.png
+- ID: "f5a07916-7bca-4fba-857c-a5d166c332d4"
+  Hint: Icon
+  Value: Multimedia/32x32/film_clip.png
+- ID: "fc6b80f1-406d-47f0-a2b3-fcd7a8ea9d74"
+  Hint: Click
+  Value: "MediaFramework:MediaPreview"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b11f9f5f-88fc-48c5-9501-2e827ef40ead"
+    Hint: Header
+    Value: Preview
+  - ID: "db8c4e34-586c-4ded-bc95-b993fc3a01a8"
+    Hint: Tooltip
+    Value: Preview with default player for media item
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130806T124250
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

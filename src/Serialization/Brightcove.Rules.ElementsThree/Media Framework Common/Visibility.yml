@@ -1,0 +1,18 @@
+﻿---
+ID: "7cc1aed6-572d-4b01-9a3b-fd7dc8d98a43"
+Parent: "a0ace81d-761f-4524-8306-baed6f070763"
+Template: "aa91a868-02f2-41d3-8b78-1cad91b4dcae"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Common/Visibility
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131111T153101

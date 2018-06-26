@@ -1,0 +1,44 @@
+﻿---
+ID: "f04a50b4-202d-4443-a0e5-4d194d04f23d"
+Parent: "186614bc-a123-4b7b-b2b6-2fa29c6894b0"
+Template: "186614bc-a123-4b7b-b2b6-2fa29c6894b0"
+Path: /sitecore/templates/MediaFramework/Brightcove/BrightcoveAccountSettings/__Standard Values
+DB: master
+SharedFields:
+- ID: "12112d15-a3de-4b42-a700-de1b9666391b"
+  Hint: PlaybackEventsRules
+  Type: Rules
+  Value: |
+    <ruleset>
+      <rule
+        uid="{4CD3C9DF-9629-4987-8D37-B32C4AF50BDC}">
+        <conditions>
+          <condition
+            id="{4888ABBB-F17D-4485-B14B-842413F88732}"
+            uid="D712742C1A4C44439448AB21403F58FB" />
+        </conditions>
+        <actions>
+          <action
+            id="{9850DB80-D70F-410B-9A5C-E825B4DE8F94}"
+            uid="36C3881349BA452A925A18AA62FEF6F4" />
+          <action
+            id="{209A6D7F-D645-4606-8B63-678149DCDB5F}"
+            uid="07AEBFCC7E724AA1BAC89EF20C4C8A77" />
+          <action
+            id="{0FD811D2-CEC2-4121-A78C-936E579E2377}"
+            uid="3133D5BEAC764B61B9BA896DEA675DE6" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T125224
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

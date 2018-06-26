@@ -1,0 +1,24 @@
+﻿---
+ID: "04704d09-7690-4103-a000-cb6063f0339f"
+Parent: "4c73dbd2-03f4-483c-84b8-6f1c2c62d6dd"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/Media/MediaFramework/Brightcove
+DB: core
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Type: tree list
+  Value: |
+    {1F0770EA-8B77-4110-91AA-CC00DEE102DD}
+    {73C2385C-9A34-4125-9419-F64376B34A62}
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20160516T143837Z

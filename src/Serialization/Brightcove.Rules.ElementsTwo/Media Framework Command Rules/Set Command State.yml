@@ -1,0 +1,25 @@
+﻿---
+ID: "11478f1a-62f2-4de5-a927-295ffacd934b"
+Parent: "d560404b-55ed-4596-bdf3-343095d01355"
+Template: "f90052a5-b4e6-4e6d-9812-1e1b88a6fcea"
+Path: /sitecore/system/Settings/Rules/Definitions/Elements/Media Framework Command Rules/Set Command State
+DB: master
+SharedFields:
+- ID: "ff55d5a7-6d4b-4cd1-83e0-bac268073f66"
+  Hint: Type
+  Value: Sitecore.Integration.Common.Rules.Commands.Actions.SetCommandState, Sitecore.Integration.Common
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130620T164000
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+    - ID: "eeb36a3b-40d9-4af5-862a-de257b84dca3"
+      Hint: Text
+      Value: "set command state to [CommandStateId,Tree,root={AEF77D80-EE48-4441-8903-E3D93154697E},the specific command state]"

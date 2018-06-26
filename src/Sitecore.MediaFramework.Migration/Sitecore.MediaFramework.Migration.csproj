@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91856649-155C-47A7-ACDB-2E3596C75B0C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sitecore.MediaFramework.Migration</RootNamespace>
+    <AssemblyName>Sitecore.MediaFramework.Migration</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.5, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Integration.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Integration.Common.NoReferences.2.1.150625\lib\NET45\Sitecore.Integration.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.9.0.171002\lib\NET462\Sitecore.Kernel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMigrationProvider.cs" />
+    <Compile Include="Commands\Migrate.cs" />
+    <Compile Include="Common\MigrationHelper.cs" />
+    <Compile Include="Common\IMigrationHelper.cs" />
+    <Compile Include="MigrationManager.cs" />
+    <Compile Include="MigrationProvider.cs" />
+    <Compile Include="Migrators\FieldMigrator.cs" />
+    <Compile Include="Migrators\HtmlFieldMigrator.cs" />
+    <Compile Include="Migrators\IFieldMigrator.cs" />
+    <Compile Include="Migrators\IMigrator.cs" />
+    <Compile Include="Migrators\NodeFieldMigrator.cs" />
+    <Compile Include="Migrators\RenderingsFieldMigrator.cs" />
+    <Compile Include="Migrators\RichTextFieldMigrator.cs" />
+    <Compile Include="Version11\AccountContentMigrator.cs" />
+    <Compile Include="Version11\EmbedHtmlMigrator.cs" />
+    <Compile Include="Version11\EmbedLinkMigrator.cs" />
+    <Compile Include="Migrators\XmlFieldMigrator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Version11\RenderingsMigrator.cs" />
+    <Compile Include="Version12\AccountContentMigrator.cs" />
+    <Compile Include="Version12\EmbedHtmlMigrator.cs" />
+    <Compile Include="Version12\EmbedLinkMigrator.cs" />
+    <Compile Include="Version12\RenderingsMigrator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sitecore.MediaFramework\Sitecore.MediaFramework.csproj">
+      <Project>{288e6e2f-9027-4746-b6c9-1d0a04e484aa}</Project>
+      <Name>Sitecore.MediaFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)Sitecore.MediaFramework.Migration*" "$(SolutionDir)Website\bin" /S /F /R /Y /I</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

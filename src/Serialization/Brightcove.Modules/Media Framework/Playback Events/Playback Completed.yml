@@ -1,0 +1,31 @@
+﻿---
+ID: "2301f41f-58ea-4ad8-a26d-de8bda637261"
+Parent: "ef5c30f0-26e3-46d9-83b2-fe8634b9dfdc"
+Template: "3a2c7fc4-bcd6-4b8b-bed7-a45e023b31db"
+Path: /sitecore/system/Modules/Media Framework/Playback Events/Playback Completed
+DB: master
+SharedFields:
+- ID: "7ccb928c-7eb0-465a-a755-d4bd7256bd58"
+  Hint: PageEvent
+  Value: PlaybackCompleted
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T131845
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130820T131845
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

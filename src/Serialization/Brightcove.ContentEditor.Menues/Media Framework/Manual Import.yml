@@ -1,0 +1,18 @@
+﻿---
+ID: "05b138fb-71ae-4dc8-9e6b-edf121bf289f"
+Parent: "4ac2d04f-4062-40b4-a99c-b4e77c1e6093"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/Content Editor/Menues/Media Framework/Manual Import
+DB: core
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130626T135516
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

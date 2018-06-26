@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brightcove.MediaFramework.Brightcove", "Brightcove.MediaFramework.Brightcove\Brightcove.MediaFramework.Brightcove.csproj", "{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{B6C4132F-37F9-4719-8A65-A33A095C4191}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{17D81DEE-EECA-4938-B14F-693F3DDBA059}"
+	ProjectSection(SolutionItems) = preProject
+		Data\Sitecore Media Framework Reporting Data Update Script.sql = Data\Sitecore Media Framework Reporting Data Update Script.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{25D2BA55-EF45-470D-8AA0-6B229ACEAC47}"
+	ProjectSection(SolutionItems) = preProject
+		Data\packages\Brightcove Media Framework 9_0.xml = Data\packages\Brightcove Media Framework 9_0.xml
+		Data\packages\Brightcove Media Framework-9.0.zip = Data\packages\Brightcove Media Framework-9.0.zip
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{393F6BF2-2B06-4164-8A94-A814060769EA}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework", "Sitecore.MediaFramework\Sitecore.MediaFramework.csproj", "{288E6E2F-9027-4746-B6C9-1D0A04E484AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework.Migration", "Sitecore.MediaFramework.Migration\Sitecore.MediaFramework.Migration.csproj", "{91856649-155C-47A7-ACDB-2E3596C75B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework.Mvc", "Sitecore.MediaFramework.Mvc\Sitecore.MediaFramework.Mvc.csproj", "{D641D8FE-7A26-400C-98AB-62DA576BBC32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.MediaFramework.Test", "Sitecore.MediaFramework.Test\Sitecore.MediaFramework.Test.csproj", "{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 7.1|Any CPU = Debug 7.1|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DEV-AOBrightcove|Any CPU = DEV-AOBrightcove|Any CPU
+		QA-AOBrightcove|Any CPU = QA-AOBrightcove|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Debug 7.1|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Debug 7.1|Any CPU.Build.0 = Debug|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.DEV-AOBrightcove|Any CPU.ActiveCfg = DEV-AOBrightcove|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.DEV-AOBrightcove|Any CPU.Build.0 = DEV-AOBrightcove|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.QA-AOBrightcove|Any CPU.ActiveCfg = QA-AOBrightcove|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.QA-AOBrightcove|Any CPU.Build.0 = QA-AOBrightcove|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4CE22B6-2F6F-456D-A502-7914DBC3CEA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Debug 7.1|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Debug 7.1|Any CPU.Build.0 = Debug|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.DEV-AOBrightcove|Any CPU.ActiveCfg = DEV-AOBrightcove|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.DEV-AOBrightcove|Any CPU.Build.0 = DEV-AOBrightcove|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.QA-AOBrightcove|Any CPU.ActiveCfg = QA-AOBrightcove|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.QA-AOBrightcove|Any CPU.Build.0 = QA-AOBrightcove|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C4132F-37F9-4719-8A65-A33A095C4191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Debug 7.1|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Debug 7.1|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.DEV-AOBrightcove|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.DEV-AOBrightcove|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.QA-AOBrightcove|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.QA-AOBrightcove|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288E6E2F-9027-4746-B6C9-1D0A04E484AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Debug 7.1|Any CPU.ActiveCfg = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Debug 7.1|Any CPU.Build.0 = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.DEV-AOBrightcove|Any CPU.ActiveCfg = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.DEV-AOBrightcove|Any CPU.Build.0 = Debug|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.QA-AOBrightcove|Any CPU.ActiveCfg = Release|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.QA-AOBrightcove|Any CPU.Build.0 = Release|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91856649-155C-47A7-ACDB-2E3596C75B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Debug 7.1|Any CPU.ActiveCfg = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Debug 7.1|Any CPU.Build.0 = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.DEV-AOBrightcove|Any CPU.ActiveCfg = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.DEV-AOBrightcove|Any CPU.Build.0 = Debug|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.QA-AOBrightcove|Any CPU.ActiveCfg = Release|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.QA-AOBrightcove|Any CPU.Build.0 = Release|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D641D8FE-7A26-400C-98AB-62DA576BBC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Debug 7.1|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Debug 7.1|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.DEV-AOBrightcove|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.DEV-AOBrightcove|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.QA-AOBrightcove|Any CPU.ActiveCfg = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.QA-AOBrightcove|Any CPU.Build.0 = Debug 7.1|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1602DB-8B3C-4075-8028-0BF3BBCCB774}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25D2BA55-EF45-470D-8AA0-6B229ACEAC47} = {17D81DEE-EECA-4938-B14F-693F3DDBA059}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

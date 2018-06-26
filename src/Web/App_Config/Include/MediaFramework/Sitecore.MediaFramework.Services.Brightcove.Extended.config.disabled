@@ -1,0 +1,96 @@
+﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+  <sitecore>
+   <!-- Enhancements for version 3 -->
+
+    <settings>
+      <setting name="Brightcove.EnableAdvancedLogging" value="true" />
+      <!--
+           Brightcove - COMMAND ROUTE PREFIX
+           The prefix used for controller routes.
+           Default value: sitecore/api/brightcove/
+      
+      -->
+      <setting name="Brightcove.CommandRoutePrefix" value="sitecore/api/brightcove/" />
+
+      <setting name="Brightcove.ImportLimit" value="100" />
+
+      <setting name="Brightcove.TextTracksMimeTypes" value="{application/octet-stream},{text/vtt}" />
+
+      <setting name="Sitecore.MediaFramework.DefaultPlayerSize">
+        <patch:attribute name="value">640,360</patch:attribute>
+      </setting>
+
+			<setting name="HtmlEditor.RemoveScripts">
+				<patch:attribute name="value">false</patch:attribute>
+			</setting>
+
+	    <setting name="HtmlEditor.ConvertToXhtml">
+		    <patch:attribute name="value">false</patch:attribute>
+	    </setting>
+
+      <setting name="Sitecore.MediaFramework.PreviewSize">
+        <patch:attribute name="value">640,360</patch:attribute>
+      </setting>
+      <setting name="Brightcove.IndexName" value="sitecore_master_index" />
+    </settings>
+
+    <commands>
+      <command name="mediaFramework:CustomFields:Brightcove" type="Brightcove.MediaFramework.Brightcove.Commands.CustomFields,Brightcove.MediaFramework.Brightcove"/>
+      <command name="mediaFramework:TextTracks:Brightcove" type="Brightcove.MediaFramework.Brightcove.Commands.TextTracks,Brightcove.MediaFramework.Brightcove"/>
+    </commands>
+
+    <!--
+      Manage uploaded video with media library in sitecore
+    -->
+    
+    <Brightcove.VideoUploadService type="Brightcove.MediaFramework.Brightcove.Upload.MediaItem.VideoUploadService, Brightcove.MediaFramework.Brightcove">
+      <Config type="Brightcove.MediaFramework.Brightcove.Upload.VideoUploadServiceConfigBase, Brightcove.MediaFramework.Brightcove">
+        <CaptureImages>true</CaptureImages>
+        <!--<Profile>multi-platform-standard-static</Profile>-->
+        <AlwaysCreateVideoItem>true</AlwaysCreateVideoItem>
+      </Config>
+    </Brightcove.VideoUploadService>
+    
+    <Brightcove.StorageService type="Brightcove.MediaFramework.Brightcove.Upload.MediaItem.StorageService, Brightcove.MediaFramework.Brightcove">
+      <Config type="Brightcove.MediaFramework.Brightcove.Upload.MediaItem.StorageServiceConfig, Brightcove.MediaFramework.Brightcove">
+        <BaseUrl>[PUT YOUR WEB SITE URL HERE]</BaseUrl>
+        <ContentDatabaseName>master</ContentDatabaseName>
+        <PublishDatabaseName>web</PublishDatabaseName>
+      </Config>
+    </Brightcove.StorageService>
+
+    <pipelines>
+
+      <initialize>
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.Initialize.RegisterRoutes, Brightcove.MediaFramework.Brightcove" />
+      </initialize>
+
+      <Brightcove.VideoUpload>
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload.CreateVideoEntity, Brightcove.MediaFramework.Brightcove" />
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload.PostVideo, Brightcove.MediaFramework.Brightcove" />
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload.SaveVideoContent, Brightcove.MediaFramework.Brightcove" />
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload.CreateIngestVideoEntity, Brightcove.MediaFramework.Brightcove" />
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.VideoUpload.IngestVideo, Brightcove.MediaFramework.Brightcove" />
+      </Brightcove.VideoUpload>
+
+      <Brightcove.HandleCallback>
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.HandleCallback.CheckVideoUpload, Brightcove.MediaFramework.Brightcove" />
+        <processor type="Brightcove.MediaFramework.Brightcove.Pipelines.HandleCallback.SetIngestStatus, Brightcove.MediaFramework.Brightcove" />
+      </Brightcove.HandleCallback>
+
+      <mediaFramework.mediaGenerateMarkup>
+        <processor patch:instead="processor[@type='Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup.GetPlaybackEvents, Sitecore.MediaFramework']" type="Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup.GetPlaybackEvents,Brightcove.MediaFramework.Brightcove">
+        </processor>
+	      <processor patch:instead="processor[@type='Sitecore.MediaFramework.Pipelines.MediaGenerateMarkup.GenerateMarkup, Sitecore.MediaFramework']" type="Brightcove.MediaFramework.Brightcove.Pipelines.MediaGenerateMarkup.GenerateMarkup, Brightcove.MediaFramework.Brightcove">
+        </processor>
+      </mediaFramework.mediaGenerateMarkup>
+
+      <mediaFramework.mediaSyncImport>
+        <processor patch:after="processor[@type='Sitecore.MediaFramework.Pipelines.MediaSyncImport.CallItemImport, Sitecore.MediaFramework']" type="Brightcove.MediaFramework.Brightcove.Pipelines.MediaSyncImport.ForceSyncClear,Brightcove.MediaFramework.Brightcove">
+        </processor>
+      </mediaFramework.mediaSyncImport>
+    
+  </pipelines>
+    
+  </sitecore>
+</configuration>

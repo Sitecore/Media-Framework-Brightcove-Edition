@@ -1,0 +1,35 @@
+﻿---
+ID: "8cb6c483-8154-43a0-899e-8866292560a6"
+Parent: "3e33877d-52e3-48c1-8351-cf19d0872418"
+Template: "5210d3fa-7bd8-449b-9c89-8a7e20f6ae18"
+Path: /sitecore/system/Modules/Media Framework/Brightcove/Enums/WMode/transparent
+DB: master
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Transparent
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20100421T154542
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\genzymeadmin
+  - Version: 2
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20100421T154542
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\genzymeadmin

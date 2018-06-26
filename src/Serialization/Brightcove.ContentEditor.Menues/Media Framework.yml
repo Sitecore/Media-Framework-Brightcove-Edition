@@ -1,0 +1,14 @@
+﻿---
+ID: "4ac2d04f-4062-40b4-a99c-b4e77c1e6093"
+Parent: "3be34b62-23bf-491e-ab1e-e8d70abb1183"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/content/Applications/Content Editor/Menues/Media Framework
+DB: core
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20130619T153000

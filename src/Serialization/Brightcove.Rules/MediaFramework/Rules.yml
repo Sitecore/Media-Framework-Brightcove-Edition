@@ -1,0 +1,18 @@
+﻿---
+ID: "fb70ec4a-20c4-40c0-91cf-f5c00bee6ae0"
+Parent: "e821c2c4-5827-4757-aa6d-2fabd15f9626"
+Template: "8ea2cf67-4250-47a2-aeca-4f70fd200dc7"
+Path: /sitecore/system/Settings/Rules/MediaFramework/Rules
+DB: master
+SharedFields:
+- ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
+  Hint: __Originator
+  Value: 
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20131111T114628

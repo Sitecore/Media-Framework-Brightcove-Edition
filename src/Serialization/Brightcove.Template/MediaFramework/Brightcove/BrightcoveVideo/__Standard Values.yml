@@ -1,0 +1,41 @@
+﻿---
+ID: "a0b6faaa-3c37-4ca4-8792-7fc9eaf9e7d8"
+Parent: "6a5c6835-6e11-4602-a11d-b626e9255397"
+Template: "6a5c6835-6e11-4602-a11d-b626e9255397"
+Path: /sitecore/templates/MediaFramework/Brightcove/BrightcoveVideo/__Standard Values
+DB: master
+SharedFields:
+- ID: "22579c0b-2bb7-47eb-ae54-39cc8d9899c5"
+  Hint: Economics
+  Value: AD_SUPPORTED
+- ID: "a0cb3965-8884-4c7a-8815-b6b2e5ced162"
+  Hint: __Editors
+  Type: TreelistEx
+  Value: 
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 0
+- ID: "c0e276bb-8807-40aa-8138-e5c38b0c5dab"
+  Hint: __Quick Actions
+  Type: Multilist
+  Value: "{3A6C91F6-FC45-4ABD-8B8C-EBCA2993E1F7}"
+- ID: "c923961c-5664-43d2-85d2-d194143197df"
+  Hint: Events
+  Type: Multilist
+  Value: 
+- ID: "c9283d9e-7c29-4419-9c28-5a5c8ff53e84"
+  Hint: __Bucketable
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20090813T070100
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
