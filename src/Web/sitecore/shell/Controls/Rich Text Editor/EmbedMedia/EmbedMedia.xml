@@ -113,10 +113,10 @@
 	          <Border Padding="0px 4px 0px 5px" Width="150px">
 	          </Border>
 	          <Border Padding="5px 4px 5px 5px" Width="150px">
-		          <Checkbox ID="AutoplayCheckbox" Width="100px" Header="Autoplay:"/>
+		          <Checkbox ID="AutoplayCheckbox" Width="100px" Header="Autoplay"/>
 	          </Border>
 	          <Border Padding="5px 4px 5px 5px" Width="150px">
-							<Checkbox ID="MutedCheckbox" Width="100px" Header="Muted:"/>
+							<Checkbox ID="MutedCheckbox" Width="100px" Header="Muted"/>
 	          </Border>
 
 	          <Border Padding="0px 4px 0px 5px" Width="150px">
